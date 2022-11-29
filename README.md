@@ -16,15 +16,16 @@ Tengo 23 años, estudié y trabajo con .NET. Me gusta el backend.
 Tengo 24 años, actualmente estudiando el profesorado de Ed. Fisica y aprendiendo conocimientos sobre la programación. Me interesa el frontend.
 ## Autores
 
-- [@GonzaDiDio](https://github.com/gonzadidio)
+- [@GonzaloDiDioLeal](https://github.com/gonzadidio)
 - [@YamilaGauto](https://github.com/yamila-gauto)
 - [@LionelGomez](https://github.com/LionelSGomez)
 - [@RocioPalomino](https://github.com/rochipalomino)
 - [@LautaroGarcia](https://github.com/lautarodpr)
 
 
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
-[![instagram](https://img.shields.io/badge/instagram-FF0000?style=for-the-badge&logo=instagram&logoColor=white)](https://twitter.com/)
+## 🔗 Sitios de Referencia 
+[![sitio1](https://img.shields.io/badge/sitio1-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
+[![sitio2](https://img.shields.io/badge/sitio2-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+[![sitio3](https://img.shields.io/badge/sitio3-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
+[![sitio4](https://img.shields.io/badge/sitio4-FF0000?style=for-the-badge&logo=instagram&logoColor=white)](https://twitter.com/)
+[![sitio5](https://img.shields.io/badge/sitio5-$FF0000?style=for-the-badge&logo=instagram&logoColor=white)](https://twitter.com/)
