@@ -18,6 +18,9 @@ Tengo 24 años, actualmente estudiando el profesorado de Ed. Fisica y aprendiend
 
 - [@GonzaDiDio](https://github.com/gonzadidio)
 - [@YamilaGauto](https://github.com/yamila-gauto)
+- [@LionelGomez](https://github.com/LionelSGomez)
+- [@RocioPalomino](https://github.com/rochipalomino)
+- [@LautaroGarcia](https://github.com/lautarodpr)
 
 
 ## 🔗 Links
