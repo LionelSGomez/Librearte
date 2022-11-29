@@ -14,6 +14,8 @@ Con 25 años, previamente estudié HTML y CSS. Me gustan las páginas estéticas
 Tengo 23 años, estudié y trabajo con .NET. Me gusta el backend.
 ## Hola, Mi nombre es Rocío Palomino! 👋
 Tengo 24 años, actualmente estudiando el profesorado de Ed. Fisica y aprendiendo conocimientos sobre la programación. Me interesa el frontend.
+## Hola, Mi nombre es Lautaro Garcia! 👋
+Tengo 20 años, actualmente soy estudiante de la carrera Ingenieria en Sistemas.
 ## Autores
 
 - [@GonzaloDiDioLeal](https://github.com/gonzadidio)
