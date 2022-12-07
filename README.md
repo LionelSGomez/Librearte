@@ -26,7 +26,7 @@ Tengo 20 años, actualmente soy estudiante de la carrera Ingenieria en Sistemas.
 
 
 ## 🔗 Sitios de Referencia 
-[![Casa D'alessandro](https://img.shields.io/badge/sitio2-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.casadalessandro.com.ar/)
+[![Casa D'alessandro](https://img.shields.io/badge/Casa D'alessandro-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.casadalessandro.com.ar/)
 
 Se eligio este sitio ya que es una casa muy conocida de San Miguel y contiene productos que ofrecemos y el sitio tiene cosas esteticas para extraer.
 
