@@ -27,6 +27,8 @@ Tengo 20 años, actualmente soy estudiante de la carrera Ingenieria en Sistemas.
 
 ## 🔗 Sitios de Referencia 
 [![Casa D'alessandro](https://img.shields.io/badge/Dalessandro-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.casadalessandro.com.ar/)
+[![Camel](https://img.shields.io/badge/Dalessandro-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.kokuyocamlin.com/camel/kids)
+[![pitayafoods](https://img.shields.io/badge/Dalessandro-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.pitayafoods.com/)
 
 Se eligio este sitio ya que es una casa muy conocida de San Miguel, contiene productos que ofrecemos y el sitio tiene cosas esteticas para extraer.
 
