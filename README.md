@@ -30,8 +30,9 @@ Tengo 20 años, actualmente soy estudiante de la carrera Ingenieria en Sistemas.
 [![Camel](https://img.shields.io/badge/Camel-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.kokuyocamlin.com/camel/kids)
 [![pitayafoods](https://img.shields.io/badge/PitayaFoods-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.pitayafoods.com/)
 [![Woopy](https://img.shields.io/badge/Woopy-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.woopylibreria.com.ar/)
+[![rabatthem](https://img.shields.io/badge/rabatthem-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://rabatthem.se/)
 
 [![sitio2](https://img.shields.io/badge/sitio2-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
 [![sitio3](https://img.shields.io/badge/sitio3-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
-[![sitio4](https://img.shields.io/badge/sitio4-FF0000?style=for-the-badge&logo=instagram&logoColor=white)](https://twitter.com/)
-[![sitio5](https://img.shields.io/badge/sitio5-$FF0000?style=for-the-badge&logo=instagram&logoColor=white)](https://twitter.com/)
+[![sitio4](https://img.shields.io/badge/sitio4-FF0000?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/)
+[![sitio5](https://img.shields.io/badge/sitio5-$FF0000?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/)
