@@ -27,13 +27,16 @@ Tengo 20 años, actualmente soy estudiante de la carrera Ingenieria en Sistemas.
 # Links del equipo
 [![Trello](https://img.shields.io/badge/Trello-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://trello.com/b/tMuYxcja/grupo3librearte)
 [![Wireframe](https://img.shields.io/badge/Wireframe-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.figma.com/file/Z1zmRoPALBNrFYT7PPVL8X/LibreArte?node-id=0%3A1&t=Pki08GZuBMvh53D7-0)
+[![PaletaColores](https://img.shields.io/badge/Colores-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://colorhunt.co/palette/00a8b5774898de4383f3ae4b))
 
 ## 🔗 Sitios de Referencia 
 [![Casa D'alessandro](https://img.shields.io/badge/Dalessandro-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.casadalessandro.com.ar/)
 [![Camel](https://img.shields.io/badge/Camel-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.kokuyocamlin.com/camel/kids)
 [![pitayafoods](https://img.shields.io/badge/PitayaFoods-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.pitayafoods.com/)
 [![Woopy](https://img.shields.io/badge/Woopy-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.woopylibreria.com.ar/)
-[![rabatthem](https://img.shields.io/badge/rabatthem-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://rabatthem.se/)
+[![rabatthem](https://img.shields.io/badge/Rabatthem-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://rabatthem.se/)
+
+
 
 [![sitio2](https://img.shields.io/badge/sitio2-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
 [![sitio3](https://img.shields.io/badge/sitio3-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/)
