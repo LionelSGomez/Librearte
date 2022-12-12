@@ -7,7 +7,7 @@ Librearte es una tienda E-commerce dedicado a la venta de productos de librería
 # 🚀 Sobre Nosotros
 
 ## Hola, Mi nombre es Yamila Gauto! 👋
-Tengo 27 años, soy de San Miguel, soy estudiante de la carrera de Relaciones del trabajo.
+Tengo 27 años, soy de San Miguel, soy estudiante de la carrera de Relaciones del trabajo, me gusta el diseño, por lo que me interesa la parte de frontend.
 ## Hola, Mi nombre es Lionel Gomez! 👋
 Con 25 años, previamente estudié HTML y CSS. Me gustan las páginas estéticas.
 ## Hola, Mi nombre es Gonzalo Di Dio Leal! 👋
@@ -27,7 +27,7 @@ Tengo 20 años, actualmente soy estudiante de la carrera Ingenieria en Sistemas.
 # Links del equipo
 [![Trello](https://img.shields.io/badge/Trello-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://trello.com/b/tMuYxcja/grupo3librearte)
 [![Wireframe](https://img.shields.io/badge/Wireframe-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.figma.com/file/Z1zmRoPALBNrFYT7PPVL8X/LibreArte?node-id=0%3A1&t=Pki08GZuBMvh53D7-0)
-[![PaletaColores](https://img.shields.io/badge/Paleta de colores-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://colorhunt.co/palette/00a8b5774898de4383f3ae4b)
+[![PaletaColores](https://img.shields.io/badge/Colores-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://colorhunt.co/palette/00a8b5774898de4383f3ae4b)
 
 ## 🔗 Sitios de Referencia 
 [![Casa D'alessandro](https://img.shields.io/badge/Dalessandro-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.casadalessandro.com.ar/)
@@ -35,7 +35,6 @@ Tengo 20 años, actualmente soy estudiante de la carrera Ingenieria en Sistemas.
 [![pitayafoods](https://img.shields.io/badge/PitayaFoods-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.pitayafoods.com/)
 [![Woopy](https://img.shields.io/badge/Woopy-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.woopylibreria.com.ar/)
 [![rabatthem](https://img.shields.io/badge/Rabatthem-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://rabatthem.se/)
-
 
 
 [![sitio2](https://img.shields.io/badge/sitio2-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
