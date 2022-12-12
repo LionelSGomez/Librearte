@@ -25,8 +25,8 @@ Tengo 20 años, actualmente soy estudiante de la carrera Ingenieria en Sistemas.
 - [@LautaroGarcia](https://github.com/lautarodpr)
 
 # Links del equipo
-[![Trello](https://img.shields.io/badge/Dalessandro-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://trello.com/b/tMuYxcja/grupo3librearte)
-[![Wireframe](https://img.shields.io/badge/Dalessandro-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.figma.com/file/Z1zmRoPALBNrFYT7PPVL8X/LibreArte?node-id=0%3A1&t=Pki08GZuBMvh53D7-0)
+[![Trello](https://img.shields.io/badge/Trello-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://trello.com/b/tMuYxcja/grupo3librearte)
+[![Wireframe](https://img.shields.io/badge/Wireframe-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.figma.com/file/Z1zmRoPALBNrFYT7PPVL8X/LibreArte?node-id=0%3A1&t=Pki08GZuBMvh53D7-0)
 
 ## 🔗 Sitios de Referencia 
 [![Casa D'alessandro](https://img.shields.io/badge/Dalessandro-0A66C2?style=for-the-badge&logo=cafe&logoColor=white)](https://www.casadalessandro.com.ar/)
