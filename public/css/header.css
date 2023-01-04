@@ -1,0 +1,33 @@
+header{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #F3AE4B;
+    justify-content: space-around;
+    height: 100px;
+    align-content: center;
+    font-size: 30px;
+}
+
+.logo{
+    margin-top: 8%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+    height: 180px;
+    border-bottom: ridge;
+}
+
+.logo{
+    size: 50px;
+}
+
+.headerOptions{
+    display: flex;
+}
+
+header div a{
+padding: 15px;
+margin: 10px;
+}

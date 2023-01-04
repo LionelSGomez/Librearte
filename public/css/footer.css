@@ -1,0 +1,45 @@
+footer{
+    height: 250px;
+    background-color: #F3AE4B;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+#logoFooter{
+    display: flex;
+    margin-left: 3%;
+    margin-bottom: auto;
+    width: 25%;
+}
+
+footer ul li{
+    list-style-type: none;
+    padding: 10px;
+    align-self: auto;
+}
+
+#infoEmpresa{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    flex-wrap: wrap;
+}
+
+.footerLinks{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#footerLeft{
+    width: 25%;
+    align-content: end;
+}
+
+#footerRight{
+    width: 25%;
+    align-content: flex-start;
+}

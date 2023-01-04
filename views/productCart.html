@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>LibreArte</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/productCartStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3f5a8bb97d.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="top-header">
+      <div class="burger-menu">
+        <i class="fa fa-bars burger"></i>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Tienda</a></li>
+        </ul>
+      </nav>
+      <a href="/iniciosesion"><img class="logo" src="/images/LibreArte Logo.webp" alt="LibreArte_logo"></a>
+      <div>
+        <ul class="nav-bar">
+          <li><a href="/iniciosesion">Ingresa</a></li>
+          <li><a href="/registro">Registrate</a></li>
+          <a class="carrito" href="/productcart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main>
+    <p class="txtCarrito">Carrito de Compras</p>
+    <div class="producto">
+      <img class="img-producto" src="/images/cuaderno-mickey.webp" alt="cuaderno-mickey">
+      <div class="detallesProducto">
+        <p class="txtProducto">Cuarderno Mickey</p>
+        <p class="txtCantidad">- 1 +</p>
+        <p class="txtCantidad">$XXX.XX</p>
+      </div>
+    </div>
+    <hr>
+    <div class="producto">
+      <img class="img-producto" src="/images/cuaderno-minnie.webp" alt="cuaderno-minnie">
+      <div class="detallesProducto">
+        <p class="txtProducto">Cuaderno Minnie</p>
+        <p class="txtCantidad">- 1 +</p>
+        <p class="txtCantidad">$XXX.XX</p>
+      </div>
+    </div>
+    <div class="subtotal">
+      <p class="txtSubtotal">Subtotal (Sin envío):</p>
+      <p class="txtSubtotal">$XXX.XX</p>
+    </div>
+    <hr>
+    <div>
+      <p class="txtEnvio">Envio</p>
+      <div>
+        <input type="checkbox" name="interests" value="a" id="a">
+        <label for="a">Acordar envio (Costo a estimar)</label>
+      </div>
+      <div>
+        <input type="checkbox" name="interests" value="b" id="b">
+        <label for="b">Retiro en sucursal (Gratis)</label>
+      </div>
+    </div>
+    <hr>
+    <div class="subtotal">
+      <p class="txtSubtotal">Total:</p>
+      <p class="txtSubtotal">$XXX.XX</p>
+    </div>
+    <div class="footer-carrito">
+      <div>
+        <p class="txtOlvidaste">¿Olvidaste Algo?</p>
+        <div class="productosRelacionados">
+          <img class="img-producto" src="/images/cuaderno-violeta.webp" alt="cuaderno-violeta">
+          <div class="agregarCarrito">
+            <p class="txtPrecio">Cuaderno Violeta</p>
+            <button class="bttAgregar">Agregar</button>
+          </div>
+        </div>
+        <div class="productosRelacionados">
+          <img class="img-producto" src="/images/cuaderno-rojo.webp" alt="cuaderno-rojo">
+          <div class="agregarCarrito">
+            <p class="txtPrecio">Cuaderno Rojo</p>
+            <button class="bttAgregar">Agregar</button>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="compraDiv">
+        <button class="bttCompra">Iniciar Compra</button>
+        <div class="promociones">
+          <img class="img-tarjetavisa" src="/images/visalogo.png" alt="visalogo">
+          <img class="img-tarjetamaster" src="/images/mastercardlogo.png" alt="mastercardlogo">
+          <p class="txtCuotas">3 y 6 cuotas sin interes</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div>
+      <img class="logo-footer" src="/images/LibreArte Logo.webp" alt="LibreArte_logo">
+      <div class="iconos-redes">
+        <a class="iconos" href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a class="iconos" href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a class="iconos" href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a class="iconos" href="#"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+      <p class="copyright">Copyright © 1999-2023 LibreArte</p>
+    </div>
+  </footer>
+</body>
+
+
+</html>
