@@ -5,6 +5,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+/*HEADER*/
+
 .homeNav {
     background-color: #F3AE4B;
     font-weight: 900;
@@ -44,6 +46,8 @@ ul li:hover {
 .burgerMenu {
     font-size: 35px;
 }
+
+/*BODY*/
 
 .landing img {
     width: 100%;
