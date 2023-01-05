@@ -6,15 +6,15 @@ const app = express();
 app.use(express.static('public'));
 
 app.get('/', (req, res) =>{
-    res.sendFile(path.join(__dirname, '/views/home.html'));
+    res.sendFile(path.join(__dirname, '/views/index.html'));
 })
 
-app.get('/registro', (req, res) =>{
-    res.sendFile(path.join(__dirname, '/views/registro.html'));
+app.get('/register', (req, res) =>{
+    res.sendFile(path.join(__dirname, '/views/register.html'));
 })
 
-app.get('/iniciosesion', (req, res) =>{
-    res.sendFile(path.join(__dirname, '/views/inicioSesion.html'));
+app.get('/login', (req, res) =>{
+    res.sendFile(path.join(__dirname, '/views/login.html'));
 })
 app.get('/productcart', (req, res) =>{
     res.sendFile(path.join(__dirname, '/views/productCart.html'));

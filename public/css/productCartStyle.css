@@ -1,4 +1,4 @@
-/*HEADER*/
+/*HEADER
 
 * {
     margin: 0px;
@@ -60,6 +60,7 @@ header ul li {
     padding-top: 30px;
     font-size: 24px;
 }
+*/
 
 /* MAIN */
 .producto {
@@ -220,7 +221,7 @@ footer {
     font-size: 16px;
 }
 
-/*MEDIA*/
+/* MEDIA
 
 @media (min-width: 769px) {
     header ul li {
@@ -266,4 +267,4 @@ footer {
         color: #000;
     }
 
-}
+} */

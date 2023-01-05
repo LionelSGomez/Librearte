@@ -6,18 +6,23 @@
 }
 
 .homeNav {
-    background-color: #00A8B5;
+    background-color: #F3AE4B;
     font-weight: 900;
     height: 100px;
 }
 
 .homeNav a{
     text-decoration: none;
-    color: #F3AE4B;
+    color: black;
+    font-size: 20px;
 }
 
 .homeNav li {
     display: none;
+}
+
+ul li:hover {
+    text-decoration: underline;
 }
 
 .homeNav div {
@@ -29,6 +34,11 @@
 
 .homeNav img {
     height: 100px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+    border-bottom: ridge;
+    box-shadow: grey 0.5px 2px 10px;
 }
 
 .burgerMenu {
@@ -69,14 +79,49 @@
     margin: 7px;
 }
 
+/*FOOTER*/
 footer {
-    padding-top: 20px;
+    background-color: #F3AE4B;
+    border-top: solid;
 }
+
+.logo-footer {
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+    height: 120px;
+    border-bottom: ridge;
+    margin-top: 10px;
+    display: block;
+    margin-inline: auto;
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    font-size: 20px;
+}
+
+.iconos {
+    color: #ebebeb;
+    margin: 5px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 16px;
+}
+
 
 @media (min-width:768px){
 
     .homeNav li {
         display: block;
+    }
+
+    .homeNav a {
+        font-size: 15px;
     }
 
     .homeNav ul{

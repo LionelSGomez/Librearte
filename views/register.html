@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro</title>
   <link rel="stylesheet" href="/css/cuentas.css">
-  <link rel="stylesheet" href="/css/productCartStyle.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <!-- <link rel="stylesheet" href="/css/productCartStyle.css"> -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/3f5a8bb97d.js" crossorigin="anonymous"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
@@ -16,27 +17,34 @@
 <body>
 
   <header>
-    <div class="top-header">
-      <div class="burger-menu">
-        <i class="fa fa-bars burger"></i>
-      </div>
-      <nav>
+    <nav class="homeNav">
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Tienda</a></li>
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+            <li>
+                <a href="/products">Productos</a>
+            </li>
+            <li>
+                <a href="/contact">Contacto</a>
+            </li>
+            <div>
+              <a href="/"><img src="/images/logo.png"></a>
+                <i class="fa-solid fa-bars burgerMenu"></i>  
+            </div>
+            
+            <li>
+                <a href="/login">Ingresar</a>
+            </li>
+            <li>
+                <a href="/register">Registrarse</a>
+            </li>
+            <li>
+                <a href="/productcart">Carrito</a>
+            </li>
         </ul>
-      </nav>
-      <a href="/iniciosesion"><img class="logo" src="/images/LibreArte Logo.webp" alt="LibreArte_logo"></a>
-      <div>
-        <ul class="nav-bar">
-          <li><a href="/iniciosesion">Ingresa</a></li>
-          <li><a href="/registro">Registrate</a></li>
-          <a class="carrito" href="/productcart"><i class="fa-solid fa-cart-shopping"></i></a>
-        </ul>
-      </div>
-    </div>
-  </header>
+    </nav>
+</header>
 
   <main>
     <div class="signupFrm">
