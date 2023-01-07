@@ -10,11 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7d8051dd3b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/home.css">
-    <title>LibreArte</title>
+    <title>Detalle de producto</title>
+
 </head>
 
 <body>
-
     <header>
         <nav class="homeNav">
             <ul>
@@ -46,26 +46,55 @@
     </header>
 
     <main>
-        <section class="landing">
-            <img src="/images/landing.jpg" alt="promotional image">
-            <img class="landing2" src="/images/landing2.jpg" alt="promotional image">
+        <section class="productImages">
+            <img src="/images/plannerBlue.jpg" alt="firstImage">
             <div>
-                <h2>Aprovechá los descuentos por la vuelta a clases!</p>
+                <img src="/images/plannerGreen.jpg" alt="secondImage">
+                <img src="/images/plannerRed.jpg" alt="thirdImage">
+                <img src="/images/plannerYellow.jpg" alt="fourthImage">
             </div>
         </section>
 
-        <section class="categories">
-            <article class="books">
-                <h4>Libros</p>
-            </article>
+        <section class="detail">
+            <h4>Agenda 2023 - 370hojas</h4>
+            <h3>$5900</h3>
+            <form action="/productDetail" method="GET">
+                <legend>Por favor seleccione un color:</legend>
+                <div class="colorSelection">
+                    <label for="red">
+                        <input type="radio" name="color" id="red" required>
+                        Rojo
+                    </label>
+                    <label for="green">
+                        <input type="radio" name="color" id="green"> 
+                        Verde
+                    </label>
+                    <label for="yellow">
+                        <input type="radio" name="color" id="yellow">
+                        Amarillo
+                    </label>
+                    <label for="blue">
+                        <input type="radio" name="color" id="blue">
+                        Azul
+                    </label>
+                </div>
 
-            <article class="schoolSupplies">
-                <h4>Útiles escolares</p>
-            </article>
+                <div class="quantitySelection">
+                    <label for="products">
+                        ¿Cuántas unidades vas a llevar?
+                        <input type="number" id="products" min="1" value="1" />
+                    </label>
+                </div>
 
-            <article class="planners">
-                <h4>Agendas 2023</p>
-            </article>
+                <button type="submit">Agregar al carrito</button>
+            </form>
+        </section>
+
+        <section class="description">
+            <h4>Descripción del producto</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Obcaecati pariatur esse maiores qui quaerat quisquam, debitis molestias
+                itaque consequuntur perferendis ipsam nemo asperiores voluptas omnis.</p>
         </section>
     </main>
 
