@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7d8051dd3b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/productDetail.css">
     <title>Detalle de producto</title>
 
 </head>
@@ -47,7 +48,7 @@
 
     <main>
         <section class="productImages">
-            <img src="/images/plannerBlue.jpg" alt="firstImage">
+            <img src="/images/plannerBlue.jpg" alt="firstImage" class="first">
             <div>
                 <img src="/images/plannerGreen.jpg" alt="secondImage">
                 <img src="/images/plannerRed.jpg" alt="thirdImage">
@@ -66,7 +67,7 @@
                         Rojo
                     </label>
                     <label for="green">
-                        <input type="radio" name="color" id="green"> 
+                        <input type="radio" name="color" id="green">
                         Verde
                     </label>
                     <label for="yellow">
@@ -84,18 +85,21 @@
                         ¿Cuántas unidades vas a llevar?
                         <input type="number" id="products" min="1" value="1" />
                     </label>
+                    <button type="submit">Agregar al carrito</button>
                 </div>
 
-                <button type="submit">Agregar al carrito</button>
+                
             </form>
+
+            <div class="description">
+                <h4>Descripción del producto.</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Obcaecati pariatur esse maiores qui quaerat quisquam, debitis molestias
+                    itaque consequuntur perferendis ipsam nemo asperiores voluptas omnis.</p>
+            </div>
         </section>
 
-        <section class="description">
-            <h4>Descripción del producto</h4>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Obcaecati pariatur esse maiores qui quaerat quisquam, debitis molestias
-                itaque consequuntur perferendis ipsam nemo asperiores voluptas omnis.</p>
-        </section>
+
     </main>
 
     <footer>

@@ -1,0 +1,149 @@
+main {
+    background-color: rgba(251,251,253,0.7);
+}
+
+.productImages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+.productImages img{
+    width: 20vw;
+    margin: 10px;
+}
+
+.productImages .first {
+    width: 50vw;
+}
+
+.detail {
+    text-align: center;
+}
+
+.detail h4 {
+    font-size: 22px;
+    margin: 25px;
+    white-space: nowrap;
+}
+
+.detail h3 {
+    padding-bottom: 25px;
+}
+
+.detail form legend {
+    padding-bottom: 15px;
+}
+
+.detail .colorSelection label {
+    padding: 6px
+} 
+
+.detail .quantitySelection {
+    padding: 20px;
+}
+
+#products {
+    width: 25px;
+    text-align: center;
+}
+
+.detail .quantitySelection button {
+    padding: 15px 37px;
+    border: none;
+    background-color: purple;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+    margin: 20px;
+}
+
+.detail .description{
+    position: relative;
+}
+
+.detail .description h4::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    height: 1px;
+    width: 250px;
+    border-bottom: 10px double #DE4383;
+}
+
+.detail .description p {
+    text-align: justify;
+    padding: 20px;
+}
+
+
+@media (min-width:1024px){
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    
+    .productImages {
+    width: 57%;
+    height: 100vh;
+    margin: 10px;
+    }
+    
+    .productImages .first {
+        width: 70%;
+        height: 65%;
+    }
+    
+    .productImages img {
+        height: 165px;
+        width: auto;
+        padding: 30px;
+    }
+    
+    .detail {
+        width: 43%;
+        margin: 10px;
+        padding: 35px;
+    }
+    
+    .detail h4{
+        margin-bottom: 30px;
+        font-size: 25px;
+    }
+    
+    .detail h3{
+        font-size: 20px;
+    }
+    
+    .detail form legend {
+        padding: 65px 0px 20px 0px;
+    }
+        
+    #products {
+        width: 40px;
+        margin: 10px;
+    }
+    
+    .detail .quantitySelection {
+        padding: 60px 0px;
+    }
+    
+    .detail .quantitySelection button {
+        margin-left: 30px;
+    }
+    
+    .detail .description p {
+        padding: 35px 40px 20px 0px;
+    }
+}
+
+@media (min-width:1440px){
+    .productImages .first {
+        width: 50%;
+        height: 70%;
+    }
+}
