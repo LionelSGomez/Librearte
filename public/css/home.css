@@ -58,30 +58,50 @@ ul li:hover {
 }
 
 .landing div {
-    height: 170px;
+    height: 120px;
     display: flex;
     align-content: center;
     text-align: center;
     align-items: center;
-    background-color: #a3c4f3;
-    border: 10px solid #cdb4db;
+    background-color: orange;
+    border: 10px solid darkgreen;
+    /* background-color: #a3c4f3;
+    border: 10px solid #cdb4db; */
     margin: 7px;
-    border-style: inset;
+    border-style: double;
+    /* border-style: inset; */
     font-size: 18px;
 }
 
 .landing h2 {
     width: 100%;
-    color: darkblue
+    font-family: cursive;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.textOfertas {
+        color: darkgreen;
 }
 
 .categories article {
     text-align: center;
-    background-color: #a2d2ff;
-    border: 6px solid #ffafcc;
+    background-color: seagreen;
+    border: 6px solid orange;
+    /* background-color: #a3c4f3;
+    border: 6px solid #ffafcc; */
     padding: 35px;
     text-transform: uppercase;
     margin: 7px;
+}
+
+.textCat{
+    font-size: 18px;
+    color: white;
+}
+
+main article .books {
+    background-image: url(/images/boton-libros.png);
 }
 
 /*FOOTER*/
@@ -119,6 +139,8 @@ footer {
 }
 
 
+/*MEDIA*/
+
 @media (min-width:768px){
 
     .homeNav li {
@@ -151,8 +173,7 @@ footer {
 
     .burgerMenu {
         display: none;
-    }
-    
+    }   
 }
 
 @media (min-width:1024px){
@@ -164,9 +185,17 @@ footer {
     .landing div {
     position: absolute;
     right: 40px;
-    height: 14%;
-    width: 40%;
-    margin-top: -10%;
+    height: 16%;
+    width: 35%;
+    margin-top: -12%;
+    background-color: whitesmoke;
+    border: 10px solid hotpink;
+    border-style: double;
+    border-radius: 10%;
+    }
+
+    .textOfertas{
+            color: royalblue;
     }
 
     .categories {
@@ -178,15 +207,17 @@ footer {
     }
 
     .categories article {
-        padding: 69px;
+        padding: 30px;
         width: 25%;
-        border-radius: 30%;
-        color: darkblue;
+        border-radius: 10%;
+        background-color: yellowgreen;
+        border: 6px solid orange;
+
     }
 
     .landing .landing2{
         display: block;
-        height: 90%;
+        height: 100%;
     }
 
     .landing img {

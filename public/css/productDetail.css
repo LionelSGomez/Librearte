@@ -22,6 +22,7 @@ main {
 .detail {
     text-align: center;
     background: floralwhite;
+    border-style: ridge;
 }
 
 .detail h4 {
@@ -42,6 +43,10 @@ main {
     padding: 6px
 } 
 
+.colorSelection{
+    font-size: 18px;
+}
+
 .detail .quantitySelection {
     padding: 20px;
 }
@@ -54,13 +59,14 @@ main {
 .detail .quantitySelection button {
     padding: 15px 37px;
     border: none;
-    background-color: purple;
+    background-color: #DE4383;
     color: white;
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
     margin-top: 30px;
     margin: 20px;
+    font-size: 18px;
 }
 
 .detail .description{
@@ -97,7 +103,7 @@ main {
     }
     
     .productImages .first {
-        width: 70%;
+        width: 50%;
         height: 65%;
     }
     
@@ -111,29 +117,30 @@ main {
         width: 43%;
         margin: 10px;
         padding: 35px;
-        background: floralwhite;
     }
     
     .detail h4{
         margin-bottom: 30px;
-        font-size: 25px;
+        font-size: 30px;
     }
     
     .detail h3{
-        font-size: 20px;
+        font-size: 25px;
     }
     
     .detail form legend {
-        padding: 65px 0px 20px 0px;
+        padding: 35px 0px 20px 0px;
+        font-size: 18px;
     }
         
     #products {
-        width: 40px;
+        width: 45px;
         margin: 10px;
+        height: 22px;
     }
     
     .detail .quantitySelection {
-        padding: 60px 0px;
+        padding: 40px 0px;
     }
     
     .detail .quantitySelection button {
@@ -145,7 +152,8 @@ main {
     }
 
     .detail .description h4::before {
-        width: 322px;
+        width: 388px;
+        top: 37px;
     }
 
 }
