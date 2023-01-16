@@ -2,11 +2,20 @@ const path = require('path');
 
 const controller = {
     index: (req, res) => {
-        res.sendFile(path.join(__dirname, '../views/index.html'));
+        res.render('index');
+    },
+    login: (req, res) => {
+        res.render('login');
     },
     register: (req, res) => {
-        res.sendFile(path.join(__dirname, '../views/register.html'));
-    }
+        res.render('register');
+    },
+    productCart: (req, res) => {
+        res.render('productCart');
+    },
+    productDetail: (req, res) => {
+        res.render('productDetail');
+    },
 };
 
 module.exports = controller;
