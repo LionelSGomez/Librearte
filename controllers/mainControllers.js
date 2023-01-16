@@ -5,16 +5,19 @@ const controller = {
         res.render('index');
     },
     login: (req, res) => {
-        res.render('login');
+        res.render('./users/login');
     },
     register: (req, res) => {
-        res.render('register');
+        res.render('./users/register');
+    },
+    contact: (req, res) => {
+        res.render('./users/contact');
     },
     productCart: (req, res) => {
-        res.render('productCart');
+        res.render('./products/productCart');
     },
     productDetail: (req, res) => {
-        res.render('productDetail');
+        res.render('./products/productDetail');
     },
 };
 

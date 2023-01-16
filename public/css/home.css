@@ -96,8 +96,9 @@ ul li:hover {
 }
 
 .textCat{
-    font-size: 18px;
+    font-size: 20px;
     color: white;
+    text-shadow: 0 0 5px black
 }
 
 main article .books {
