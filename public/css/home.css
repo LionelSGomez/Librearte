@@ -3,6 +3,7 @@
     box-sizing: border-box;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
 }
 
 /*HEADER*/
@@ -14,7 +15,6 @@
 }
 
 .homeNav a{
-    text-decoration: none;
     color: black;
     font-size: 20px;
 }
@@ -84,15 +84,23 @@ ul li:hover {
         color: darkgreen;
 }
 
-.categories article {
+.categories article{
     text-align: center;
     background-color: seagreen;
     border: 6px solid orange;
-    /* background-color: #a3c4f3;
-    border: 6px solid #ffafcc; */
     padding: 35px;
     text-transform: uppercase;
     margin: 7px;
+
+}
+
+.categories article:hover .textCat {
+    font-size: 23px;
+    transition: all 400ms; 
+}
+
+.categories article a{
+    padding: 28px;
 }
 
 .textCat{

@@ -44,7 +44,7 @@ body {
   left: 0px;
   height: 100%;
   width: 100%;
-  border: 1px solid #DADCE0;
+  border: 1px solid #918d8b;
   border-radius: 7px;
   font-size: 16px;
   padding: 0 20px;
@@ -63,7 +63,7 @@ body {
   left: 15px;
   padding: 0 4px;
   background-color: white;
-  color: #DADCE0;
+  color: #918d8b;
   font-size: 16px;
   transition: 0.5s;
   z-index: 0;
@@ -76,7 +76,7 @@ body {
 .cuentasBtn {
   padding: 15px 30px;
   border: none;
-  background-color: purple;
+  background-color: #de7124;
   color: white;
   border-radius: 6px;
   cursor: pointer;
@@ -85,7 +85,7 @@ body {
 }
 
 .cuentasBtn:hover {
-  background-color: #9867C5;
+  background-color: #e28e54;
   transform: translateY(-2px);
 }
 
@@ -103,11 +103,11 @@ body {
   z-index: 10;
   font-size: 14px;
   font-weight: 600;
-  color: purple;
+  color: #ac5415;
 }
 
 .input:focus {
-  border: 2px solid purple;
+  border: 2px solid #ac5415;
 }
 
 .input:not(:placeholder-shown)+.label {
