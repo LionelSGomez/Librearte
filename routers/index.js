@@ -10,6 +10,7 @@ router.get('/register', mainController.register);
 router.get('/contact', mainController.contact);
 router.get('/productCart', mainController.productCart);
 router.get('/productDetail', mainController.productDetail);
+router.get('/productList', mainController.productList);
 
 module.exports = router;
 
