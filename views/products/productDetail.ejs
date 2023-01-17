@@ -16,35 +16,8 @@
 </head>
 
 <body>
-    <header>
-        <nav class="homeNav">
-            <ul>
-                <li>
-                    <a href="/">Inicio</a>
-                </li>
-                <li>
-                    <a href="/productDetail">Productos</a>
-                </li>
-                <li>
-                    <a href="/contact">Contacto</a>
-                </li>
-                <div>
-                    <a href="/"><img src="/images/logo.webp"></a>
-                    <i class="fa-solid fa-bars burgerMenu"></i>
-                </div>
-
-                <li>
-                    <a href="/login">Ingresar</a>
-                </li>
-                <li>
-                    <a href="/register">Registrarse</a>
-                </li>
-                <li>
-                    <a href="/productcart">Carrito</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header -->
+    <%- include('../partials/header') %> 
 
     <main>
         <section class="productImages">
@@ -102,18 +75,5 @@
 
     </main>
 
-    <footer>
-        <div>
-            <img class="logo-footer" src="/images/logo.webp" alt="LibreArte_logo">
-            <div class="iconos-redes">
-                <a class="iconos" href="#"><i class="fa-brands fa-facebook"></i></a>
-                <a class="iconos" href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a class="iconos" href="#"><i class="fa-brands fa-youtube"></i></a>
-                <a class="iconos" href="#"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-            <p class="copyright">Copyright © 1999-2023 LibreArte</p>
-        </div>
-    </footer>
-</body>
-
-</html>
+    <!-- Footer -->
+    <%- include('../partials/footer') %> 
