@@ -1,5 +1,4 @@
 main {
-    /* background-color: rgba(251,251,253,0.7); */
     background-image: url(/images/Fondo-Productos.png);
 }
 
@@ -50,6 +49,12 @@ main {
 .detail .quantitySelection {
     padding: 20px;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+   opacity: 1;
+}
+
 
 #products {
     width: 25px;
