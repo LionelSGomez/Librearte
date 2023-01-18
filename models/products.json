@@ -39,52 +39,50 @@
     },
     {
         "id": 5,
-        "producto": "Lapices de colores Filgo",
-        "tipo1": "x6 unidades",
-        "tipo2": "x12 unidades",
-        "precio1": "650,00",
-        "precio2": "1.400,00",
-        "img1": "color-filgo-x6.jpg",
-        "img2": "color-filgo-x12.jpg"
+        "producto": "Lapices de colores Filgo x6",
+        "tipo": "x6 unidades",
+        "precio": "650,00",
+        "img1": "color-filgo-x6.jpg"
     },
     {
         "id": 6,
-        "producto": "Lapices de colores Faber Castell",
-        "tipo1": "x15 unidades",
-        "tipo2": "x12 unidades",
-        "precio1": "2.300,00",
-        "precio2": "1.800,00",
-        "img1": "faber-x15.jpg",
-        "img2": "faber-x12.jpg"
+        "producto": "Lapices de colores Filgo x12",
+        "tipo": "x12 unidades",
+        "precio": "1000,00",
+        "img1": "color-filgo-x12.jpg"
     },
     {
         "id": 7,
-        "producto": "Lápiz negro Filgo",
-        "tipo1": "x4 unidades",
-        "tipo2": "x12 unidades",
-        "precio1": "250,00",
-        "precio2": "550,00",
-        "img1": "lapiz-negro-x4.jpg",
-        "img2": "lapiz-negro-x12.jpg"
+        "producto": "Lápiz negro Filgo x4",
+        "tipo": "x4 unidades",
+        "precio": "250,00",
+        "img": "lapiz-negro-x4.jpg"
     },
     {
         "id": 8,
+        "producto": "Lápiz negro Filgo x12",
+        "tipo": "x12 unidades",
+        "precio": "550,00",
+        "img": "lapiz-negro-x12.jpg"
+    },
+    {
+        "id": 9,
         "producto": "Goma Pizzini",
         "tipo1": "Azul",
         "tipo2": "Rosa",
         "tipo3": "Violeta",
         "precio": "650,00",
-        "img1": "goma.jpg"
-    },
-    {
-        "id": 9,
-        "producto": "Sacapuntas Pizzini",
-        "tipo": "x2 unidades",
-        "precio": "300,00",
-        "img1": "sacapuntas.jpg"
+        "img": "goma.jpg"
     },
     {
         "id": 10,
+        "producto": "Sacapuntas Pizzini",
+        "tipo": "x2 unidades",
+        "precio": "300,00",
+        "img": "sacapuntas.jpg"
+    },
+    {
+        "id": 11,
         "producto": "Lapicera con muñeco",
         "tipo1": "Dinosaurio",
         "tipo2": "Unicornio",
@@ -93,7 +91,7 @@
         "img2": "lapicera-unicornio.jpg"
     },
     {
-        "id": 11,
+        "id": 12,
         "producto": "Lapicera",
         "tipo1": "Tinta azul",
         "tipo2": "Tinta negra",
@@ -102,20 +100,38 @@
         "img2": "lapicera-negra.jpg"
     },
     {
-        "id": 12,
+        "id": 13,
         "producto": "Lapicera borrable",
         "tipo": "Modelo aleatorio",
         "precio": "1000,00",
-        "img1": "lapicera-borrable.jpg"
+        "img": "lapicera-borrable.jpg"
     },
     {
-        "id": 13,
-        "producto": "Cuaderno A4",
-        "tipo1": "Anillado",
-        "tipo2": "Sin anillado",
-        "precio1": "800,00",
-        "precio2": "500,00",
-        "img1": "cuaderno-a4-anillado.jpg",
-        "img2": "cuaderno-a4-sin-anillos.jpg"
-    }   
+        "id": 14,
+        "producto": "Cuaderno A4 simple",
+        "tipo": "Simple",
+        "precio": "500,00",
+        "img": "cuaderno-a4-sin-anillos.jpg"
+    },
+    {
+        "id": 15,
+        "producto": "Cuaderno A4 anillado",
+        "tipo": "Anillado",
+        "precio": "800,00",
+        "img": "cuaderno-a4-anillado.jpg"
+    },
+    {
+        "id": 16,
+        "producto": "Lapices de colores Faber Castell x12",
+        "tipo": "x12 unidades",
+        "precio": "1.800,00",
+        "img": "faber-x12.jpg"
+    },
+    {
+        "id": 17,
+        "producto": "Lapices de colores Faber Castell x15",
+        "tipo": "x15 unidades",
+        "precio": "2.300,00",
+        "img": "faber-x15.jpg"
+    }
 ]
