@@ -25,7 +25,7 @@ const controller = {
         res.render('./products/productDetail');
     },
     productList: (req,res) => {
-        res.render('./products/productList');
+        res.render('./products/productList', {productsList : listProduct});
     },
 };
 

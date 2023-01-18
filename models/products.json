@@ -16,8 +16,8 @@
         "tipo1": "Modelo 1",
         "tipo2": "Modelo 2",
         "precio": "20.000,00",
-        "img1": "mochila-unicornio-1",
-        "img2": "mochila-unicornio-2"
+        "img1": "mochila-unicornio-1.jpg",
+        "img2": "mochila-unicornio-2.jpg"
     },
     {
         "id": 3,
@@ -25,8 +25,8 @@
         "tipo1": "Modelo 1",
         "tipo2": "Modelo 2",
         "precio": "20.000,00",
-        "img1": "mochila-videojuego-1",
-        "img2": "mochila-videojuego-2"
+        "img1": "mochila-videojuego-1.jpg",
+        "img2": "mochila-videojuego-2.jpg"
     },
     {
         "id": 4,
@@ -34,8 +34,8 @@
         "tipo1": "Modelo 1",
         "tipo2": "Modelo 2",
         "precio": "8.000,00",
-        "img1": "cartuchera-unicortnio-1",
-        "img2": "cartuchera-unicornio-2"
+        "img1": "cartuchera-unicortnio-1.jpg",
+        "img2": "cartuchera-unicornio-2.jpg"
     },
     {
         "id": 5,
@@ -44,8 +44,8 @@
         "tipo2": "x12 unidades",
         "precio1": "650,00",
         "precio2": "1.400,00",
-        "img1": "color-filgo-x6",
-        "img2": "color-filgo-x12"
+        "img1": "color-filgo-x6.jpg",
+        "img2": "color-filgo-x12.jpg"
     },
     {
         "id": 6,
@@ -54,68 +54,68 @@
         "tipo2": "x12 unidades",
         "precio1": "2.300,00",
         "precio2": "1.800,00",
-        "img1": "faber-x15",
-        "img2": "faber-x12"
+        "img1": "faber-x15.jpg",
+        "img2": "faber-x12.jpg"
     },
     {
-        "id": 6,
+        "id": 7,
         "producto": "Lápiz negro Filgo",
         "tipo1": "x4 unidades",
         "tipo2": "x12 unidades",
         "precio1": "250,00",
         "precio2": "550,00",
-        "img1": "lapiz-negro-x4",
-        "img2": "lapiz-negro-x12"
+        "img1": "lapiz-negro-x4.jpg",
+        "img2": "lapiz-negro-x12.jpg"
     },
     {
-        "id": 7,
+        "id": 8,
         "producto": "Goma Pizzini",
         "tipo1": "Azul",
         "tipo2": "Rosa",
         "tipo3": "Violeta",
         "precio": "650,00",
-        "img": "goma"
-    },
-    {
-        "id": 8,
-        "producto": "Sacapuntas Pizzini",
-        "tipo": "x2 unidades",
-        "precio": "300,00",
-        "img": "sacapuntas"
+        "img1": "goma.jpg"
     },
     {
         "id": 9,
+        "producto": "Sacapuntas Pizzini",
+        "tipo": "x2 unidades",
+        "precio": "300,00",
+        "img1": "sacapuntas.jpg"
+    },
+    {
+        "id": 10,
         "producto": "Lapicera con muñeco",
         "tipo1": "Dinosaurio",
         "tipo2": "Unicornio",
         "precio": "500,00",
-        "img1": "lapicera-dino",
-        "img2": "lapicera-unicornio"
+        "img1": "lapicera-dino.jpg",
+        "img2": "lapicera-unicornio.jpg"
     },
     {
-        "id": 10,
+        "id": 11,
         "producto": "Lapicera",
         "tipo1": "Tinta azul",
         "tipo2": "Tinta negra",
         "precio": "200,00",
-        "img1": "lapicera-azul",
-        "img2": "lapicera-negra"
-    },
-    {
-        "id": 11,
-        "producto": "Lapicera borrable",
-        "tipo": "Modelo aleatorio",
-        "precio": "1000,00",
-        "img": "lapicera-borrable"
+        "img1": "lapicera-azul.jpg",
+        "img2": "lapicera-negra.jpg"
     },
     {
         "id": 12,
+        "producto": "Lapicera borrable",
+        "tipo": "Modelo aleatorio",
+        "precio": "1000,00",
+        "img1": "lapicera-borrable.jpg"
+    },
+    {
+        "id": 13,
         "producto": "Cuaderno A4",
         "tipo1": "Anillado",
         "tipo2": "Sin anillado",
         "precio1": "800,00",
         "precio2": "500,00",
-        "img1": "cuaderno-a4-anillado",
-        "img2": "cuaderno-a4-sin-anillos"
+        "img1": "cuaderno-a4-anillado.jpg",
+        "img2": "cuaderno-a4-sin-anillos.jpg"
     }   
 ]
