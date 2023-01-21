@@ -4,8 +4,6 @@ const path = require('path');
 const productFile = fs.readFileSync(path.join(__dirname, '../models/products.json'), 'utf-8');
 const listProduct = JSON.parse(productFile);
 
-
-
 const controller = {
     index: (req, res) => {
         res.render('index');
@@ -21,20 +19,6 @@ const controller = {
     },
     productCart: (req, res) => {
         res.render('./products/productCart');
-    },
-    productDetail: (req, res) => {
-        const {id} = req.params;
-        const product = listProduct.find((product) => product.id == id)
-        res.render('./products/productDetail', {product} );
-    },
-    productAdd: (req, res) => {
-        res.render('./products/productAdd');
-    },
-    productEdit: (req, res) => {
-        res.render('./products/productEdit');
-    },
-    productList: (req,res) => {
-        res.render('./products/productList', {productsList : listProduct});
     },
 };
 
