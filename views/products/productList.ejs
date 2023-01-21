@@ -17,11 +17,14 @@
         <h2>Productos escolares</h2>
         <section class="schoolSupplies">
             
-            <% for(let i = 0; i < productsList.length; i++) {%> 
+            <% for(let i = 0; i < productsList.length; i++) {%>
+                
             <article>
                 <h4><%= productsList[i].producto %></h4>
-                <img src="./images/products/<%= productsList[i].img1 %>">
+                <a href="/productDetail/<%= productsList[i].id %> "><img src="./images/products/<%= productsList[i].img1 %>"></a>
+                
             </article>
+
             <% } %> 
         </section>
 

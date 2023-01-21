@@ -38,11 +38,11 @@ main {
     padding-bottom: 15px;
 }
 
-.detail .colorSelection label {
+.detail .typeSelection label {
     padding: 6px
 } 
 
-.colorSelection{
+.typeSelection{
     font-size: 18px;
 }
 

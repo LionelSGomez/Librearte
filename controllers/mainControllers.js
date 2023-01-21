@@ -5,6 +5,7 @@ const productFile = fs.readFileSync(path.join(__dirname, '../models/products.jso
 const listProduct = JSON.parse(productFile);
 
 
+
 const controller = {
     index: (req, res) => {
         res.render('index');
@@ -22,7 +23,9 @@ const controller = {
         res.render('./products/productCart');
     },
     productDetail: (req, res) => {
-        res.render('./products/productDetail');
+        const {id} = req.params;
+        const product = listProduct.find((product) => product.id == id)
+        res.render('./products/productDetail', {product} );
     },
     productAdd: (req, res) => {
         res.render('./products/productAdd');

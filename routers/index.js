@@ -9,7 +9,7 @@ router.get('/login', mainController.login);
 router.get('/register', mainController.register);
 router.get('/contact', mainController.contact);
 router.get('/productCart', mainController.productCart);
-router.get('/productDetail', mainController.productDetail);
+router.get('/productDetail/:id', mainController.productDetail);
 router.get('/productList', mainController.productList);
 router.get('/productAdd', mainController.productAdd);
 router.get('/productEdit', mainController.productEdit);

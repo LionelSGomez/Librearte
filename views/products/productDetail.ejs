@@ -13,37 +13,43 @@
 
     <main>
         <section class="productImages">
-            <img src="/images/plannerBlue.jpg" alt="firstImage" class="first">
+            <img src="/images/products/<%= product.img1 %>" alt="firstImage" class="first">
             <div>
-                <img src="/images/plannerGreen.jpg" alt="secondImage">
-                <img src="/images/plannerRed.jpg" alt="thirdImage">
-                <img src="/images/plannerYellow.jpg" alt="fourthImage">
+                <% if (product.img2 != null) {%> 
+                <img src="/images/products/<%= product.img2 %>">
+                <% } %> 
+                <% if (product.img3 != null) {%> 
+                    <img src="/images/products/<%= product.img3 %>">
+                    <% } %> 
             </div>
         </section>
 
         <section class="detail">
-            <h4>Agenda 2023 - 370hojas</h4>
-            <h3>$5900</h3>
+            <h4><%= product.producto %> </h4>
+            <h3>$<%= product.precio %> </h3>
+
             <form action="/productDetail" method="GET">
-                <legend>Por favor seleccione un color:</legend>
-                <div class="colorSelection">
-                    <label for="red">
-                        <input type="radio" name="color" id="red" required>
-                        Rojo
+                <% if (product.tipo2 != null) { %> 
+                <legend>Por favor seleccione una opción:</legend>
+                <div class="typeSelection">
+
+                    <label for="option1">
+                        <input type="radio" name="options" id="option1" required>
+                        <%= product.tipo1 %>
                     </label>
-                    <label for="green">
-                        <input type="radio" name="color" id="green">
-                        Verde
+                    <label for="option2">
+                        <input type="radio" name="options" id="option2">
+                        <%= product.tipo2 %>
                     </label>
-                    <label for="yellow">
-                        <input type="radio" name="color" id="yellow">
-                        Amarillo
-                    </label>
-                    <label for="blue">
-                        <input type="radio" name="color" id="blue">
-                        Azul
-                    </label>
+                    <% } %> 
+                    <% if (product.tipo3 != null){%>
+                        <label for="option3">
+                            <input type="radio" name="options" id="option3">
+                            <%= product.tipo3 %>
+                        </label>
+                    <% } %> 
                 </div>
+
 
                 <div class="quantitySelection">
                     <label for="products">
@@ -55,6 +61,7 @@
 
                 
             </form>
+
 
             <div class="description">
                 <h4>Descripción del producto.</h4>
