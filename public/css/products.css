@@ -1,0 +1,62 @@
+.schoolSupplies {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.schoolSupplies article {
+    width: 50%;
+    text-align: center;
+    padding: 15px;
+}
+
+.schoolSupplies article img{
+    width: 115px;
+    height: 115px;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 25px 10px;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 10px;
+}
+
+
+@media (min-width:768px){
+    .schoolSupplies article {
+        width: 27%;
+    }
+
+    h2 {
+        padding-top: 60px;
+    }
+
+    .schoolSupplies article img{
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (min-width: 1024px){
+    main {
+        display: block;
+    }
+
+    .schoolSupplies article {
+        width: 24%;
+    }
+
+    .schoolSupplies article img{
+        width: 180px;
+        height: 180px;
+    }
+
+    
+}

@@ -3,6 +3,7 @@
         <%- include('../partials/head') %> 
     
     <link rel="stylesheet" href="/css/productDetail.css">
+    <link rel="stylesheet" href="/css/products.css">
     <title>Lista de productos</title>
 
 </head>
@@ -12,9 +13,10 @@
     <%- include('../partials/header') %> 
 
     <main>
-       
+
+        <h2>Productos escolares</h2>
         <section class="schoolSupplies">
-            <h2>Productos escolares</h2>
+            
             <% for(let i = 0; i < productsList.length; i++) {%> 
             <article>
                 <h4><%= productsList[i].producto %></h4>
