@@ -8,7 +8,8 @@
         "precio": "50,00",
         "img1": "papel-glace-fluo.png",
         "img2": "papel-glace-metalizado.png",
-        "img3": "papel-glace-lustre.png"
+        "img3": "papel-glace-lustre.png",
+        "descripcion": null
     },
     {
         "id": 2,
@@ -19,7 +20,8 @@
         "precio": "20.000,00",
         "img1": "mochila-unicornio-1.jpg",
         "img2": "mochila-unicornio-2.jpg",
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 3,
@@ -30,7 +32,8 @@
         "precio": "20.000,00",
         "img1": "mochila-videojuego-1.jpg",
         "img2": "mochila-videojuego-2.jpg",
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 4,
@@ -41,7 +44,8 @@
         "precio": "8.000,00",
         "img1": "cartuchera-unicornio-1.jpg",
         "img2": "cartuchera-unicornio-2.jpg",
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 5,
@@ -52,7 +56,8 @@
         "precio": "650,00",
         "img1": "color-filgo-x6.jpg",
         "img2": null,
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 6,
@@ -63,7 +68,8 @@
         "precio": "1000,00",
         "img1": "color-filgo-x12.jpg",
         "img2": null,
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 7,
@@ -74,7 +80,8 @@
         "precio": "250,00",
         "img1": "lapiz-negro-x4.jpg",
         "img2": null,
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 8,
@@ -85,7 +92,8 @@
         "precio": "550,00",
         "img1": "lapiz-negro-x12.jpg",
         "img2": null,
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 9,
@@ -96,7 +104,8 @@
         "precio": "650,00",
         "img1": "goma.jpg",
         "img2": null,
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 10,
@@ -107,7 +116,8 @@
         "precio": "300,00",
         "img1": "sacapuntas.jpg",
         "img2": null,
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 11,
@@ -118,7 +128,8 @@
         "precio": "500,00",
         "img1": "lapicera-dino.jpg",
         "img2": "lapicera-unicornio.jpg",
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 12,
@@ -129,7 +140,8 @@
         "precio": "200,00",
         "img1": "lapicera-azul.jpg",
         "img2": "lapicera-negra.jpg",
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 13,
@@ -140,7 +152,8 @@
         "precio": "1000,00",
         "img1": "lapicera-borrable.jpg",
         "img2": null,
-        "img3": null
+        "img3": null,
+        "descripcion": "esta es una lapicera que esta muy buena"
     },
     {
         "id": 14,
@@ -151,7 +164,8 @@
         "precio": "500,00",
         "img1": "cuaderno-a4-sin-anillos.jpg",
         "img2": null,
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 15,
@@ -162,7 +176,8 @@
         "precio": "800,00",
         "img1": "cuaderno-a4-anillado.jpg",
         "img2": null,
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 16,
@@ -173,7 +188,8 @@
         "precio": "1.800,00",
         "img1": "faber-x12.jpg",
         "img2": null,
-        "img3": null
+        "img3": null,
+        "descripcion": null
     },
     {
         "id": 17,
@@ -184,6 +200,7 @@
         "precio": "2.300,00",
         "img1": "faber-x15.jpg",
         "img2": null,
-        "img3": null
+        "img3": null,
+        "descripcion": null
     }
 ]
