@@ -12,8 +12,6 @@ Tengo 27 años, soy de San Miguel, soy estudiante de la carrera de Relaciones de
 Con 25 años, previamente estudié HTML y CSS. Me gustan las páginas estéticas.
 ## Hola, Mi nombre es Gonzalo Di Dio Leal! 👋
 Tengo 23 años, estudié y trabajo con .NET. Me gusta el backend.
-## Hola, Mi nombre es Rocío Palomino! 👋
-Tengo 24 años, actualmente estudiando el profesorado de Ed. Fisica y aprendiendo conocimientos sobre la programación. Me interesa el frontend.
 ## Hola, Mi nombre es Lautaro Garcia! 👋
 Tengo 20 años, actualmente soy estudiante de la carrera Ingenieria en Sistemas.
 ## Autores
@@ -21,7 +19,6 @@ Tengo 20 años, actualmente soy estudiante de la carrera Ingenieria en Sistemas.
 - [@GonzaloDiDioLeal](https://github.com/gonzadidio)
 - [@YamilaGauto](https://github.com/yamila-gauto)
 - [@LionelGomez](https://github.com/LionelSGomez)
-- [@RocioPalomino](https://github.com/rochipalomino)
 - [@LautaroGarcia](https://github.com/lautarodpr)
 
 # Links del equipo

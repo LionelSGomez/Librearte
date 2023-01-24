@@ -53,6 +53,15 @@ body {
   z-index: 1;
 }
 
+.description {
+  height: 150px;
+}
+
+textarea.input {
+  padding: 15px;
+  resize: none;
+}
+
 ::placeholder {
   color: transparent;
 }
