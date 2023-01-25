@@ -1,0 +1,180 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    box-sizing: border-box;
+    font-family: "lato", sans-serif;
+}
+
+.father-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+    height: 820px;
+}
+
+/* Contact-section-header */
+
+.header-contact-page {
+    width: 100%;
+    height: 0%;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+/* Contact-section-info */
+
+.contact-page {
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+    width: 90%;
+    height: 90%;
+}
+
+p {
+    font-size: 14px;
+}
+
+.contact-info { 
+    font-size: 15px;
+}
+
+.contact-form {
+    margin-top: 25px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul.contact-list {
+    margin-top: 20px;
+}
+
+.contact-item {
+    margin-bottom: 16px;
+}
+
+a {
+    color: black;
+}
+
+.contact-item a:link a:visited a:active {
+    text-decoration: none !important;
+}
+
+.contact-icon {
+    font-size: 18px;
+    margin-right: 8px;
+    margin-left: 2px;
+}
+
+.form-boxs {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.controls {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
+.controls:hover {
+    border: 1px solid #de7124;
+}
+
+.controls:focus, .controls:focus-visible {
+    outline: none;
+    border: 2px solid #de7124;
+}
+
+.form-label {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.send-button {
+    margin-top: 25px;
+    padding: 13px;
+    background-color: #de7124;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: bold;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    border-radius: 40px;
+}
+
+.send-button:hover {
+    background-color: #e28e54;
+    transform: translateY(-2px);
+}
+
+
+@media (min-width: 768px) {
+    .father-container{
+        margin-top: 60px;
+        height: 650px;
+    }
+    .contact-page {
+        display: flex;
+        
+    }
+    .contact-info {
+        width: 33%;
+    }
+    .contact-form{
+        width: 66%;
+        padding-left: 15px;
+    }
+    .contact-icon {
+        font-size: 21px;
+    }
+    .container {
+        padding-left: 20px;
+        text-align: left;
+    }
+    h1 {
+        font-size: 35px;
+        margin-left: 23px;
+    }
+    .contact-form, .form-box {
+        margin-top: 0px;
+    }
+    p {
+        margin-top: 18px;
+        margin-bottom: 30px;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width:1025px) {
+    .father-container{
+        width: 85%;
+    }
+    h1 {
+        padding-left: 26px;
+    }
+    .contact-item {
+        font-size: 18px;
+    }
+}

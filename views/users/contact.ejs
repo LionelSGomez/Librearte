@@ -1,13 +1,67 @@
-
-        <!-- Head -->
-        <%- include('../partials/head') %> 
-        <title>Contacto</title>
-    
+<!-- Head -->
+<%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/contact.css">
+    <title>Contacto</title>
     </head>
-<body>
-    <h1>contact page</h1>
-    <!-- Header -->
-    <%- include('../partials/header') %> 
 
-    <!-- Footer -->
-    <%- include('../partials/footer') %> 
+    <body>
+        <!-- Header -->
+        <%- include('../partials/header') %>
+
+            <main>
+                <div class="father-container">
+                    <section class="header-contact-page">
+                        <div class="container">
+                            <div class="content">
+                                <h1>Contacto</h1>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="contact-page">
+                        <div class="contact-info">
+                            <p>
+                                Si tenes alguna inquietud, no dudes en contactarnos. ¡Te estaremos respondiendo a la brevedad!
+                            </p>
+                            <ul class="contact-list">
+                                <li class="contact-item">
+                                    <a href="#"><i class="fa-brands fa-whatsapp contact-icon"></i>"Whatsapp"</a>
+                                </li>
+                                <li class="contact-item">
+                                    <a href="#"><i class="fa-light fa-phone contact-icon"></i>"Teléfono"</a>
+                                </li>
+                                <li class="contact-item">
+                                    <a href="#"><i class="fa-light fa-envelope contact-icon"></i>"Email"</a>
+                                </li>
+                                <li class="contact-item">
+                                    <a><i class="fa-light fa-location-dot contact-icon"></i>"Ubicación"</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contact-form">
+                            <form action="/" method="" id="form" autocomplete="off">
+                                <div class="form-boxs">
+                                    <label class="form-label" for="name">Nombre</label>
+                                    <input class="controls" type="text" name="name" id="name" required>
+                                </div>
+                                <div class="form-boxs">
+                                    <label class="form-label" for="e-mail">Email</label>
+                                    <input class="controls" type="email" name="e-mail" id="email" required>
+                                </div>
+                                <div class="form-boxs">
+                                    <label class="form-label"  for="phone">Teléfono</label>
+                                    <input class="controls" type="text" name="phone" id="phone" required>
+                                </div>
+                                <div class="form-boxs">
+                                    <label class="form-label" for="message">Mensaje</label>
+                                    <textarea class="controls" name="menssage" id="message" cols="30" rows="6" required></textarea>
+                                </div>
+                                <button class="send-button" type="submit" value="Enviar" name="contact">ENVIAR</button>
+
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <%- include('../partials/footer') %>
