@@ -2,9 +2,15 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  /* background-color: white; */
   font-family: "lato", sans-serif;
-  /* background-image: url(/images/fondo01.jpg);  */
+  /* background-image: url(/images/fondo01.jpg); */
+  /* background-image: url(/images/Fondo-Productos.png); */
+  background-image: url(/images/Fondo-Productos2.png);
+}
+
+#background {
+  position: absolute;
+  z-index: -1;
 }
 
 .signupFrm {
@@ -16,7 +22,7 @@ body {
 
 .form {
   background-color: white;
-  width: 95%;
+  width: 60%;
   border-radius: 8px;
   padding: 20px 40px;
   box-shadow: 0 10px 25px rgba(92, 99, 105, .8);
