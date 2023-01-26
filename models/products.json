@@ -219,5 +219,38 @@
         "img3": null,
         "descripcion": null,
         "categoria": "schoolSupplies"
+    },
+    {
+        "id": 18,
+        "producto": "Mochila",
+        "variante1": "Jirafa",
+        "variante2": "Unicornio",
+        "variante3": "Dinosaurio",
+        "precio": 45000,
+        "descripcion": "Mochila super cara ",
+        "categoria": "schoolSupplies",
+        "img1": null
+    },
+    {
+        "id": 19,
+        "producto": "Mochila",
+        "variante1": "Jirafa",
+        "variante2": "Unicornio",
+        "variante3": "Dinosaurio",
+        "precio": 30000,
+        "descripcion": "Nada",
+        "categoria": "schoolSupplies",
+        "img1": null
+    },
+    {
+        "id": 20,
+        "producto": "Marcadores metalizados",
+        "variante1": "Gris",
+        "variante2": "Rosa",
+        "variante3": null,
+        "precio": 1000,
+        "descripcion": "Algo",
+        "categoria": "schoolSupplies",
+        "img1": null
     }
 ]

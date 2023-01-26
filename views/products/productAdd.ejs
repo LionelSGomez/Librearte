@@ -46,11 +46,17 @@
                 <textarea class="input" placeholder="a" name="descripcion" required></textarea>
                 <label for="descripcion" class="label">Descripción</label>
             </div>
-            <div class="inputContainer">
-                <input type="text" class="input" placeholder="a" name="categoria" required>
-                <label for="categoria" class="label">Categoria</label>
+            <div class="inputContainer categorias">
+                <label for="categoria" class="label" id="categorias">Categorias</label>
+                <select name="category" id="category" class="form-input" required>
+                    <option value="">Seleccione</option>
+                    <option value="schoolSupplies">Artículos escolares</option>
+                    <option value="books">Libros</option>
+                </select>
+                
+                
             </div>
-            <div>
+            <div class="img">
                 <input type="file" name="img1">
             </div>
               <div class="Contenedor">
