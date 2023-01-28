@@ -29,23 +29,23 @@
             <h3>$<%= product.precio %> </h3>
 
             <form action="/productDetail" method="GET">
-                <% if (product.tipo2 != null) { %> 
+                <% if (product.variante2 != null) { %> 
                 <legend>Por favor seleccione una opción:</legend>
                 <div class="typeSelection">
 
                     <label for="option1">
                         <input type="radio" name="options" id="option1" required>
-                        <%= product.tipo1 %>
+                        <%= product.variante1 %>
                     </label>
                     <label for="option2">
                         <input type="radio" name="options" id="option2">
-                        <%= product.tipo2 %>
+                        <%= product.variante2 %>
                     </label>
                     <% } %> 
-                    <% if (product.tipo3 != null){%>
+                    <% if (product.variante3 != null){%>
                         <label for="option3">
                             <input type="radio" name="options" id="option3">
-                            <%= product.tipo3 %>
+                            <%= product.variante3 %>
                         </label>
                     <% } %> 
                 </div>

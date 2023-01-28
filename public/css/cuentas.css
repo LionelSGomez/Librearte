@@ -58,6 +58,19 @@ body {
   z-index: 1;
 }
 
+.description {
+  height: 90px;
+}
+
+.img {
+  margin-top: 45px;
+}
+
+textarea.input {
+  padding: 15px;
+  resize: none;
+}
+
 ::placeholder {
   color: transparent;
 }
@@ -121,4 +134,12 @@ body {
   z-index: 10;
   font-size: 14px;
   font-weight: 600;
+}
+
+#category {
+  margin-top: 55px;
+}
+
+.inputContainer .categorias{
+  padding-bottom: 45px;
 }
