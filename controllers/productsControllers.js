@@ -19,6 +19,7 @@ const controller = {
         if(newProduct.id == listProduct.length + 1){ //condicion de que el formulario no se haya enviado vacio por recargar
             newProduct.id = Number(newProduct.id); //cambio el id de string a numero
             newProduct.precio = Number(newProduct.precio); //cambio el precio de string a numero
+            newProduct.img1 = "default.png" //deja como imagen default el logo
             for(const property in newProduct){ //itera las propiedades del objeto, si están vacias, serán null
                 if(newProduct[property] == ''){
                     newProduct[property] = null;
