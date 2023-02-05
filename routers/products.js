@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
+
+
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
         cb(null, './public/images/products');
@@ -26,7 +28,7 @@ router.get('/:id', productsController.productDetail);
 
 // /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', productsController.productEdit);
-router.put('/:id', productsController.productUpdate); 
+router.put('/:id', productsController.productUpdate);
 
 // /*** DELETE ONE PRODUCT***/ 
 // router.???('/:id', productsController.destroy); 

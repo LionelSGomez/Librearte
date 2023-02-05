@@ -54,22 +54,8 @@ const controller = {
         res.render('./products/productEdit', { productToEdit });
     },
     productUpdate: (req, res) => {
-		let indexToEdit;  
-		let productToEdit = listProduct.find((product, index) => {
-			if (product.id == req.params.id) {
-				indexToEdit = index;
-				return true;
-			}
-			return false;
-		});
-		productToEdit = {
-			...productToEdit,
-			...req.body
-		};
-		listProduct[indexToEdit] = productToEdit;
-		fs.writeFileSync(listProduct, JSON.stringify(listProduct, null, ' '));
-		res.redirect('/products');
-	},
+
+	 },
 
     
     
