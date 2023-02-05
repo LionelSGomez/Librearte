@@ -4,6 +4,11 @@ const path = require('path');
 const productFile = fs.readFileSync(path.join(__dirname, '../models/products.json'), 'utf-8');
 const listProduct = JSON.parse(productFile);
 
+function writeFileJson (listProduct) {
+    const newProductJson = JSON.stringify(listProduct); //convierto a json
+    fs.writeFileSync('./models/products.json', newProductJson); //creo o sobreescribo newProducts.json, con el producto creado    
+}
+
 const controller = {
     index: (req,res) => {
         res.render('./products/products', {productsList : listProduct});
@@ -36,18 +41,37 @@ const controller = {
             }
 
             listProduct.push(newProduct); //agrego el producto creado al array
-            const newProductJson = JSON.stringify(listProduct); //convierto a json
-            fs.writeFileSync('./models/products.json', newProductJson); //creo o sobreescribo newProducts.json, con el producto creado
+            // const newProductJson = JSON.stringify(listProduct); //convierto a json
+            // fs.writeFileSync('./models/products.json', newProductJson); //creo o sobreescribo newProducts.json, con el producto creado
+            writeFileJson(listProduct);
         };
         res.redirect('/products');
         
     },
 
     productEdit: (req, res) => {
-        const {id} = req.params;
-        const product = listProduct.find((product) => product.id == id)
-        res.render('./products/productEdit', {product});
+        const productToEdit = listProduct.find((product) => product.id == req.params.id);
+        res.render('./products/productEdit', { productToEdit });
     },
+    productUpdate: (req, res) => {
+		let indexToEdit;  
+		let productToEdit = listProduct.find((product, index) => {
+			if (product.id == req.params.id) {
+				indexToEdit = index;
+				return true;
+			}
+			return false;
+		});
+		productToEdit = {
+			...productToEdit,
+			...req.body
+		};
+		listProduct[indexToEdit] = productToEdit;
+		fs.writeFileSync(listProduct, JSON.stringify(listProduct, null, ' '));
+		res.redirect('/products');
+	},
+
+    
     
 };
 

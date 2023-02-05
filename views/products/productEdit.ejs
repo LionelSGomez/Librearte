@@ -1,48 +1,83 @@
 <!-- Head -->
-<%- include('../partials/head') %> 
+<%- include('../partials/head') %>
 
-<link rel="stylesheet" href="/css/cuentas.css">
-<title>Editar producto</title>
-</head>
+    <link rel="stylesheet" href="/css/productAddEdit.css">
+    <title>Editar producto</title>
+    </head>
 
-<body>
+    <body>
 
-  <!-- Header -->
-  <%- include('../partials/header') %> 
+        <!-- Header -->
+        <%- include('../partials/header') %>
 
-  <main>
-      <div class="signupFrm">
-          <form action="" class="form">
-              <h1 class="title">Editar Producto</h1>
+            <main>
+                <div class="signupFrm">
+                    <form action="/products/<%= productToEdit.id %>?_method=PUT" method="POST" class="form"> <!-- ESTABA ANTES DEL CLASS // enctype="multipart/form-data" -->
+                        <h1 class="title">Editar Producto</h1>
 
-              <div class="inputContainer">
-                <input type="text" class="input" placeholder="a" value="<%=product.id%>" disabled required>
-                <label for="" class="label">Id</label>
-            </div>
+                        <div class="inputContainer">
+                            <input type="text" class="input" placeholder="a" value="<%= productToEdit.id %>" disabled
+                                required>
+                            <label for="" class="label">Id</label>
+                        </div>
 
-            <div class="inputContainer">
-              <input type="text" class="input" placeholder="a" required>
-              <label for="" class="label">Producto</label>
-          </div>
+                        <div class="inputContainer">
+                            <input type="text" class="input" placeholder="a" value="<%= productToEdit.producto %>"
+                                required>
+                            <label for="" class="label">Nombre del Producto</label>
+                        </div>
 
-            <div class="inputContainer">
-                <input type="text" class="input" placeholder="a" required>
-                <label for="" class="label">Tipo</label>
-            </div>
-            <div class="inputContainer">
-              <input type="text" class="input" placeholder="a" required>
-              <label for="" class="label">Precio</label>
-          </div>
-          <div>
-              <input type="file" name="avatar">
-          </div>
+                        <div class="inputContainer">
+                            <input type="text" class="input" placeholder="a" value="<%=  productToEdit.variante1  %>"
+                                name="variante1" required>
+                            <label for="variante1" class="label">Variante 1</label>
+                        </div>
+                        <div class="inputContainer">
+                            <input type="text" class="input" placeholder="a" value="<%= productToEdit.variante2 %>"
+                                name="variante2">
+                            <label for="variante2" class="label">Variante 2</label>
+                        </div>
+                        <div class="inputContainer">
+                            <input type="text" class="input" placeholder="a" value="<%= productToEdit.variante3 %>"
+                                name="variante3">
+                            <label for="variante3" class="label">Variante 3</label>
+                        </div>
+                        <div class="inputContainer">
+                            <input type="text" class="input" placeholder="a" value="<%= productToEdit.precio %>"
+                                required>
+                            <label for="" class="label">Precio</label>
+                        </div>
 
-              <div class="Contenedor">
-                  <input href="#" type="submit" class="cuentasBtn" id="crear" value="Editar">
-              </div>
-          </form>
-      </div>
-  </main>
+                        <div class="inputContainer description">
+                            <textarea class="input" placeholder="a" value="<%= productToEdit.descripcion %>"
+                                name="descripcion" required></textarea>
+                            <label for="descripcion" class="label">Descripción</label>
+                        </div>
+                        <div class="inputContainer categorias">
+                            <label for="categoria" class="label" id="categorias">Seleccione Categorias</label>
+                            <select name="category" id="category" class="form-input">
+                                <option value="schoolSupplies" <%=productToEdit.category==='schoolSupplies' ? 'selected' : null %>>Artículos escolares</option>
+                                <option value="books" <%=productToEdit.category==='books' ? 'selected' : null %>>Libros</option>
+                            </select>
+                        </div>
+                        <!-- checkear si dejamos form de images para editar
+                        <section class="imgForm">
+                            <div class="img">
+                                <input type="file" name="img">
+                            </div>
+                            <div class="img">
+                                <input type="file" name="img">
+                            </div>
+                            <div class="img">
+                                <input type="file" name="img">
+                            </div>
+                        </section> -->
+                        <div class="Contenedor">
+                            <input type="submit" class="cuentasBtn" id="crear" value="Agregar">
+                        </div>
+                    </form>
+                </div>
+            </main>
 
-  <!-- Footer -->
-  <%- include('../partials/footer') %> 
+            <!-- Footer -->
+            <%- include('../partials/footer') %>
