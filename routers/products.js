@@ -28,10 +28,10 @@ router.get('/:id', productsController.productDetail);
 
 // /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', productsController.productEdit);
-router.put('/:id', productsController.productUpdate);
+router.put('/edit-process/:id', productsController.productUpdate);
 
 // /*** DELETE ONE PRODUCT***/ 
-// router.???('/:id', productsController.destroy); 
+router.delete('/delete/:id', productsController.destroy); 
 
 
 module.exports = router;
