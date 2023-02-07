@@ -1,7 +1,7 @@
 // ************ Require's ************
 const express = require('express');
 const path = require('path');
-const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 // ************ express() ************
 const app = express();

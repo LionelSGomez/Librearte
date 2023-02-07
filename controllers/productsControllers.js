@@ -54,25 +54,44 @@ const controller = {
         res.render('./products/productEdit', { productToEdit });
     },
     productUpdate: (req, res) => {
-        let indexToEdit;
-        let produtToEdit = listProduct.find((product, index) => {
-            if (product.id == req.params.id) {
-                indexToEdit == index;
-                return true;
-            }
-            return false;
+
+        const productId = req.params.id;
+        // Obtengo producto
+        let productToEdit = listProduct.find(function(product){
+        return product.id == productId;
         });
-        produtToEdit = {
-            ...produtToEdit,
+
+        productToEdit = {
+            ...productToEdit,
             ...req.body
-        };
-        listProduct[indexToEdit] = produtToEdit;
-        
-        //Actualizo JSON
-        const newProductJson = JSON.stringify(listProduct, null, ' '); //convierto a json
-        fs.writeFileSync('./models/products.json', newProductJson); //creo o sobreescribo newProducts.json, con el producto creado
-        //redirect
+        }
+        console.log(req.body)
+        writeFileJson(listProduct);
         res.redirect('/products');
+
+
+
+
+
+        // let indexToEdit;
+        // let productToEdit = listProduct.find((product, index) => {
+        //     if (product.id == req.params.id) {
+        //         indexToEdit = index;
+        //         return true;
+        //     }
+        //     return false;
+        // });
+        // productToEdit = {
+        //     ...productToEdit,
+        //     ...req.body
+        // };
+        // listProduct[indexToEdit] = productToEdit;
+        
+        // //Actualizo JSON
+        // const newProductJson = JSON.stringify(listProduct, null, ' '); //convierto a json
+        // fs.writeFileSync('./models/products.json', newProductJson); //creo o sobreescribo newProducts.json, con el producto creado
+        // //redirect
+        // res.redirect('/products');
 
 
         // const productId = req.params.id;

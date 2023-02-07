@@ -1,92 +1,113 @@
 [{
-    "Nombre": "Estrella",
-    "Apellido": "Helix",
-    "Direccion": "5 Alpine Place",
-    "Email": "ehelix0@bing.com",
-    "Contraseña": "mmHlf7o"
-  }, {
-    "Nombre": "Dorisa",
-    "Apellido": "Cleveland",
-    "Direccion": "6 Prairie Rose Terrace",
-    "Email": "dcleveland1@angelfire.com",
-    "Contraseña": "JGko4fH0Fg"
-  }, {
-    "Nombre": "Augustine",
-    "Apellido": "Dagg",
-    "Direccion": "21 Melby Lane",
-    "Email": "adagg2@list-manage.com",
-    "Contraseña": "RFVIfSUGDbqy"
-  }, {
-    "Nombre": "Geoffrey",
-    "Apellido": "Lealle",
-    "Direccion": "53870 Vahlen Alley",
-    "Email": "glealle3@shinystat.com",
-    "Contraseña": "pjJtWD2fE"
-  }, {
-    "Nombre": "Ilaire",
-    "Apellido": "Caulier",
-    "Direccion": "8319 Sachtjen Hill",
-    "Email": "icaulier4@ycombinator.com",
-    "Contraseña": "Tu0iimqXIuTh"
-  }, {
-    "Nombre": "Linea",
-    "Apellido": "Worthing",
-    "Direccion": "7 Bluejay Parkway",
-    "Email": "lworthing5@mtv.com",
-    "Contraseña": "8dbmjT"
-  }, {
-    "Nombre": "Phillip",
-    "Apellido": "Howcroft",
-    "Direccion": "789 Ronald Regan Court",
-    "Email": "phowcroft6@bloglines.com",
-    "Contraseña": "oByffojSw3f"
-  }, {
-    "Nombre": "Clemens",
-    "Apellido": "Roskruge",
-    "Direccion": "3835 Sugar Street",
-    "Email": "croskruge7@ed.gov",
-    "Contraseña": "zx6y6f"
-  }, {
-    "Nombre": "Leanor",
-    "Apellido": "Pioch",
-    "Direccion": "644 Moose Avenue",
-    "Email": "lpioch8@sciencedaily.com",
-    "Contraseña": "pTt1FIHs6fMH"
-  }, {
-    "Nombre": "Korrie",
-    "Apellido": "Arboin",
-    "Direccion": "0722 Rieder Junction",
-    "Email": "karboin9@china.com.cn",
-    "Contraseña": "4EU74bdCnB"
-  }, {
-    "Nombre": "Ignacio",
-    "Apellido": "Risson",
-    "Direccion": "579 Laurel Place",
-    "Email": "irissona@purevolume.com",
-    "Contraseña": "7jeGOjn556"
-  }, {
-    "Nombre": "Merrily",
-    "Apellido": "Yurenin",
-    "Direccion": "64497 Dwight Street",
-    "Email": "myureninb@hc360.com",
-    "Contraseña": "dOAb3Ol"
-  }, {
-    "Nombre": "Aeriel",
-    "Apellido": "Eilhersen",
-    "Direccion": "4994 Nevada Place",
-    "Email": "aeilhersenc@columbia.edu",
-    "Contraseña": "Dd8FtlbckX"
-  }, {
-    "Nombre": "Parsifal",
-    "Apellido": "Shields",
-    "Direccion": "2649 Harper Street",
-    "Email": "pshieldsd@techcrunch.com",
-    "Contraseña": "QteQIx"
-  }, {
-    "Nombre": "Minnnie",
-    "Apellido": "Ateridge",
-    "Direccion": "2866 Lukken Plaza",
-    "Email": "materidgee@china.com.cn",
-    "Contraseña": "g7jzZjruMk"
-  }]
-  
+  "id": 1,
+  "firstName": "sed vestibulum",
+  "lastName": "curabitur at",
+  "email": "gshorbrook0@cafepress.com",
+  "password": "B99cZm7",
+  "type": "Customer",
+  "avatar": ""
+}, {
+  "id": 2,
+  "firstName": "lacus morbi",
+  "lastName": "fusce",
+  "email": "acaulier1@mail.ru",
+  "password": "zyISnv348D",
+  "type": "Customer",
+  "avatar": "/images/avatars/tostada.jpg"
+}, {
+  "id": 3,
+  "firstName": "semper est",
+  "lastName": "eu magna",
+  "email": "gbolesworth2@webmd.com",
+  "password": "lBvEWuXD",
+  "type": "Admin",
+  "avatar": "/images/avatars/tostada.jpg"
+}, {
+  "id": 4,
+  "firstName": "mi integer",
+  "lastName": "semper sapien",
+  "email": "crushmere3@tamu.edu",
+  "password": "Lna4CgkbuIbj",
+  "type": "Admin",
+  "avatar": "/images/avatars/tostada.jpg"
+}, {
+  "id": 5,
+  "firstName": "eu magna",
+  "lastName": "neque vestibulum",
+  "email": "amacklin4@salon.com",
+  "password": "2eQjeGuxIB",
+  "type": "Customer",
+  "avatar": "/images/avatars/polloCorazon.jpg"
+}, {
+  "id": 6,
+  "firstName": "aliquet pulvinar",
+  "lastName": "blandit",
+  "email": "eschlagman5@spotify.com",
+  "password": "ymymq2Sp",
+  "type": "Customer",
+  "avatar": ""
+}, {
+  "id": 7,
+  "firstName": "tempus",
+  "lastName": "posuere",
+  "email": "jstaries6@github.com",
+  "password": "75twSdGscDx",
+  "type": "Admin",
+  "avatar": "/images/avatars/tostada.jpg"
+}, {
+  "id": 8,
+  "firstName": "leo rhoncus",
+  "lastName": "id consequat",
+  "email": "dpetherick7@msn.com",
+  "password": "jgwPq05lFoV",
+  "type": "Customer",
+  "avatar": "/images/avatars/pretzel.jpg"
+}, {
+  "id": 9,
+  "firstName": "in magna",
+  "lastName": "nunc purus",
+  "email": "amcnirlin8@timesonline.co.uk",
+  "password": "Q72jmEIk2pXD",
+  "type": "Admin",
+  "avatar": "/images/avatars/pletzale.jpg"
+}, {
+  "id": 10,
+  "firstName": "vestibulum",
+  "lastName": "quam",
+  "email": "astenet9@businesswire.com",
+  "password": "uW2qeqRZ7B",
+  "type": "Admin",
+  "avatar": "/images/avatars/kipa.jpg"
+}, {
+  "id": 11,
+  "firstName": "donec",
+  "lastName": "posuere",
+  "email": "aartindalea@vk.com",
+  "password": "t6S8T7blDaM",
+  "type": "Customer",
+  "avatar": "/images/avatars/kipa.jpg"
+}, {
+  "id": 12,
+  "firstName": "nulla integer",
+  "lastName": "elementum",
+  "email": "pcuzenb@yolasite.com",
+  "password": "oBo7MnI",
+  "type": "Admin",
+  "avatar": "/images/avatars/pletzale.jpg"
+}, {
+  "id": 13,
+  "firstName": "justo aliquam",
+  "lastName": "eleifend",
+  "email": "elonerganc@google.es",
+  "password": "kahAB3VZGskR",
+  "type": "Admin",
+  "avatar": "/images/avatars/kipa.jpg"
+}, {
+  "id": 14,
+  "firstName": "tincidunt",
+  "lastName": "sem fusce",
+  "email": "cpitfieldd@bluehost.com",
+  "password": "aNqBjgOV5UD1",
+  "type": "Admin",
+  "avatar": ""
+}]

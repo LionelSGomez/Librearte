@@ -12,8 +12,7 @@
 
             <main>
                 <div class="signupFrm">
-                    <form action="/products/edit-process/<%= productToEdit.id %>?_method=PUT" method="POST"
-                        enctype="multipart/form-data" enctype="multipart/form-data" class="form">
+                    <form action="/products/<%= productToEdit.id %>/edit?_method=PUT" method="POST" enctype="multipart/form-data" class="form">
                         <h1 class="title">Editar Producto</h1>
 
                         <div class="inputContainer">

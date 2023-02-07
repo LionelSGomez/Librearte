@@ -28,7 +28,7 @@ router.get('/:id', productsController.productDetail);
 
 // /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', productsController.productEdit);
-router.put('/edit-process/:id', productsController.productUpdate);
+router.put('/:id/edit', productsController.productUpdate);
 
 // /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', productsController.destroy); 
