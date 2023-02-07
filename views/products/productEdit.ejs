@@ -22,8 +22,8 @@
                         </div>
 
                         <div class="inputContainer">
-                            <input type="text" class="input" placeholder="a" value="<%= productToEdit.producto %>" name="producto"
-                                required>
+                            <input type="text" class="input" placeholder="a" value="<%= productToEdit.producto %>"
+                                name="producto" required>
                             <label for="" class="label">Nombre del Producto</label>
                         </div>
 
@@ -43,13 +43,14 @@
                             <label for="variante3" class="label">Variante 3</label>
                         </div>
                         <div class="inputContainer">
-                            <input type="text" class="input" placeholder="a" value="<%= productToEdit.precio %>" name="precio"
-                                required>
+                            <input type="text" class="input" placeholder="a" value="<%= productToEdit.precio %>"
+                                name="precio" required>
                             <label for="" class="label">Precio</label>
                         </div>
 
                         <div class="inputContainer description">
-                            <textarea class="input" placeholder="a" name="descripcion"><%= productToEdit.descripcion %></textarea>
+                            <textarea class="input" placeholder="a"
+                                name="descripcion"><%= productToEdit.descripcion %></textarea>
                             <label for="descripcion" class="label">Descripción</label>
                         </div>
                         <div class="inputContainer categorias">
@@ -74,13 +75,12 @@
                             </div>
                         </section> -->
                         <div class="Contenedor">
-                            
                             <input type="submit" class="cuentasBtn" id="crear" value="Cambiar">
-                        </div>
                     </form>
                     <form action="/products/delete/<%= productToEdit.id %>?_method=DELETE" method="POST">
                         <button class="cuentasBtn">Borrar</button>
                     </form>
+                        </div>
                 </div>
             </main>
 

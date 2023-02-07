@@ -96,6 +96,7 @@ textarea.input {
 
 .Contenedor {
   display: flex;
+  flex-direction: row-reverse;
 }
 
 .cuentasBtn {
