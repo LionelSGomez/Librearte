@@ -54,23 +54,25 @@ const controller = {
         res.render('./products/productEdit', { productToEdit });
     },
     productUpdate: (req, res) => {
+        
+        console.log("hola", req.body);
 
-        const productId = req.params.id;
-        // Obtengo producto
-        let productToEdit = listProduct.find(function(product){
-        return product.id == productId;
+        let indexToEdit;
+        let productToEdit = listProduct.find((product, index) => {
+            if (product.id == req.params.id) {
+                indexToEdit = index;
+                return true;
+            }
+            return false;
         });
-
         productToEdit = {
             ...productToEdit,
             ...req.body
-        }
-        console.log(req.body)
+        };
+        listProduct[indexToEdit] = productToEdit;
+   
         writeFileJson(listProduct);
         res.redirect('/products');
-
-
-
 
 
         // let indexToEdit;
@@ -116,6 +118,9 @@ const controller = {
 
 	 },
      destroy: function(req, res){
+
+        console.log("hola");
+
         const productId = req.params.id;
     //obtengo el indice del producto 
     const productIndexFound = listProduct.findIndex(function(product){
