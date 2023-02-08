@@ -58,8 +58,6 @@ const controller = {
     },
     productUpdate: (req, res) => {
 
-        console.log("hola", req.body);
-
         let indexToEdit;
         let productToEdit = listProduct.find((product, index) => {
             if (product.id == req.params.id) {
