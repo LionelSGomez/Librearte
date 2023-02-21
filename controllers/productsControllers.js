@@ -32,7 +32,6 @@ const controller = {
     },
     store: (req, res) => {
         const images = req.files; //obtengo la/s imagen/es
-
         if (req.body.id == listProduct.length + 1) { //condicion de que el formulario no se haya enviado vacio por recargar y que sea el siguiente producto
             const newProduct = {
                 ...req.body,
@@ -51,13 +50,11 @@ const controller = {
         res.redirect('/products');
 
     },
-
     productEdit: (req, res) => {
         const productToEdit = listProduct.find((product) => product.id == req.params.id);
         res.render('./products/productEdit', { productToEdit });
     },
     productUpdate: (req, res) => {
-
         let indexToEdit;
         let productToEdit = listProduct.find((product, index) => {
             if (product.id == req.params.id) {
@@ -70,28 +67,19 @@ const controller = {
             ...productToEdit,
             ...req.body
         };
-
         checkEmpty(productToEdit);
-
         listProduct[indexToEdit] = productToEdit;
-
         writeFileJson(listProduct);
         res.redirect('/products');
     },
     destroy: function (req, res) {
-
         const productId = req.params.id;
         //obtengo el indice del producto 
         const productIndexFound = listProduct.findIndex(function (product) {
             return product.id == productId;
-        })
-
-        
-
+        })       
         listProduct.splice(productIndexFound, 1);
-
         writeFileJson(listProduct);
-
         res.redirect('/products');
     }
 }
