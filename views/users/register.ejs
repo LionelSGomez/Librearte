@@ -13,31 +13,36 @@
 
   <main>
     <div class="signupFrm">
-      <form action="" class="form">
+      <form action="/register" method="POST" enctype="multipart/form-data" class="form">
         <h1 class="title">Crear Cuenta</h1>
 
         <div class="inputContainer">
-          <input type="text" class="input" placeholder="a" required>
-          <label for="" class="label">Nombre y Apellido</label>
+          <input type="text" class="input" placeholder="a" name="firstName">
+          <label for="" class="label">Nombre</label>
         </div>
 
         <div class="inputContainer">
-          <input type="text" class="input" placeholder="a" required>
-          <label for="" class="label">Dirección</label>
+          <input type="text" class="input" placeholder="a" name="lastName">
+          <label for="" class="label">Apellido</label>
         </div>
 
         <div class="inputContainer">
-          <input type="text" class="input" placeholder="a" required>
+          <input type="text" class="input" placeholder="a" name="email">
           <label for="" class="label">Email</label>
         </div>
 
         <div class="inputContainer">
-          <input type="password" class="input" placeholder="a" required>
+          <input type="password" class="input" placeholder="a" name="password">
           <label for="" class="label">Contraseña</label>
         </div>
+              
+        <div class="inputContainer profileContainer">
+          <input class="profile" type="file" name="profile">
+          <label for="profile" class="label profileLabel">Imagen de perfil</label>
+        </div>        
         <div class="Contenedor">
-          <input href="/" type="submit" class="cuentasBtn" id="inicio" value="Inicio">
-          <input href="#" type="submit" class="cuentasBtn" id="crear" value="Crear">
+          <a href="/" class="cuentasBtn">Inicio</a>
+          <input type="submit" class="cuentasBtn" id="crear" value="Crear">
         </div>
       </form>
     </div>
