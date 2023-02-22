@@ -11,10 +11,9 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({storage});
-const usersController = require('../controllers/usersControllers');
+const usersControllers = require('../controllers/usersControllers');
 
-
-
-router.get('/register', upload.single('profile'),mainController.register);
+router.get('/', usersControllers.register);
+router.post('/', upload.single('profile'), usersControllers.create)
 
 module.exports = router;

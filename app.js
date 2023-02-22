@@ -19,9 +19,11 @@ app.set('views', path.join(__dirname, './views'));
 // ************ Route System require and use() ************
 const mainRouter = require('./routers/index');
 const productsRouter = require('./routers/products');
+const usersRouter = require('./routers/users')
 
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
+app.use('/register', usersRouter);
 
 
 // ************ Listen URL + Console log ************
