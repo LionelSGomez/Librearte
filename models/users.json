@@ -13,7 +13,7 @@
   "email": "acaulier1@mail.ru",
   "password": "zyISnv348D",
   "type": "Customer",
-  "avatar": "/images/avatars/tostada.jpg"
+  "avatar": "tostada.jpg"
 }, {
   "id": 3,
   "firstName": "semper est",
@@ -21,7 +21,7 @@
   "email": "gbolesworth2@webmd.com",
   "password": "lBvEWuXD",
   "type": "Admin",
-  "avatar": "/images/avatars/tostada.jpg"
+  "avatar": "tostada.jpg"
 }, {
   "id": 4,
   "firstName": "mi integer",
@@ -29,7 +29,7 @@
   "email": "crushmere3@tamu.edu",
   "password": "Lna4CgkbuIbj",
   "type": "Admin",
-  "avatar": "/images/avatars/tostada.jpg"
+  "avatar": "tostada.jpg"
 }, {
   "id": 5,
   "firstName": "eu magna",
@@ -37,7 +37,7 @@
   "email": "amacklin4@salon.com",
   "password": "2eQjeGuxIB",
   "type": "Customer",
-  "avatar": "/images/avatars/polloCorazon.jpg"
+  "avatar": "polloCorazon.jpg"
 }, {
   "id": 6,
   "firstName": "aliquet pulvinar",
@@ -53,7 +53,7 @@
   "email": "jstaries6@github.com",
   "password": "75twSdGscDx",
   "type": "Admin",
-  "avatar": "/images/avatars/tostada.jpg"
+  "avatar": "tostada.jpg"
 }, {
   "id": 8,
   "firstName": "leo rhoncus",
@@ -61,7 +61,7 @@
   "email": "dpetherick7@msn.com",
   "password": "jgwPq05lFoV",
   "type": "Customer",
-  "avatar": "/images/avatars/pretzel.jpg"
+  "avatar": "pretzel.jpg"
 }, {
   "id": 9,
   "firstName": "in magna",
@@ -69,7 +69,7 @@
   "email": "amcnirlin8@timesonline.co.uk",
   "password": "Q72jmEIk2pXD",
   "type": "Admin",
-  "avatar": "/images/avatars/pletzale.jpg"
+  "avatar": "pletzale.jpg"
 }, {
   "id": 10,
   "firstName": "vestibulum",
@@ -77,7 +77,7 @@
   "email": "astenet9@businesswire.com",
   "password": "uW2qeqRZ7B",
   "type": "Admin",
-  "avatar": "/images/avatars/kipa.jpg"
+  "avatar": "kipa.jpg"
 }, {
   "id": 11,
   "firstName": "donec",
@@ -85,7 +85,7 @@
   "email": "aartindalea@vk.com",
   "password": "t6S8T7blDaM",
   "type": "Customer",
-  "avatar": "/images/avatars/kipa.jpg"
+  "avatar": "kipa.jpg"
 }, {
   "id": 12,
   "firstName": "nulla integer",
@@ -93,7 +93,7 @@
   "email": "pcuzenb@yolasite.com",
   "password": "oBo7MnI",
   "type": "Admin",
-  "avatar": "/images/avatars/pletzale.jpg"
+  "avatar": "pletzale.jpg"
 }, {
   "id": 13,
   "firstName": "justo aliquam",
@@ -101,7 +101,7 @@
   "email": "elonerganc@google.es",
   "password": "kahAB3VZGskR",
   "type": "Admin",
-  "avatar": "/images/avatars/kipa.jpg"
+  "avatar": "kipa.jpg"
 }, {
   "id": 14,
   "firstName": "tincidunt",
