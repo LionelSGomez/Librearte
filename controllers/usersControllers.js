@@ -7,10 +7,10 @@ const usersList = JSON.parse(usersFile);
 
 const controller = {
     login: (req, res) => {
-        res.render('../users/register', { session: req.session });
+        res.render('./users/login', { session: req.session });
     },
-    
-        create: (req, res) => {
+
+    create: (req, res) => {
         const image = req.file;
         const newUser = {
             id: usersList.length + 1,
@@ -20,24 +20,24 @@ const controller = {
         }
         usersList.push(newUser);
         const newUserJson = JSON.stringify(usersList);
-        fs.writeFileSync(usersPath, newUserJson);     
+        fs.writeFileSync(usersPath, newUserJson);
         res.redirect('/login');
     },
 
-    storeLogin: (req,res) => {
-        const {email, password} = req.body;
+    storeLogin: (req, res) => {
+        const { email, password } = req.body;
         req.session.email = email;
         req.session.password = password;
         console.log(req.session);
-        res.render('../users/login'), { session: req.session };
+        res.render('./users/login'), { session: req.session };
     },
 
     register: (req, res) => {
-        res.render('../users/register')
+        res.render('./users/register')
     },
 
     contact: (req, res) => {
-        res.render('../users/contact')
+        res.render('./users/contact')
     }
 };
 
