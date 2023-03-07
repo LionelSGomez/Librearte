@@ -132,5 +132,13 @@
         "email": "yamila@mail.com",
         "password": "$2a$10$InwOEbUkShxNJ.dY3o/zx.DAtVsyzJKMG0JED7cFVXKfbYalQ9lT.",
         "avatar": "6971678153276971.jpg"
-    }
+    },
+    {
+        "id": 16,
+        "firstName": "yamila",
+        "lastName": "g",
+        "email": "yamila@mail.com",
+        "password": "$2a$10$j34P6jC7zR8ZEC3cTk5wo.I8Faa.5LPBWrm4XPbAtgYAd.LRV33rm",
+        "avatar": "default.png"
+        }
 ]

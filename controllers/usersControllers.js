@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const usersPath = path.join(__dirname, '../models/users.json');
 const usersFile = fs.readFileSync(usersPath, 'utf-8');
 const usersList = JSON.parse(usersFile);
+const { validationResult } = require('express-validator');
 
 const controller = {
     login: (req, res) => {
@@ -11,6 +12,10 @@ const controller = {
     },
 
     create: (req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.render('./users/register', { session: req.session, errors: errors.mapped() });
+        }
         const image = req.file;
         const newUser = {
             id: usersList.length + 1,
@@ -28,7 +33,6 @@ const controller = {
         const { email, password } = req.body;
         req.session.email = email;
         req.session.password = password;
-        console.log(req.session);
         res.render('./users/login'), { session: req.session };
     },
 
