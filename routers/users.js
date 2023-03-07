@@ -5,8 +5,8 @@ const path = require('path');
 
 const usersControlers = require('../controllers/usersControllers');
 
-router.get('/register', usersControlers.login);
-router.post('/register', usersControlers.storeRegister);
+router.get('/login', usersControlers.login);
+router.post('/login', usersControlers.storeLogin);
 
 module.exports = userRouter;
 

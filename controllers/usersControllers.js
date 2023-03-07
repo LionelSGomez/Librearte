@@ -6,15 +6,14 @@ const listUsers = JSON.parse(usersFile);
 
 const controller = {
     login: (req, res) => {
-        res.render('');
+        res.render('../users/register', { session: req.session });
     },
 
-    storeRegister: (req,res) => {
-        const {name, adress, email, password} = req.body;
-        req.session.name = name;
-        req.session.adress = adress;
+    storeLogin: (req,res) => {
+        const {email, password} = req.body;
         req.session.email = email;
         req.session.password = password;
+        console.log(req.session);
         res.render('../users/login'), { session: req.session };
     },
 
