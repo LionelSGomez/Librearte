@@ -32,16 +32,17 @@ const controller = {
     },
     store: (req, res) => {
         const images = req.files; //obtengo la/s imagen/es
-
-        if (req.body.id == listProduct.length + 1) { //condicion de que el formulario no se haya enviado vacio por recargar y que sea el siguiente producto
+        const lastIndex = listProduct.length - 1;
+        if (req.body.producto) { //condicion de que el formulario no se haya enviado vacio por recargar y que sea el siguiente producto
             const newProduct = {
-                ...req.body,
-                id: Number(req.body.id), //cambio el id de string a numero
+                id: listProduct[lastIndex].id + 1,
+                ...req.body,                
                 precio: Number(req.body.precio), //cambio el precio de string a numero
                 img1: !images[0] ? "default.png" : images[0].filename,//con if ternario valido si hay imagen, si no hay, pongo una por defecto
                 img2: !images[1] ? null : images[1].filename,
                 img3: !images[2] ? null : images[2].filename
             }
+            
             checkEmpty(newProduct);
             listProduct.push(newProduct); //agrego el producto creado al array
             // const newProductJson = JSON.stringify(listProduct); //convierto a json
@@ -51,13 +52,11 @@ const controller = {
         res.redirect('/products');
 
     },
-
     productEdit: (req, res) => {
         const productToEdit = listProduct.find((product) => product.id == req.params.id);
         res.render('./products/productEdit', { productToEdit });
     },
     productUpdate: (req, res) => {
-
         let indexToEdit;
         let productToEdit = listProduct.find((product, index) => {
             if (product.id == req.params.id) {
@@ -70,28 +69,19 @@ const controller = {
             ...productToEdit,
             ...req.body
         };
-
         checkEmpty(productToEdit);
-
         listProduct[indexToEdit] = productToEdit;
-
         writeFileJson(listProduct);
         res.redirect('/products');
     },
     destroy: function (req, res) {
-
         const productId = req.params.id;
         //obtengo el indice del producto 
         const productIndexFound = listProduct.findIndex(function (product) {
             return product.id == productId;
-        })
-
-        
-
+        })       
         listProduct.splice(productIndexFound, 1);
-
         writeFileJson(listProduct);
-
         res.redirect('/products');
     }
 }
