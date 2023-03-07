@@ -25,3 +25,17 @@ Demo 1:
   3. Continuar haciendo: Completar los trabajos.
   5. Hacer menos: Ignorar los mensajes del grupo.
   6. Dejar de hace: No hacer seguimiento de las tareas.
+
+  Sprint 4:
+  1. Comenzar a hacer: Organizar mejor las fechas limite de entregas y puestas en comun.
+  2. Hacer más: Reunirnos para planificar mejor los sprints.
+  3. Continuar haciendo: Juntarnos y terminar los trabajos en una reunion todos juntos.
+  5. Hacer menos: Ignorar los mensajes del grupo y/o no contestar.
+  6. Dejar de hace: No hacer seguimiento de las tareas.
+
+  Sprint 5:
+  1. Comenzar a hacer: Organizar mejor las fechas limite de entregas y puestas en comun, seleccionar un dia para que hagamos una reunion/llamada para trabajar.
+  2. Hacer más: Reunirnos para planificar mejor los sprints, no solo utilizar las clases de aplicaciones practicas, sino buscar otro dia extra.
+  3. Continuar haciendo: Juntarnos y terminar los trabajos en una reunion todos juntos.
+  5. Hacer menos: Ignorar los mensajes del grupo y/o no contestar.
+  6. Dejar de hace: No hacer seguimiento de las tareas,  no confirmar recepcion de mensajes.
