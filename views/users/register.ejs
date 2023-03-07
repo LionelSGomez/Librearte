@@ -17,24 +17,38 @@
       <form action="/users/register" method="POST" enctype="multipart/form-data" class="form">
         <h1 class="title">Crear Cuenta</h1>
 
+        <% if(locals.errors?.firstName) { %>
+          <strong><%= errors.firstName.msg %></strong>
+      <% } %> 
         <div class="inputContainer">
           <input type="text" class="input" placeholder="a" name="firstName">
           <label for="" class="label">Nombre</label>
         </div>
 
+        <% if(locals.errors?.lastName) { %>
+          <strong><%= errors.lastName.msg %></strong>
+      <% } %> 
         <div class="inputContainer">
           <input type="text" class="input" placeholder="a" name="lastName">
           <label for="" class="label">Apellido</label>
         </div>
+
+        <% if(locals.errors?.email) { %>
+          <strong><%= errors.email.msg %></strong>
+      <% } %> 
         <div class="inputContainer">
           <input type="text" class="input" placeholder="a" name="email">
           <label for="" class="label">Email</label>
         </div>
+
+        <% if(locals.errors?.password) { %>
+          <strong><%= errors.password.msg %></strong>
+      <% } %> 
         <div class="inputContainer">
           <input type="password" class="input" placeholder="a" name="password">
           <label for="" class="label">Contraseña</label>
         </div>
-              
+        
         <div class="inputContainer profileContainer">
           <input class="profile" type="file" name="profile">
           <label for="profile" class="label profileLabel">Imagen de perfil</label>
