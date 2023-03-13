@@ -17,13 +17,17 @@
 
                 <div class="inputContainer">
                     <input type="text" class="input" placeholder="a" name="email" required>
-                    <label for="" class="label">Email</label>
+                    <label for="email" class="label">Email</label>
                 </div>
 
                 <div class="inputContainer">
                     <input type="password" class="input" placeholder="a" name="password" required>
-                    <label for="" class="label">Contraseña</label>
+                    <label for="password" class="label">Contraseña</label>
                 </div>
+
+                <% if(locals.errors?.email) { %>
+                    <strong><%= errors.email.msg %></strong>
+                <% } %> 
 
                 <div class="Contenedor">
                     <a href="/" class="cuentasBtn" id="inicio">Volver al inicio</a>

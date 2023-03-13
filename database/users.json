@@ -135,10 +135,17 @@
     },
     {
         "id": 16,
-        "firstName": "yamila",
-        "lastName": "g",
-        "email": "yamila@mail.com",
-        "password": "$2a$10$j34P6jC7zR8ZEC3cTk5wo.I8Faa.5LPBWrm4XPbAtgYAd.LRV33rm",
+        "firstName": "Javier",
+        "lastName": "Herrera",
+        "email": "prueba1234@gmail.com",
+        "password": "$2a$10$CnQHj1fP7O3vWx6d6AvnjOAIUrGECZIZtATeUru5NqF/tjbTHVmUC",
         "avatar": "default.png"
-        }
+    },
+    {
+        "firstName": "Javier",
+        "lastName": "Herrera",
+        "email": "prueba12345@gmail.com",
+        "password": "$2a$10$OH3lYr9MLAyP4htvvaV.nubRGk2kcWmSI9emXf6Zf.A2ueOyPgD.a",
+        "avatar": "default.png"
+    }
 ]

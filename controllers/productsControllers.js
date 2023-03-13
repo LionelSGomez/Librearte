@@ -1,12 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 
-const productFile = fs.readFileSync(path.join(__dirname, '../models/products.json'), 'utf-8');
+const productFile = fs.readFileSync(path.join(__dirname, '../database/products.json'), 'utf-8');
 const listProduct = JSON.parse(productFile);
 
 function writeFileJson(data) {
     const newProductJson = JSON.stringify(data); //convierto a json
-    fs.writeFileSync(path.join(__dirname, '../models/products.json'), newProductJson); //creo o sobreescribo newProducts.json, con el producto creado    
+    fs.writeFileSync(path.join(__dirname, '../database/products.json'), newProductJson); //creo o sobreescribo newProducts.json, con el producto creado    
 }
 
 function checkEmpty(productToEdit) {

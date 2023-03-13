@@ -15,10 +15,13 @@ const upload = multer({storage});
 const usersControllers = require('../controllers/usersControllers');
 const storeValidator = require('../validators/storeValidator');
 
-router.get('/register', usersControllers.register);
+//Middlewares
+const guestMiddlewares = require('../middlewares/guestMiddleware');
+
+router.get('/register', guestMiddlewares, usersControllers.register);
 router.post('/register', upload.single('profile'),storeValidator , usersControllers.create)
-router.get('/login', usersControllers.login);
-router.post('/login', usersControllers.storeLogin);
+router.get('/login', guestMiddlewares, usersControllers.login);
+router.post('/login', usersControllers.loginCtrl);
 
 module.exports = router;
 
