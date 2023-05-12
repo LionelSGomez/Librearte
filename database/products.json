@@ -220,17 +220,6 @@
         "categoria": "schoolSupplies"
     },
     {
-        "id": 19,
-        "producto": "Goma",
-        "variante1": "verde",
-        "variante2": "blanca",
-        "variante3": null,
-        "precio": 50,
-        "descripcion": "jsalsl",
-        "category": "schoolSupplies",
-        "img1": "default.png"
-    },
-    {
         "id": 20,
         "producto": "Cartuchera Videojuegos",
         "variante1": "Modelo 1",
