@@ -1,4 +1,4 @@
-const {body} = require('express-validator')
+const { body } = require('express-validator')
 
 const storeValidations = [
     body('firstName').notEmpty().withMessage('El campo nombre es requerido').bail(),

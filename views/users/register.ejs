@@ -19,9 +19,10 @@
 
         <% if(locals.errors?.firstName) { %>
           <strong><%= errors.firstName.msg %></strong>
-      <% } %> 
+        <% } %>
+
         <div class="inputContainer">
-          <input type="text" class="input" placeholder="a" name="firstName">
+          <input type="text" class="input" placeholder="a" name="firstName" autocomplete="off">
           <label for="" class="label">Nombre</label>
         </div>
 
@@ -29,7 +30,7 @@
           <strong><%= errors.lastName.msg %></strong>
       <% } %> 
         <div class="inputContainer">
-          <input type="text" class="input" placeholder="a" name="lastName">
+          <input type="text" class="input" placeholder="a" name="lastName" autocomplete="off">
           <label for="" class="label">Apellido</label>
         </div>
 
@@ -37,7 +38,7 @@
           <strong><%= errors.email.msg %></strong>
       <% } %> 
         <div class="inputContainer">
-          <input type="text" class="input" placeholder="a" name="email">
+          <input type="text" class="input" placeholder="a" name="email" autocomplete="off">
           <label for="" class="label">Email</label>
         </div>
 

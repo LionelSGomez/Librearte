@@ -1,18 +1,5 @@
 [
     {
-        "id": 1,
-        "producto": "Papel Glacé",
-        "variante1": "Flúo",
-        "variante2": "Metalizado",
-        "variante3": "Lustre",
-        "precio": "50,00",
-        "img1": "papel-glace-fluo.png",
-        "img2": "papel-glace-metalizado.png",
-        "img3": "papel-glace-lustre.png",
-        "descripcion": null,
-        "categoria": "schoolSupplies"
-    },
-    {
         "id": 2,
         "producto": "Mochila Unicornio",
         "variante1": "Modelo 1",
@@ -98,32 +85,6 @@
         "variante3": null,
         "precio": "550,00",
         "img1": "lapiz-negro-x12.png",
-        "img2": null,
-        "img3": null,
-        "descripcion": null,
-        "categoria": "schoolSupplies"
-    },
-    {
-        "id": 9,
-        "producto": "Goma Pizzini",
-        "variante1": "Azul",
-        "variante2": "Rosa",
-        "variante3": "Violeta",
-        "img1": "goma.png",
-        "img2": null,
-        "img3": null,
-        "descripcion": "Goma de borrar",
-        "categoria": "schoolSupplies",
-        "precio": "500"
-    },
-    {
-        "id": 10,
-        "producto": "Sacapuntas Pizzini",
-        "variante1": "x2 unidades",
-        "variante2": null,
-        "variante3": null,
-        "precio": "300,00",
-        "img1": "sacapuntas.png",
         "img2": null,
         "img3": null,
         "descripcion": null,
