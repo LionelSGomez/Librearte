@@ -6,20 +6,23 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true,
             primaryKey: true
           },
-          title: {
+        title: {
             type: dataTypes.TEXT,
             allowNull: false
-          },
-          description: {
+        },
+        description: {
             type: dataTypes.TEXT
-          },
-          price: {
+        },
+        price: {
             type: dataTypes.DECIMAL(11,2),
             allowNull: false
-          },
-          products_categories_id: {
+        },
+        img: {
+            type: dataTypes.TEXT
+        },
+        products_categories_id: {
             type: dataTypes.INTEGER,
-          }
+        }
     };
     let config = {
         timestamps: false

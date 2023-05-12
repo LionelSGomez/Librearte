@@ -20,6 +20,9 @@ module.exports = {
         type: Sequelize.DECIMAL(11,2),
         allowNull: false
       },
+      img: {
+        type: Sequelize.TEXT
+      },
       products_categories_id: {
         type: Sequelize.INTEGER,
         references: {

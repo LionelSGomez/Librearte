@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+const db = require('../database/models');
 const productFile = fs.readFileSync(path.join(__dirname, '../database/products.json'), 'utf-8');
 const listProduct = JSON.parse(productFile);
 
@@ -28,28 +28,39 @@ const controller = {
         res.render('./products/productDetail', { product });
     },
     productAdd: (req, res) => {
-        res.render('./products/productAdd', { productsList: listProduct });
+        res.render('./products/productAdd');
     },
-    store: (req, res) => {
+    create: async (req, res) => {
         const images = req.files; //obtengo la/s imagen/es
-        const lastIndex = listProduct.length - 1;
-        if (req.body.producto) { //condicion de que el formulario no se haya enviado vacio por recargar y que sea el siguiente producto
-            const newProduct = {
-                id: listProduct[lastIndex].id + 1,
-                ...req.body,                
-                precio: Number(req.body.precio), //cambio el precio de string a numero
-                img1: !images[0] ? "default.png" : images[0].filename,//con if ternario valido si hay imagen, si no hay, pongo una por defecto
-                img2: !images[1] ? null : images[1].filename,
-                img3: !images[2] ? null : images[2].filename
-            }
+        const newProduct = {
+            title: req.body.title,
+            price: req.body.price,
+            description: req.body.description,
+            img: !images ? "default.png" : images.filename
+        }
+        try {
+            db.Product.create(newProduct);
+            res.redirect('/products')
+        }
+        catch (error){
+            res.send({error})
+        }
+        // const lastIndex = listProduct.length - 1;
+        // if (req.body.producto) { //condicion de que el formulario no se haya enviado vacio por recargar y que sea el siguiente producto
+        //     const newProduct = {
+        //         id: listProduct[lastIndex].id + 1,
+        //         ...req.body,                
+        //         precio: Number(req.body.precio), //cambio el precio de string a numero
+        //         img1: !images[0] ? "default.png" : images[0].filename,//con if ternario valido si hay imagen, si no hay, pongo una por defecto
+        //     }
             
-            checkEmpty(newProduct);
-            listProduct.push(newProduct); //agrego el producto creado al array
-            // const newProductJson = JSON.stringify(listProduct); //convierto a json
-            // fs.writeFileSync('./models/products.json', newProductJson); //creo o sobreescribo newProducts.json, con el producto creado
-            writeFileJson(listProduct);
-        };
-        res.redirect('/products');
+        //     checkEmpty(newProduct);
+        //     listProduct.push(newProduct); //agrego el producto creado al array
+        //     // const newProductJson = JSON.stringify(listProduct); //convierto a json
+        //     // fs.writeFileSync('./models/products.json', newProductJson); //creo o sobreescribo newProducts.json, con el producto creado
+        //     writeFileJson(listProduct);
+        // };
+        // res.redirect('/products');
 
     },
     productEdit: (req, res) => {

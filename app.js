@@ -4,10 +4,6 @@ const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const expressSession = require('express-session');
-// const logger = require('morgan');
-// const cookieParser = require('cookie-parser');
-// const createError = require('http-errors');
-
 
 // ************ express() ************
 const app = express();
@@ -22,8 +18,6 @@ app.use(expressSession({
     resave: false,
     saveUninitialized: false,
 }));
-// app.use(logger('dev'));
-// app.use(cookieParser());
 
 // ************ Template Engine ************
 app.set('view engine', 'ejs');

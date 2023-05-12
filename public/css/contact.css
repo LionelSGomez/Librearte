@@ -49,6 +49,7 @@ h1 {
 
 .contact-info { 
     font-size: 15px;
+    margin-top: 20%;
 }
 
 .contact-form {
@@ -147,6 +148,7 @@ textarea {
     }
     .contact-info {
         width: 33%;
+        margin-top: 2%;
     }
     .contact-form{
         width: 66%;
@@ -175,7 +177,7 @@ textarea {
 
 @media (min-width:1025px) {
     .father-container{
-        width: 85%;
+        width: 70%;
     }
     h1 {
         padding-left: 26px;
