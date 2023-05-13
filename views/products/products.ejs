@@ -1,35 +1,37 @@
-
-        <!-- Head -->
-        <%- include('../partials/head') %> 
-    
+<!-- Head -->
+<%- include('../partials/head') %>
     <link rel="stylesheet" href="/css/productDetail.css">
     <link rel="stylesheet" href="/css/products.css">
     <title>Lista de productos</title>
+    </head>
 
-</head>
+    <body>
+        <!-- Header -->
+        <%- include('../partials/header') %>
+            <main>
+                <div class="agregar"><a href="/products/create">Agregar producto</a></div>
 
-<body>
-    <!-- Header -->
-    <%- include('../partials/header') %> 
+                <% for(let i=0; i < categories.length;i++) {%>
+                    <section class="schoolSupplies category" id="<%= categories[i].name %>">
+                        <h2>
+                            <%= categories[i].name %>
+                        </h2>
+                        <% for(let j=0; j < products.length; j++) {%>
+                            <% if(products[j].products_categories_id == categories[i].id) {%>
+                                <article>
+                                    <h4>
+                                        <%= products[j].title %>
+                                    </h4>
+                                    <a href="/products/<%= products[j].id %> "><img
+                                            src="./images/products/<%= products[j].img %>"></a>
+                                    <h4>$<%= products[j].price %>
+                                    </h4>
+                                </article>
+                                <% }%>
+                                    <% } %>
+                    </section>
+                    <% } %>
 
-    <main>
-        <div class="agregar"><a href="/products/create">Agregar producto</a></div>
-        
-        <h2>Productos escolares</h2>
-        <section id="schoolSupplies">
-            
-            <% for(let i = 0; i < products.length; i++) {%>
-                
-            <article>
-                <h4><%= products[i].title %></h4>
-                <a href="/products/<%= products[i].id %> "><img src="./images/products/<%= products[i].img %>"></a>
-                <h4>$<%= products[i].price %></h4>
-            </article>
-
-            <% } %> 
-        </section>
-
-        </main>
-
-    <!-- Footer -->
-    <%- include('../partials/footer') %> 
+            </main>
+            <!-- Footer -->
+            <%- include('../partials/footer') %>

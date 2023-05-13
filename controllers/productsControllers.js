@@ -2,9 +2,11 @@ const db = require('../database/models');
 
 const controller = {
     index: (req, res) => {
-        db.Product.findAll()
-        .then(function (products){
-            res.render('./products/products', { products })
+        const pedidoCategories = db.Product_Category.findAll();
+        const pedidoProducts = db.Product.findAll();
+        Promise.all([pedidoProducts, pedidoCategories])
+        .then(function ([products, categories]){
+            res.render('./products/products', { products, categories})
         })
         ;
     },

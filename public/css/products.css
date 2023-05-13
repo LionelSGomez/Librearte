@@ -1,18 +1,23 @@
-#schoolSupplies {
+.category h2 {
+    width: 100%;
+}
+
+.schoolSupplies {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
     justify-content: center;
+    flex-direction: row;
 }
 
-#schoolSupplies article {
+.schoolSupplies article {
     width: 50%;
     text-align: center;
     padding: 15px;
 }
 
-#schoolSupplies article img{
+.schoolSupplies article img{
     width: 115px;
     height: 115px;
 }
@@ -66,7 +71,7 @@ h4 {
 
 
 @media (min-width:768px){
-    #schoolSupplies article {
+    .schoolSupplies article {
         width: 27%;
     }
 
@@ -74,7 +79,7 @@ h4 {
         padding-top: 60px;
     }
 
-    #schoolSupplies article img{
+    .schoolSupplies article img{
         width: 180px;
         height: 180px;
     }
@@ -85,11 +90,11 @@ h4 {
         display: block;
     }
 
-    #schoolSupplies article {
+    .schoolSupplies article {
         width: 20%;
     }
 
-    #schoolSupplies article img{
+    .schoolSupplies article img{
         width: 180px;
         height: 180px;
     }
