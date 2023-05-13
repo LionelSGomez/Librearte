@@ -39,16 +39,19 @@ const controller = {
     },
     productEdit: (req, res) => {
         const {id} = req.params;
-        db.Product.findByPk(id)
-        .then(function(product){
-            res.render('./products/productEdit', { product });
-        })
+        const pedidoCategory = db.Product_Category.findAll();
+        const pedidoProduct = db.Product.findByPk(id);
+        Promise.all([pedidoProduct, pedidoCategory])
+            .then(function([product,category]){
+                res.render('./products/productEdit', { product , category});
+            })
     },
     productUpdate: async (req, res) => {
         const {id} = req.params;
         try {
             db.Product.update({
-                ...req.body
+                ...req.body,
+                products_categories_id: req.body.category
             }, {
                 where: {
                     id: id

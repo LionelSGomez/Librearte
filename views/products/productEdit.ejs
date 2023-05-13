@@ -3,7 +3,7 @@
 
     <link rel="stylesheet" href="/css/productAddEdit.css">
     <title>Editar producto</title>
-    </head>di
+    </head>
 
     <body>
 
@@ -35,11 +35,18 @@
                         </div>
                         <div class="inputContainer categorias">
                             <label for="category" class="label" id="categorias">Seleccione Categorias</label>
-                            <select name="category" id="category" class="form-input">
-                                <option value="schoolSupplies" <%= product.category === 'schoolSupplies' ? 'selected'
-                                    : null %>>Artículos escolares</option>
-                                <option value="books" <%=product.category==='books' ? 'selected' : null %>>Libros
-                                </option>
+                            <select name="category" id="category" class="form-input" required>
+                            <% for(i = 0; i < category.length; i++){ %>
+                                <% if(category[i].id === product.products_categories_id) {%>
+                                    <option value="<%= category[i].id %>" selected>
+                                        <%= category[i].name %>
+                                    </option>
+                                    <%} else {%>
+                                        <option value="<%= category[i].id %>">
+                                            <%= category[i].name %>
+                                        </option>
+                                        <% }%>
+                            <% }%>                             
                             </select>
                         </div>
 
