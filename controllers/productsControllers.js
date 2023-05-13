@@ -26,7 +26,8 @@ const controller = {
             title: req.body.title,
             price: req.body.price,
             description: req.body.description,
-            img: !image ? "default.png" : image.filename
+            img: !image ? "default.png" : image.filename,
+            products_categories_id: req.body.category
         }
         try {
             db.Product.create(newProduct);
