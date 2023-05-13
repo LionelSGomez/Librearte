@@ -14,44 +14,15 @@
     <main>
         <div class="editar"><a href="/products/<%= product.id %>/edit">Editar producto</a></div>
         <section class="productImages">
-            <img src="/images/products/<%= product.img1 %>" alt="firstImage" class="first">
-            <div>
-                <% if (product.img2 != null) {%> 
-                <img src="/images/products/<%= product.img2 %>">
-                <% } %> 
-                <% if (product.img3 != null) {%> 
-                    <img src="/images/products/<%= product.img3 %>">
-                    <% } %> 
-            </div>
+            <img src="/images/products/<%= product.img %>" alt="firstImage" class="first">
         </section>
 
         <section class="detail">
-            <h4><%= product.producto %> </h4>
-            <h3>$<%= product.precio %> </h3>
+            <h4><%= product.title %> </h4>
+            <h3>$<%= product.price %> </h3>
 
             <form action="/productDetail" method="GET">
-                <% if (product.variante2 != null) { %> 
-                <legend>Por favor seleccione una opción:</legend>
-                <div class="typeSelection">
-
-                    <label for="option1">
-                        <input type="radio" name="options" id="option1" required>
-                        <%= product.variante1 %>
-                    </label>
-                    <label for="option2">
-                        <input type="radio" name="options" id="option2">
-                        <%= product.variante2 %>
-                    </label>
-                    <% } %> 
-                    <% if (product.variante3 != null){%>
-                        <label for="option3">
-                            <input type="radio" name="options" id="option3">
-                            <%= product.variante3 %>
-                        </label>
-                    <% } %> 
-                </div>
-
-
+                
                 <div class="quantitySelection">
                     <label for="products">
                         ¿Cuántas unidades vas a llevar?
@@ -60,16 +31,15 @@
                     <button type="submit">Agregar al carrito</button>
                 </div>
 
-                
             </form>
 
 
             <div class="description">
                 <h4>Descripción del producto.</h4>
-                <p><% if(product.descripcion == null){%>
+                <p><% if(product.description == null){%>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat neque iusto odit reprehenderit eligendi? Id doloribus maiores molestiae numquam quod provident nemo dolore, harum corporis quae? Soluta fugit dignissimos ea.
                 <% } else{%>
-                    <%= product.descripcion %>
+                    <%= product.description %>
                     <%}%>
                 </p>
             </div>

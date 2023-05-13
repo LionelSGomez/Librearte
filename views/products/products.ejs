@@ -18,11 +18,12 @@
         <h2>Productos escolares</h2>
         <section id="schoolSupplies">
             
-            <% for(let i = 0; i < productsList.length; i++) {%>
+            <% for(let i = 0; i < products.length; i++) {%>
                 
             <article>
-                <h4><%= productsList[i].producto %></h4>
-                <a href="/products/<%= productsList[i].id %> "><img src="./images/products/<%= productsList[i].img1 %>"></a>
+                <h4><%= products[i].title %></h4>
+                <a href="/products/<%= products[i].id %> "><img src="./images/products/<%= products[i].img %>"></a>
+                <h4>$<%= products[i].price %></h4>
             </article>
 
             <% } %> 

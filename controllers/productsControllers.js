@@ -1,42 +1,32 @@
-const fs = require('fs');
-const path = require('path');
 const db = require('../database/models');
-const productFile = fs.readFileSync(path.join(__dirname, '../database/products.json'), 'utf-8');
-const listProduct = JSON.parse(productFile);
-
-function writeFileJson(data) {
-    const newProductJson = JSON.stringify(data); //convierto a json
-    fs.writeFileSync(path.join(__dirname, '../database/products.json'), newProductJson); //creo o sobreescribo newProducts.json, con el producto creado    
-}
-
-function checkEmpty(productToEdit) {
-    for (const property in productToEdit) { //itera las propiedades del objeto, si están vacias, serán null
-        if (productToEdit[property] == '' || !productToEdit[property]) {
-            productToEdit[property] = null;
-        }
-    }
-}
 
 const controller = {
     index: (req, res) => {
-        res.render('./products/products', { productsList: listProduct });
+        db.Product.findAll()
+        .then(function (products){
+            res.render('./products/products', { products })
+        })
+        ;
     },
 
     productDetail: (req, res) => {
         const { id } = req.params;
-        const product = listProduct.find((product) => product.id == id)
-        res.render('./products/productDetail', { product });
+        db.Product.findByPk(id)
+        .then(function (product){
+            res.render('./products/productDetail', { product })
+        })
+
     },
     productAdd: (req, res) => {
         res.render('./products/productAdd');
     },
     create: async (req, res) => {
-        const images = req.files; //obtengo la/s imagen/es
+        const image = req.file; //obtengo la/s imagen/es
         const newProduct = {
             title: req.body.title,
             price: req.body.price,
             description: req.body.description,
-            img: !images ? "default.png" : images.filename
+            img: !image ? "default.png" : image.filename
         }
         try {
             db.Product.create(newProduct);
@@ -45,55 +35,44 @@ const controller = {
         catch (error){
             res.send({error})
         }
-        // const lastIndex = listProduct.length - 1;
-        // if (req.body.producto) { //condicion de que el formulario no se haya enviado vacio por recargar y que sea el siguiente producto
-        //     const newProduct = {
-        //         id: listProduct[lastIndex].id + 1,
-        //         ...req.body,                
-        //         precio: Number(req.body.precio), //cambio el precio de string a numero
-        //         img1: !images[0] ? "default.png" : images[0].filename,//con if ternario valido si hay imagen, si no hay, pongo una por defecto
-        //     }
-            
-        //     checkEmpty(newProduct);
-        //     listProduct.push(newProduct); //agrego el producto creado al array
-        //     // const newProductJson = JSON.stringify(listProduct); //convierto a json
-        //     // fs.writeFileSync('./models/products.json', newProductJson); //creo o sobreescribo newProducts.json, con el producto creado
-        //     writeFileJson(listProduct);
-        // };
-        // res.redirect('/products');
-
     },
     productEdit: (req, res) => {
-        const productToEdit = listProduct.find((product) => product.id == req.params.id);
-        res.render('./products/productEdit', { productToEdit });
+        const {id} = req.params;
+        db.Product.findByPk(id)
+        .then(function(product){
+            res.render('./products/productEdit', { product });
+        })
     },
-    productUpdate: (req, res) => {
-        let indexToEdit;
-        let productToEdit = listProduct.find((product, index) => {
-            if (product.id == req.params.id) {
-                indexToEdit = index;
-                return true;
-            }
-            return false;
-        });
-        productToEdit = {
-            ...productToEdit,
-            ...req.body
-        };
-        checkEmpty(productToEdit);
-        listProduct[indexToEdit] = productToEdit;
-        writeFileJson(listProduct);
-        res.redirect('/products');
-    },
-    destroy: function (req, res) {
-        const productId = req.params.id;
-        //obtengo el indice del producto 
-        const productIndexFound = listProduct.findIndex(function (product) {
-            return product.id == productId;
-        })       
-        listProduct.splice(productIndexFound, 1);
-        writeFileJson(listProduct);
-        res.redirect('/products');
+    productUpdate: async (req, res) => {
+        const {id} = req.params;
+        try {
+            db.Product.update({
+                ...req.body
+            }, {
+                where: {
+                    id: id
+                }
+            });
+            res.redirect('/products')        
+        }
+        catch (error){
+            res.send({error})
+        }                
+    }        
+    ,
+     destroy: async (req, res) => {
+        const {id} = req.params;
+        try {
+            db.Product.destroy({
+                where: {
+                    id: id
+                }
+            });
+            res.redirect('/products')        
+        }
+        catch (error){
+            res.send({error})
+        }                
     }
 }
 

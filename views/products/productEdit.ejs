@@ -3,7 +3,7 @@
 
     <link rel="stylesheet" href="/css/productAddEdit.css">
     <title>Editar producto</title>
-    </head>
+    </head>di
 
     <body>
 
@@ -12,66 +12,41 @@
 
             <main>
                 <div class="signupFrm">
-                    <form action="/products/<%= productToEdit.id %>/edit?_method=PUT" method="POST" class="form">
+                    <form action="/products/<%= product.id %>/edit?_method=PUT" method="POST" class="form">
                         <h1 class="title">Editar Producto</h1>
 
                         <div class="inputContainer">
-                            <input type="text" class="input" placeholder="a" value="<%= productToEdit.producto %>"
-                                name="producto" required>
-                            <label for="" class="label">Nombre del Producto</label>
+                            <input type="text" class="input" placeholder="a" value="<%= product.title %>"
+                                name="title" required>
+                            <label for="title" class="label">Nombre del Producto</label>
                         </div>
 
+            
                         <div class="inputContainer">
-                            <input type="text" class="input" placeholder="a" value="<%=  productToEdit.variante1  %>"
-                                name="variante1" required>
-                            <label for="variante1" class="label">Variante 1</label>
-                        </div>
-                        <div class="inputContainer">
-                            <input type="text" class="input" placeholder="a" value="<%= productToEdit.variante2 %>"
-                                name="variante2">
-                            <label for="variante2" class="label">Variante 2</label>
-                        </div>
-                        <div class="inputContainer">
-                            <input type="text" class="input" placeholder="a" value="<%= productToEdit.variante3 %>"
-                                name="variante3">
-                            <label for="variante3" class="label">Variante 3</label>
-                        </div>
-                        <div class="inputContainer">
-                            <input type="text" class="input" placeholder="a" value="<%= productToEdit.precio %>"
-                                name="precio" required>
-                            <label for="" class="label">Precio</label>
+                            <input type="text" class="input" placeholder="a" value="<%= product.price %>"
+                                name="price" required>
+                            <label for="price" class="label">Precio</label>
                         </div>
 
                         <div class="inputContainer description">
                             <textarea class="input" placeholder="a"
-                                name="descripcion"><%= productToEdit.descripcion %></textarea>
-                            <label for="descripcion" class="label">Descripción</label>
+                                name="description"><%= product.description %></textarea>
+                            <label for="description" class="label">Descripción</label>
                         </div>
                         <div class="inputContainer categorias">
-                            <label for="categoria" class="label" id="categorias">Seleccione Categorias</label>
-                            <select name="categoria" id="category" class="form-input">
-                                <option value="schoolSupplies" <%=productToEdit.category==='schoolSupplies' ? 'selected'
+                            <label for="category" class="label" id="categorias">Seleccione Categorias</label>
+                            <select name="category" id="category" class="form-input">
+                                <option value="schoolSupplies" <%= product.category === 'schoolSupplies' ? 'selected'
                                     : null %>>Artículos escolares</option>
-                                <option value="books" <%=productToEdit.category==='books' ? 'selected' : null %>>Libros
+                                <option value="books" <%=product.category==='books' ? 'selected' : null %>>Libros
                                 </option>
                             </select>
                         </div>
-                        <!-- checkear si dejamos form de images para editar
-                        <section class="imgForm">
-                            <div class="img">
-                                <input type="file" name="img">
-                            </div>
-                            <div class="img">
-                                <input type="file" name="img">
-                            </div>
-                            <div class="img">
-                                <input type="file" name="img">
-                            </div>
-                        </section> -->
+
                         <div class="Contenedor">
                             <input type="submit" class="cuentasBtn" id="crear" value="Cambiar">
                     </form>
-                    <form action="/products/delete/<%= productToEdit.id %>?_method=DELETE" method="POST">
+                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
                         <button class="cuentasBtn">Borrar</button>
                     </form>
                         </div>
