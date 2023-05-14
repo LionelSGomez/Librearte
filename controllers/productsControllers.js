@@ -53,7 +53,8 @@ const controller = {
         try {
             db.Product.update({
                 ...req.body,
-                products_categories_id: req.body.category
+                products_categories_id: req.body.category,
+                img: req.file ? req.file.filename : this.img
             }, {
                 where: {
                     id: id
@@ -62,6 +63,7 @@ const controller = {
             res.redirect('/products')        
         }
         catch (error){
+            console.log(error);
             res.send({error})
         }                
     }        

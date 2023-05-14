@@ -8,6 +8,11 @@ body {
   background-image: url(/images/Fondo-Productos2.png);
 }
 
+#sample img{
+  width: 100px;
+  height: 100px;
+}
+
 #background {
   position: absolute;
   z-index: -1;
@@ -68,10 +73,8 @@ body {
 }
 
 .imgForm {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  padding-bottom: 65px;
+  margin-top: 27px;
 }
 
 textarea.input {

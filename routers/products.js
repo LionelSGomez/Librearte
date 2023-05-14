@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-
 const storage = multer.diskStorage({
     destination: function(req, file, cb){
         cb(null, './public/images/products');
@@ -12,7 +11,6 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({storage});
-
 const productsController = require('../controllers/productsControllers');
 
 /*** GET ALL PRODUCTS ***/ 
@@ -27,8 +25,7 @@ router.get('/:id', productsController.productDetail);
 
 // /*** EDIT ONE PRODUCT ***/ 
 router.get('/:id/edit', productsController.productEdit);
-router.put('/:id/edit', productsController.productUpdate);
-
+router.put('/:id/edit', upload.single('img'), productsController.productUpdate);
 // /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', productsController.destroy); 
 

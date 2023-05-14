@@ -12,7 +12,7 @@
 
             <main>
                 <div class="signupFrm">
-                    <form action="/products/<%= product.id %>/edit?_method=PUT" method="POST" class="form">
+                    <form action="/products/<%= product.id %>/edit?_method=PUT" enctype="multipart/form-data" method="POST" class="form">
                         <h1 class="title">Editar Producto</h1>
 
                         <div class="inputContainer">
@@ -48,6 +48,16 @@
                                         <% }%>
                             <% }%>                             
                             </select>
+                        </div>
+
+                        <div class="imgForm inputContainer">
+                            <h4 class="label" id="categorias">Imagen</h4>
+                            <div class="img">
+                                <input type="file" name="img">
+                            </div>
+                            <div id="sample">
+                                <img src="/images/products/<%= product.img %>">
+                            </div>
                         </div>
 
                         <div class="Contenedor">
