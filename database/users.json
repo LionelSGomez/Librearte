@@ -154,5 +154,12 @@
   "email": "hola123@gmail.com",
   "password": "$2a$10$MnWdhX60I9FvnfTT4giqROB8DWOJX8eAgz9UtUChSjYFuO5nzLItO",
   "avatar": "default.png"
+ },
+ {
+  "firstName": "Prueba",
+  "lastName": "Uno",
+  "email": "pruebauno@lio.com",
+  "password": "$2a$10$sgIkPJ59l23Vw2MKYZ7PpOSO8fhabsicc9pYv1hCPqL4kxQxUBn7m",
+  "avatar": "6381684035142671.png"
  }
 ]

@@ -23,7 +23,7 @@ const controller = {
         res.render('./products/productAdd');
     },
     create: async (req, res) => {
-        const image = req.file; //obtengo la/s imagen/es
+        const image = req.file;
         const newProduct = {
             title: req.body.title,
             price: req.body.price,
@@ -63,7 +63,6 @@ const controller = {
             res.redirect('/products')        
         }
         catch (error){
-            console.log(error);
             res.send({error})
         }                
     }        

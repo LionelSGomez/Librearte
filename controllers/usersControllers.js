@@ -1,12 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
-const User = require('../models/User');
 const usersPath = path.join(__dirname, '../database/users.json');
-const usersFile = fs.readFileSync(usersPath, 'utf-8');
-const usersList = JSON.parse(usersFile);
 const { validationResult } = require('express-validator');
-// const { use } = require('../routers/users');
+const db = require('../database/models')
 
 const controller = {
     login: (req, res) => {
@@ -16,56 +13,54 @@ const controller = {
     create: (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            return res.render('./users/register', { session: req.session, errors: errors.mapped() });
-        }
-        let image = req.file;
-        let userToCreate = {
-            ...req.body,
-            password: bcrypt.hashSync(req.body.password, 10),
-            avatar: image != undefined ? image.filename : "default.png"
-        }
-
-        let userInDB = User.findByField('email', req.body.email)
-        if (userInDB) {
-            return res.render('./users/register', {
-                errors: {
+          return res.render('./users/register', { session: req.session, errors: errors.mapped() });
+        }        
+        let image = req.file;      
+        db.User.findAll()
+          .then(function(usuarios) {
+            for (let i = 0; i < usuarios.length; i++) {
+              if (usuarios[i].email === req.body.email) {
+                return res.render('./users/register', {
+                  errors: {
                     email: {
-                        msg: 'Este email ya está registrado'
+                      msg: 'Este email ya está registrado'
                     }
-                },
-                oldData: req.body
-            })
-        }
-
-        let userCreated = User.create(userToCreate);
-        // const image = req.file;
-        // const newUser = {
-        //     id: usersList.length + 1,
-        //     ...req.body,
-        //     password: bcrypt.hashSync(req.body.password, 10),
-        //     avatar: image != undefined ? image.filename : "default.png"
-        // }
-        // usersList.push(newUser);
-        // const newUserJson = JSON.stringify(usersList, null, ' ');
-        // fs.writeFileSync(usersPath, newUserJson);
-        res.redirect('/users/login');
-    },
+                  }
+                });
+              }
+            }            
+            const userToCreate = {
+              name: req.body.firstName + " " + req.body.lastName,
+              email: req.body.email,
+              password: bcrypt.hashSync(req.body.password, 10),
+              avatar: image ? image.filename : "default.png",
+              role: 2 //usuario
+            };
+            
+            return db.User.create(userToCreate);
+          })
+          .then(() => {
+            res.redirect('/users/login');
+          });
+      },
 
     loginCtrl: async (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.render('./users/login', { session: req.session, errors: errors.mapped() });
         }
-
-        let userToLogin = User.findByField('email', req.body.email);
-        if (userToLogin) {
-            let comparePassword = bcrypt.compare(req.body.password, userToLogin.password);
-            if (comparePassword) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-                return res.redirect('/');
-            } 
+        const userToLogin = await db.User.findOne({where: {email: req.body.email}})
+        try {
+                let comparePassword = await bcrypt.compare(req.body.password, userToLogin.password);
+                if (comparePassword) {
+                    console.log(comparePassword);
+                    req.session.userLogged = userToLogin;
+                    return res.redirect('/');
+                }            
         }
+        catch (error){
+            res.send({error})
+        }     
         return res.render('./users/login', {
             errors: {
                 email: {
