@@ -28,13 +28,14 @@ const controller = {
                   }
                 });
               }
-            }            
+            }
+            const image = req.file;            
             const userToCreate = {
               name: req.body.firstName + " " + req.body.lastName,
               email: req.body.email,
               password: bcrypt.hashSync(req.body.password, 10),
               avatar: image ? image.filename : "default.png",
-              role: 2 //usuario
+              roles_id: 2 //usuario
             };
             
             return db.User.create(userToCreate);
