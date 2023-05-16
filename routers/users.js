@@ -13,12 +13,19 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 const usersControllers = require('../controllers/usersControllers');
 const storeValidator = require('../validators/storeValidator');
+const adminMiddleware = require('../middlewares/adminMiddleware')
 
 router.get('/register',usersControllers.register);
 router.post('/register', upload.single('profile'),storeValidator, usersControllers.create)
 router.get('/login',usersControllers.login);
 router.post('/login', usersControllers.loginCtrl);
-router.get('/userList', usersControllers.control);
+router.get('/userList', adminMiddleware, usersControllers.control);
+router.get('/users/userList', adminMiddleware, usersControllers.control);
+router.get('/userList/:id', usersControllers.modify);
+router.get('/userList/:id', usersControllers.destroy)
+router.get('/users/userList/:id', usersControllers.modify);
+router.get('/users/userList/:id', usersControllers.destroy)
+
 
 module.exports = router;
 

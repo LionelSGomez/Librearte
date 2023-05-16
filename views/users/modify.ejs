@@ -1,0 +1,56 @@
+
+        <!-- Head -->
+        <%- include('../partials/head') %> 
+
+  <link rel="stylesheet" href="/css/cuentas.css">
+  <link rel="stylesheet" href="/css/UserList.css">
+  <title>Modificar usuario</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <%- include('../partials/header') %> 
+
+  <main>
+    <div class="signupFrm">
+
+      <form action="/users/register" method="POST" enctype="multipart/form-data" class="form">
+        <h1 class="title">Modificar usuario</h1>
+
+        <% if(locals.errors?.firstName) { %>
+          <strong><%= errors.firstName.msg %></strong>
+        <% } %>
+
+        <div class="inputContainer">
+          <input type="text" class="input" placeholder="a" name="name" value="<%= user.name%>">
+          <label for="" class="label">Nombre</label>
+        </div>
+
+        <% if(locals.errors?.email) { %>
+          <strong><%= errors.email.msg %></strong>
+      <% } %> 
+        <div class="inputContainer">
+          <input type="text" class="input" placeholder="a" name="email" value="<%= user.email%>">
+          <label for="" class="label">Email</label>
+        </div>
+        
+        <div class="imgForm inputContainer">
+          <h4 class="label" id="profile">Imagen</h4>
+          <div class="img">
+              <input type="file" name="avatar">
+          </div>
+          <div class="sample">
+              <img src="/images/users/<%=user.avatar %>">
+          </div>
+      </div>       
+        <div class="Contenedor">
+          <a href="/" class="cuentasBtn" id="inicio">Volver al inicio</a>
+          <input type="submit" class="cuentasBtn" value="Cambiar usuario">
+        </div>
+      </form>
+    </div>
+  </main>
+
+    <!-- Footer -->
+    <%- include('../partials/footer') %> 

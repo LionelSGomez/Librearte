@@ -1,0 +1,77 @@
+section {
+    width: 100%;
+    margin-top: 65px;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    text-align: center;
+}
+
+ul.users article {
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.users .userAvatar img {
+    width: 110px;
+}
+
+li.userName {
+    width: 15%;
+}
+
+li.userEmail {
+    width: 15%;
+}
+
+li.userAvatar {
+    width: 30%;
+}
+
+li.userRole {
+    width: 20%;
+}
+
+.userOptions {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 20%;
+    align-items: flex-end;
+}
+
+.users {
+    padding: 13px;
+}
+
+.users form {
+    width: 100%;
+}
+
+.userOptions button {
+    width: 50%;
+}
+
+.sample img {
+    width: 100px;
+    height: 100px;
+}
+
+.img {
+    margin-top: 45px;
+    width: 100%;
+}
+
+.imgForm.inputContainer {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 65px;
+    margin-top: 27px;
+}

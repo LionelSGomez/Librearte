@@ -1,52 +1,56 @@
+<!-- Head -->
+<%- include('../partials/head') %>
 
-        <!-- Head -->
-        <%- include('../partials/head') %> 
-    
     <link rel="stylesheet" href="/css/productDetail.css">
     <title>Control de usuarios</title>
 
-</head>
+    </head>
 
-<body>
-    <!-- Header -->
-    <%- include('../partials/header') %> 
+    <body>
+        <!-- Header -->
+        <%- include('../partials/header') %>
 
-    <main>
-        <div class="editar"><a href="/products/<%= product.id %>/edit">Editar producto</a></div>
-        <section class="productImages">
-            <img src="/images/products/<%= product.img %>" alt="firstImage" class="first">
-        </section>
+            <main>
 
-        <section class="detail">
-            <h4><%= product.title %> </h4>
-            <h3>$<%= product.price %> </h3>
+                <section>
+                    <h2>
+                        Lista de usuarios
+                    </h2>
+                    <ul class="users">
+                        <% for(i=0;i < users.length; i++) {%>
+                            <article class="users" id="user<%=i+1%>">
+                                <li class="userName">
+                                    <%= users[i].name %>
+                                </li>
+                                <li class="userEmail">
+                                    <%= users[i].email %>
+                                </li>
+                                <li class="userAvatar">
+                                    <img src="/images/users/<%= users[i].avatar %>">
+                                </li>
+                                <% if(users[i].role) {%>
+                                    <li class="userRole">
+                                        <%= users[i].role.name %>
+                                    </li>
+                                    <% } %>      
+                                <div class="userOptions">
+                                    <form action="/users/delete/<%=users[i].id%>" method="GET">
+                                        <button>Borrar usuario</button>
+                                    </form>
+                                    <form action="/users/userList/<%=users[i].id%>" method="GET">
+                                        <button>Editar usuario</button>
+                                    </form>
+                                    
+                                </div>                          
+                            </article>
+                            
+                            <% } %>
 
-            <form action="/productDetail" method="GET">
-                
-                <div class="quantitySelection">
-                    <label for="products">
-                        ¿Cuántas unidades vas a llevar?
-                        <input type="number" id="products" min="1" value="1" />
-                    </label>
-                    <button type="submit">Agregar al carrito</button>
-                </div>
 
-            </form>
+                    </ul>
 
+                </section>
+            </main>
 
-            <div class="description">
-                <h4>Descripción del producto.</h4>
-                <p><% if(product.description == null){%>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat neque iusto odit reprehenderit eligendi? Id doloribus maiores molestiae numquam quod provident nemo dolore, harum corporis quae? Soluta fugit dignissimos ea.
-                <% } else{%>
-                    <%= product.description %>
-                    <%}%>
-                </p>
-            </div>
-        </section>
-
-
-    </main>
-
-    <!-- Footer -->
-    <%- include('../partials/footer') %> 
+            <!-- Footer -->
+            <%- include('../partials/footer') %>

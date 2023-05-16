@@ -3,7 +3,8 @@ const path = require('path');
 const bcrypt = require('bcryptjs');
 const usersPath = path.join(__dirname, '../database/users.json');
 const { validationResult } = require('express-validator');
-const db = require('../database/models')
+const db = require('../database/models');
+const { error } = require('console');
 
 const controller = {
     login: (req, res) => {
@@ -80,9 +81,38 @@ const controller = {
     contact: (req, res) => {
         res.render('./users/contact')
     },
-    control : (req,res) => {
-        res.render('./users/userList')
-    }
+    control : async (req,res) => {
+        const users = await db.User.findAll({include : [{association: "role"}]})
+        try {
+          res.render('./users/userList', {users})
+        }
+        catch (error){
+          res.send({error})
+      }        
+    },
+    modify : (req,res) => {
+      const {id} = req.params;
+      console.log(db.User, id);
+      db.User.findByPk(id)
+      .then(function(user){
+        res.render('./users/modify', {user})
+      })
+    },
+
+    destroy: async (req, res) => {
+      const {id} = req.params;
+      try {
+          await db.User.destroy({
+              where: {
+                  id: id
+              }
+          });
+          res.redirect('/products')        
+      }
+      catch (error){
+          res.send({error})
+      }                
+  }
 }
 
 module.exports = controller
