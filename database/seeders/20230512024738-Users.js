@@ -7,28 +7,28 @@ module.exports = {
       {
         name: 'Admin_1',
         email: 'prueba1@gmail.com',
-        password: '12345678',
+        password: '$2a$10$gufs/KOB/VvgCYwhlq7Tgum2iY7s5UHHLWlicloBE0E1KjdBbPxui',//12345678
         avatar: "Default",
         roles_id: 1
       },
       {
         name: 'Admin_2',
         email: 'prueba2@gmail.com',
-        password: '12345678',
+        password: '$2a$10$gufs/KOB/VvgCYwhlq7Tgum2iY7s5UHHLWlicloBE0E1KjdBbPxui',//12345678
         avatar: "Default",
         roles_id: 1
       },
       {
         name: 'User_1',
         email: 'prueba3@gmail.com',
-        password: '12345678',
+        password: '$2a$10$gufs/KOB/VvgCYwhlq7Tgum2iY7s5UHHLWlicloBE0E1KjdBbPxui',//12345678
         avatar: "Default",
         roles_id: 2
       },
       {
         name: 'User_2',
         email: 'prueba4@gmail.com',
-        password: '12345678',
+        password: '$2a$10$gufs/KOB/VvgCYwhlq7Tgum2iY7s5UHHLWlicloBE0E1KjdBbPxui',//12345678
         avatar: "Default",
         roles_id: 2
       }

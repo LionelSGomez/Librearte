@@ -28,7 +28,8 @@ const controller = {
                   }
                 });
               }
-            }            
+            }
+            const image = req.file;            
             const userToCreate = {
               name: req.body.firstName + " " + req.body.lastName,
               email: req.body.email,
@@ -79,9 +80,9 @@ const controller = {
     contact: (req, res) => {
         res.render('./users/contact')
     },
-    control: (req,res) => {
+    control : (req,res) => {
         res.render('./users/userList')
-    },
-};
+    }
+}
 
-module.exports = controller;
+module.exports = controller
