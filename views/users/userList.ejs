@@ -1,0 +1,52 @@
+
+        <!-- Head -->
+        <%- include('../partials/head') %> 
+    
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <title>Control de usuarios</title>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <%- include('../partials/header') %> 
+
+    <main>
+        <div class="editar"><a href="/products/<%= product.id %>/edit">Editar producto</a></div>
+        <section class="productImages">
+            <img src="/images/products/<%= product.img %>" alt="firstImage" class="first">
+        </section>
+
+        <section class="detail">
+            <h4><%= product.title %> </h4>
+            <h3>$<%= product.price %> </h3>
+
+            <form action="/productDetail" method="GET">
+                
+                <div class="quantitySelection">
+                    <label for="products">
+                        ¿Cuántas unidades vas a llevar?
+                        <input type="number" id="products" min="1" value="1" />
+                    </label>
+                    <button type="submit">Agregar al carrito</button>
+                </div>
+
+            </form>
+
+
+            <div class="description">
+                <h4>Descripción del producto.</h4>
+                <p><% if(product.description == null){%>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat neque iusto odit reprehenderit eligendi? Id doloribus maiores molestiae numquam quod provident nemo dolore, harum corporis quae? Soluta fugit dignissimos ea.
+                <% } else{%>
+                    <%= product.description %>
+                    <%}%>
+                </p>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <%- include('../partials/footer') %> 

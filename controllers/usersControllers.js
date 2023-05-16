@@ -34,7 +34,7 @@ const controller = {
               email: req.body.email,
               password: bcrypt.hashSync(req.body.password, 10),
               avatar: image ? image.filename : "default.png",
-              role: 2 //usuario
+              roles_id: 2
             };
             
             return db.User.create(userToCreate);
@@ -53,10 +53,9 @@ const controller = {
         try {
                 let comparePassword = await bcrypt.compare(req.body.password, userToLogin.password);
                 if (comparePassword) {
-                    console.log(comparePassword);
                     req.session.userLogged = userToLogin;
                     return res.redirect('/');
-                }            
+                }
         }
         catch (error){
             res.send({error})
@@ -69,14 +68,20 @@ const controller = {
             }
         })
     },
-
+    logout: (req, res) => {
+      req.session.userLogged = undefined;
+      res.redirect('./users/login')
+    }
+    ,
     register: (req, res) => {
         res.render('./users/register')
     },
-
     contact: (req, res) => {
         res.render('./users/contact')
-    }
+    },
+    control: (req,res) => {
+        res.render('./users/userList')
+    },
 };
 
 module.exports = controller;

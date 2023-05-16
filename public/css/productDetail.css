@@ -75,16 +75,16 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .editar{
-    padding: 6px;
+    padding: 10px;
     background-color: #de7124;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     font-weight: bold;
-    width: 160px;
+    width: 175px;
     text-align: center;
     border-radius: 15px;
-    position: absolute;
-    right: 20px;
-    top: 120px;
+    position: fixed;
+    right: 15px;
+    bottom: 30px;
 }
 
 .editar a {

@@ -26,4 +26,32 @@
             </li>
         </ul>
     </nav>
+    <% if(userLogged){ %>
+        <div class="hi">
+            <div class="userAvatar">
+                <img class="userAvatar" src="/images/users/default.png">
+            </div>
+            <div>
+                <p>
+                    <%=userLogged.name %>, bienvenido! %>
+                </p>
+            </div>
+            <div class="logout">
+                <form action="/logout" method="POST">
+                    <button action="submit">
+                        <img class="logout" src="/images/cerrar-sesion.png">
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="admin">
+            <% if (userLogged.roles_id==1){ %>
+                <div>
+                    <a href="users/userList">Control de usuarios</a>
+                </div>
+            <% } %>
+                    <% } %>
+        </div>
+
+
 </header>

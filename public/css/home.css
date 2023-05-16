@@ -47,6 +47,51 @@ ul li:hover {
     font-size: 35px;
 }
 
+.hi {
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    background-color: #F3AE4B;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.hi div.userAvatar {
+    padding: 8px;
+}
+
+.hi img{
+    width: 30px;
+}
+
+.logout form {
+    padding: 5px;
+}
+
+.logout form button {
+    border: none;
+    width: 30px;
+    background-color: #F3AE4B;
+}
+
+.admin {
+    position: absolute;
+    padding: 15px;
+    left: 0px;
+    top: 100px;
+    background-color: #F3AE4B;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.admin a {
+    text-decoration: none;
+    color: black;
+}
+
 /*BODY*/
 
 .landing img {

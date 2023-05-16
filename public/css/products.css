@@ -41,9 +41,9 @@ h4 {
     width: 175px;
     text-align: center;
     border-radius: 15px;
-    position: absolute;
+    position: fixed;
     right: 15px;
-    top: 111px;
+    bottom: 30px;
 }
 
 .agregar a {

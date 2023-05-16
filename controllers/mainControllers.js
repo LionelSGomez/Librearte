@@ -1,6 +1,6 @@
 const controller = {
     index: (req, res) => {
-        res.render('index');
+        res.render('index'), {userLogged: req.session.userLogged};
     },
     login: (req, res) => {
         res.render('./users/login');
