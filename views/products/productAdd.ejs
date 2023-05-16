@@ -14,16 +14,26 @@
                 <div class="signupFrm">
                     <form action="/products/create" method="POST" enctype="multipart/form-data" class="form">
                         <h1 class="title">Agregar Producto</h1>
+
+                        <% if(locals.errors?.title) { %>
+                            <strong><%= errors.title.msg %></strong>
+                        <% } %>
                         <div class="inputContainer">
                             <input type="text" class="input" placeholder="a" name="title">
                             <label for="title" class="label">Nombre del Producto</label>
                         </div>
                         
+                        <% if(locals.errors?.price) { %>
+                            <strong><%= errors.price.msg %></strong>
+                        <% } %>
                         <div class="inputContainer">
                             <input type="text" class="input" placeholder="a" name="price">
                             <label for="price" class="label">Precio</label>
                         </div>
 
+                        <% if(locals.errors?.description) { %>
+                            <strong><%= errors.description.msg %></strong>
+                        <% } %>
                         <div class="inputContainer description">
                             <textarea class="input" placeholder="a" name="description"></textarea>
                             <label for="description" class="label">Descripción</label>
@@ -40,6 +50,7 @@
                             </select>
                         </div>
                         <section class="imgForm">
+                            
                             <div class="img">
                                 <input type="file" name="img">
                             </div>

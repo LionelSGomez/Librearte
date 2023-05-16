@@ -11,14 +11,16 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({storage});
+
 const productsController = require('../controllers/productsControllers');
+const addProductValidator = require('../validators/addProductValidator')
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index);
 
 // /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productsController.productAdd);
-router.post('/create', upload.single('img'), productsController.create);
+router.post('/create', upload.single('img'), addProductValidator, productsController.create);
 
 // /*** GET ONE PRODUCT ***/ 
 router.get('/:id', productsController.productDetail);

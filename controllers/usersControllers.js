@@ -14,7 +14,7 @@ const controller = {
     create: (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-          return res.render('./users/register', { session: req.session, errors: errors.mapped() });
+          return res.render('./users/register', { session: req.session, errors: errors.mapped(), oldData: req.body });
         }        
         let image = req.file;      
         db.User.findAll()

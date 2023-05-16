@@ -22,7 +22,7 @@
         <% } %>
 
         <div class="inputContainer">
-          <input type="text" class="input" placeholder="a" name="firstName" autocomplete="off">
+          <input type="text" class="input" placeholder="a" name="firstName" autocomplete="off" value="<%= locals.oldData ? oldData.firstName : null %>">
           <label for="" class="label">Nombre</label>
         </div>
 
@@ -30,7 +30,7 @@
           <strong><%= errors.lastName.msg %></strong>
       <% } %> 
         <div class="inputContainer">
-          <input type="text" class="input" placeholder="a" name="lastName" autocomplete="off">
+          <input type="text" class="input" placeholder="a" name="lastName" autocomplete="off" value="<%= locals.oldData ? oldData.lastName : null %>">
           <label for="" class="label">Apellido</label>
         </div>
 
@@ -38,7 +38,7 @@
           <strong><%= errors.email.msg %></strong>
       <% } %> 
         <div class="inputContainer">
-          <input type="text" class="input" placeholder="a" name="email" autocomplete="off">
+          <input type="text" class="input" placeholder="a" name="email" autocomplete="off" value="<%= locals.oldData ? oldData.email : null %>">
           <label for="" class="label">Email</label>
         </div>
 

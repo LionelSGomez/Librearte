@@ -1,4 +1,5 @@
 const db = require('../database/models');
+const { validationResult } = require('express-validator');
 
 const controller = {
     index: (req, res) => {
@@ -23,6 +24,10 @@ const controller = {
         res.render('./products/productAdd');
     },
     create: async (req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+          return res.render('./products/productAdd', { errors: errors.mapped() });
+        }
         const image = req.file;
         const newProduct = {
             title: req.body.title,

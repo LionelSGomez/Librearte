@@ -15,31 +15,33 @@
                     <form action="/users/login" method="post" class="form">
                         <h1 class="title">Ingresá a tu cuenta</h1>
 
+                        <% if(locals.errors?.email) { %>
+                            <strong><%= errors.email.msg %></strong>
+                        <% } %>
+                        <br>
                         <div class="inputContainer">
                             <input type="text" class="input" placeholder="a" name="email" autocomplete="off">
                             <label for="email" class="label">Email</label>
                         </div>
+                        
+                        <% if(locals.errors?.password) { %>
+                            <strong><%= errors.password.msg %></strong>
+                        <% } %>
 
                         <div class="inputContainer">
                             <input type="password" class="input" placeholder="a" name="password" 
                                 autocomplete="off">
                             <label for="password" class="label">Contraseña</label>
                         </div>
-
-                        <% if(locals.errors?.email) { %>
-                            <strong>
-                                <%= errors.email.msg %>
-                            </strong>
-                            <% } %>
-
-                                <div class="Contenedor">
-                                        <a href="/" class="cuentasBtn" id="inicio">Volver al inicio</a>
-                                    <% if(userLogged){ %>                                                               
-                                            <button type="submit" class="cuentasBtn" id="crear">Cambiar de usuario</button>
-                                        <% } else {%>
-                                                <button type="submit" class="cuentasBtn" id="crear">Iniciar sesión</button>
-                                            <% }%>
-                                </div>
+                        
+                        <div class="Contenedor">
+                            <a href="/" class="cuentasBtn" id="inicio">Volver al inicio</a>
+                                <% if(userLogged){ %>                                                               
+                                        <button type="submit" class="cuentasBtn" id="crear">Cambiar de usuario</button>
+                                <% } else {%>
+                                    <button type="submit" class="cuentasBtn" id="crear">Iniciar sesión</button>
+                                <% }%>
+                        </div>
                     </form>
                 </div>
             </main>
