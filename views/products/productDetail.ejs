@@ -12,7 +12,10 @@
     <%- include('../partials/header') %> 
 
     <main>
-        <div class="editar"><a href="/products/<%= product.id %>/edit">Editar producto</a></div>
+        <% if(userLogged && userLogged.roles_id == 1) { %>
+            <div class="editar"><a href="/products/<%= product.id %>/edit">Editar producto</a></div>
+        <% } %>
+        
         <section class="productImages">
             <img src="/images/products/<%= product.img %>" alt="firstImage" class="first">
         </section>

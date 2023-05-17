@@ -14,9 +14,10 @@ const upload = multer({storage});
 
 const productsController = require('../controllers/productsControllers');
 const addProductValidator = require('../validators/addProductValidator')
+const authMiddleware = require('../middlewares/authMiddleware');
 
 /*** GET ALL PRODUCTS ***/ 
-router.get('/', productsController.index);
+router.get('/', authMiddleware ,productsController.index);
 
 // /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productsController.productAdd);
@@ -26,10 +27,10 @@ router.post('/create', upload.single('img'), addProductValidator, productsContro
 router.get('/:id', productsController.productDetail);
 
 // /*** EDIT ONE PRODUCT ***/ 
-router.get('/:id/edit', productsController.productEdit);
+router.get('/:id/edit', authMiddleware ,productsController.productEdit);
 router.put('/:id/edit', upload.single('img'), productsController.productUpdate);
 // /*** DELETE ONE PRODUCT***/ 
-router.delete('/delete/:id', productsController.destroy); 
+router.delete('/delete/:id', productsController.destroy);
 
 
 module.exports = router;

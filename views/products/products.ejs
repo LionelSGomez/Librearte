@@ -9,8 +9,11 @@
         <!-- Header -->
         <%- include('../partials/header') %>
             <main>
-                <div class="agregar"><a href="/products/create">Agregar producto</a></div>
 
+                <% if(userLogged && userLogged.roles_id == 1) { %>
+                    <div class="agregar"><a href="/products/create">Agregar producto</a></div>
+                <% } %>
+                
                 <% for(let i=0; i < categories.length;i++) {%>
                     <section class="schoolSupplies category" id="<%= categories[i].name %>">
                         <h2>
