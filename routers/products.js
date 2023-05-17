@@ -13,24 +13,24 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 
 const productsController = require('../controllers/productsControllers');
-const addProductValidator = require('../validators/addProductValidator')
 const authMiddleware = require('../middlewares/authMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware')
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', authMiddleware ,productsController.index);
 
 // /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productsController.productAdd);
-router.post('/create', upload.single('img'), addProductValidator, productsController.create);
+router.post('/create', adminMiddleware , upload.single('img'), productsController.create);
 
 // /*** GET ONE PRODUCT ***/ 
 router.get('/:id', productsController.productDetail);
 
 // /*** EDIT ONE PRODUCT ***/ 
-router.get('/:id/edit', authMiddleware ,productsController.productEdit);
-router.put('/:id/edit', upload.single('img'), productsController.productUpdate);
+router.get('/:id/edit', adminMiddleware ,productsController.productEdit);
+router.put('/:id/edit', adminMiddleware, upload.single('img'), productsController.productUpdate);
 // /*** DELETE ONE PRODUCT***/ 
-router.delete('/delete/:id', productsController.destroy);
+router.delete('/delete/:id', adminMiddleware, productsController.destroy);
 
 
 module.exports = router;

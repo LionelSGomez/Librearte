@@ -122,7 +122,7 @@ const controller = {
                   id: id
               }
           });
-          res.redirect('/products')        
+          res.redirect('/users/userList')        
       }
       catch (error){
           res.send({error})

@@ -25,6 +25,7 @@ router.post('/login', loginValidator, usersControllers.loginCtrl);
 router.get('/userList', adminMiddleware, usersControllers.control);
 router.get('/userList/:id', adminMiddleware, usersControllers.modify);
 router.put('/userList/:id', adminMiddleware, upload.single('avatar'), usersControllers.edit);
+router.delete('/userList/:id', adminMiddleware, usersControllers.destroy);
 
 
 module.exports = router;

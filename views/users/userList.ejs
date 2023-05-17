@@ -34,7 +34,7 @@
                                     </li>
                                     <% } %>      
                                 <div class="userOptions">
-                                    <form action="/users/delete/<%=users[i].id%>" method="GET">
+                                    <form action="/users/userList/<%=users[i].id%>?_method=DELETE" method="POST">
                                         <button>Borrar usuario</button>
                                     </form>
                                     <form action="/users/userList/<%=users[i].id%>" method="GET">

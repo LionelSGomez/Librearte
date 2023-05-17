@@ -173,6 +173,10 @@ footer {
     font-size: 16px;
 }
 
+form strong {
+    display: flex;
+    justify-content: center;
+}
 
 /*MEDIA*/
 
