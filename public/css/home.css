@@ -27,14 +27,13 @@ ul li:hover {
     text-decoration: underline;
 }
 
-.homeNav div {
+.homeNav .librearte {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0px 22px;
+    justify-content: center;
 }
 
-.homeNav img {
+.homeNav #librearte {
     height: 100px;
     padding: 10px;
     background-color: white;
@@ -48,49 +47,31 @@ ul li:hover {
 }
 
 .hi {
-    position: absolute;
-    right: 0px;
-    top: 100px;
-    background-color: #F3AE4B;
-    height: 55px;
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
-.hi div.userAvatar {
-    padding: 8px;
-}
-
-.hi img{
+.hi img {
     width: 30px;
 }
 
-.logout form {
-    padding: 5px;
+.logout img {
+    width: 30px;
 }
 
-.logout form button {
+.logout {
+    background-color: #F3AE4B;
+}
+
+.logout button {
     border: none;
-    width: 30px;
     background-color: #F3AE4B;
+    font-size: 15px;
+    font-weight: 900;
+    color: black
 }
 
-.admin {
-    position: absolute;
-    padding: 15px;
-    left: 0px;
-    top: 100px;
-    background-color: #F3AE4B;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    color: black;
-}
-
-.admin a {
-    text-decoration: none;
-    color: black;
-}
 
 /*BODY*/
 
@@ -199,6 +180,7 @@ footer {
 
     .homeNav li {
         display: block;
+        width: calc(100%/7);
     }
 
     .homeNav a {
@@ -207,21 +189,19 @@ footer {
 
     .homeNav ul{
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        align-content: center;
+        justify-content: center;
         flex-wrap: nowrap;
         flex-direction: row;
         list-style-type: none;
         height: 100px;
         position: relative;
+        align-items: center;
+        text-align: center;
     }
     
-    .homeNav img {
+    .homeNav #librearte {
         height: 130px;
-        position: absolute;
-        left: 50%;
-        margin-left: -55px;
+        position: relative;
         bottom: -45px;
     }
 

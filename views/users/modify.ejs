@@ -15,7 +15,7 @@
   <main>
     <div class="signupFrm">
 
-      <form action="/users/register" method="POST" enctype="multipart/form-data" class="form">
+      <form action="/users/userList/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="form">
         <h1 class="title">Modificar usuario</h1>
 
         <% if(locals.errors?.firstName) { %>
@@ -34,6 +34,14 @@
           <input type="text" class="input" placeholder="a" name="email" value="<%= user.email%>">
           <label for="" class="label">Email</label>
         </div>
+        <div class="inputContainer">
+          <label for="roles_id" class="label">Seleccione Categorias</label>
+          <select name="roles_id" id="role" class="form-input" required>
+              <option value="">Seleccione categorias</option>
+              <option value="1" <%= user.roles_id == 1 ? "selected" : "" %>>Administrador</option>
+              <option value="2" <%= user.roles_id == 2 ? "selected" : "" %>>Usuario</option>
+          </select>
+      </div>
         
         <div class="imgForm inputContainer">
           <h4 class="label" id="profile">Imagen</h4>

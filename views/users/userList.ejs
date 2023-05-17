@@ -9,7 +9,7 @@
     <body>
         <!-- Header -->
         <%- include('../partials/header') %>
-
+        <link rel="stylesheet" href="/css/userList.css">
             <main>
 
                 <section>
@@ -38,7 +38,7 @@
                                         <button>Borrar usuario</button>
                                     </form>
                                     <form action="/users/userList/<%=users[i].id%>" method="GET">
-                                        <button>Editar usuario</button>
+                                        <button>Modificar usuario</button>
                                     </form>
                                     
                                 </div>                          

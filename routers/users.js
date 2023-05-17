@@ -18,14 +18,13 @@ const adminMiddleware = require('../middlewares/adminMiddleware')
 
 router.get('/register',usersControllers.register);
 router.post('/register', upload.single('profile'), registerValidator, usersControllers.create)
+
 router.get('/login', usersControllers.login);
 router.post('/login', loginValidator, usersControllers.loginCtrl);
+
 router.get('/userList', adminMiddleware, usersControllers.control);
-router.get('/users/userList', adminMiddleware, usersControllers.control);
-router.get('/userList/:id', usersControllers.modify);
-router.get('/userList/:id', usersControllers.destroy)
-router.get('/users/userList/:id', usersControllers.modify);
-router.get('/users/userList/:id', usersControllers.destroy)
+router.get('/userList/:id', adminMiddleware, usersControllers.modify);
+router.put('/userList/:id', adminMiddleware, upload.single('avatar'), usersControllers.edit);
 
 
 module.exports = router;

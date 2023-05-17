@@ -1,10 +1,6 @@
-const fs = require('fs');
-const path = require('path');
 const bcrypt = require('bcryptjs');
-const usersPath = path.join(__dirname, '../database/users.json');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
-const { error } = require('console');
 
 const controller = {
     login: (req, res) => {
@@ -13,10 +9,10 @@ const controller = {
 
     create: (req, res) => {
         const errors = validationResult(req);
+        const oldData = req.body;
         if (!errors.isEmpty()) {
-          return res.render('./users/register', { session: req.session, errors: errors.mapped(), oldData: req.body });
-        }        
-        let image = req.file;      
+          return res.render('./users/register', { session: req.session, errors: errors.mapped(), oldData });
+        }
         db.User.findAll()
           .then(function(usuarios) {
             for (let i = 0; i < usuarios.length; i++) {
@@ -26,7 +22,7 @@ const controller = {
                     email: {
                       msg: 'Este email ya está registrado'
                     }
-                  }
+                  }, oldData
                 });
               }
             }
@@ -39,11 +35,12 @@ const controller = {
               roles_id: 2
             };
             
-            return db.User.create(userToCreate);
+            return db.User.create(userToCreate)
+            .then(() => {
+              res.redirect('/users/login');
+            });
           })
-          .then(() => {
-            res.redirect('/users/login');
-          });
+
       },
 
     loginCtrl: async (req, res) => {
@@ -92,12 +89,30 @@ const controller = {
     },
     modify : (req,res) => {
       const {id} = req.params;
-      console.log(db.User, id);
       db.User.findByPk(id)
       .then(function(user){
         res.render('./users/modify', {user})
       })
     },
+    edit : async (req,res) => {
+      const {id} = req.params;
+        try {
+          console.log(id,req.file, req.body);
+            await db.User.update({
+                ...req.body,
+                avatar: req.file ? req.file.filename : this.avatar
+            }, {
+                where: {
+                    id: id
+                }
+            });
+            res.redirect('/users/userList')
+        }
+        catch (error){
+            res.send({error})
+        }                
+    }
+    ,
 
     destroy: async (req, res) => {
       const {id} = req.params;

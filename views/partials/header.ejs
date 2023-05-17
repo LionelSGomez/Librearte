@@ -10,48 +10,80 @@
             <li>
                 <a href="/contact">Contacto</a>
             </li>
-            <div>
-                <a href="/"><img src="/images/logo.webp"></a>
+            <li class="librearte">
+                <a href="/"><img id="librearte" src="/images/logo.webp"></a>
                 <i class="fa-solid fa-bars burgerMenu"></i>
-            </div>
+            </li>
 
-            <li>
-                <a href="/users/login">Ingresar</a>
-            </li>
-            <li>
-                <a href="/users/register">Registrarse</a>
-            </li>
-            <li>
-                <a href="/productcart">Carrito</a>
-            </li>
+            <% if(userLogged && userLogged.roles_id == 1){ %>
+                <li>
+                    <div class="hi">
+                        <div class="userAvatar">
+                            <img class="userAvatar" src="/images/users/default.png">
+                        </div>
+                        <div>
+                            <p>
+                                <%=userLogged.name %>%>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="logout">
+                        <form action="/logout" method="POST">
+                            <button action="submit">Cerrar sesión</button>
+                        </form>
+                    </div>
+                </li>                       
+                    
+                       
+            <% } else if (userLogged && userLogged.roles_id != 1) {%>
+
+                <li>
+                    <div class="hi">
+                        <div class="userAvatar">
+                            <img class="userAvatar" src="/images/users/default.png">
+                        </div>
+                        <div>
+                            <p>
+                                <%=userLogged.name %>%>
+                            </p>
+                        </div>
+                </li>
+                <li>
+                    <div class="logout">
+                        <form action="/logout" method="POST">
+                            <button action="submit">Cerrar sesión</button>
+                        </form>
+                    </div>
+                </li>
+            <% } else { %>
+
+                <li>
+                    <a href="/users/login">Ingresar</a>
+                </li>
+   
+                <li>
+                    <a href="/users/register">Registrarse</a>
+                </li>
+                <% }%>
+                <% if(userLogged && userLogged.roles_id == 1) {%>
+                    <li>
+                        <div class="admin"></div>
+                            <div>
+                                <a href="/users/userList">Control de usuarios</a>
+                            </div>
+                        </div>
+                    </li>        
+                    <% } else { %>
+                    <li>
+                        <a href="/productcart">Carrito</a>
+                    </li>
+                    <% }%> 
         </ul>
     </nav>
-    <% if(userLogged){ %>
-        <div class="hi">
-            <div class="userAvatar">
-                <img class="userAvatar" src="/images/users/default.png">
-            </div>
-            <div>
-                <p>
-                    <%=userLogged.name %>, bienvenido! %>
-                </p>
-            </div>
-            <div class="logout">
-                <form action="/logout" method="POST">
-                    <button action="submit">
-                        <img class="logout" src="/images/cerrar-sesion.png">
-                    </button>
-                </form>
-            </div>
-        </div>
-        <div class="admin">
-            <% if (userLogged.roles_id==1){ %>
-                <div>
-                    <a href="users/userList">Control de usuarios</a>
-                </div>
-            <% } %>
-                    <% } %>
-        </div>
+
+        
 
 
 </header>

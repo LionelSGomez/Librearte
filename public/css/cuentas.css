@@ -151,3 +151,8 @@ textarea.input {
 .inputContainer .categorias{
   padding-bottom: 45px;
 }
+
+form strong {
+  display: flex;
+  justify-content: center;
+}
