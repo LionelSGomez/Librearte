@@ -2,6 +2,7 @@
 <%- include('../partials/head') %>
 
     <link rel="stylesheet" href="/css/cuentas.css">
+    <script src="/js/js-login.js"></script>
     <title>Inicio de Sesión</title>
     </head>
 
@@ -15,21 +16,26 @@
                     <form action="/users/login" method="post" class="form">
                         <h1 class="title">Ingresá a tu cuenta</h1>
 
+                        <div class="errors">
+                            <ul></ul>
+                        </div>
+                        <p class="error-message" id="error-email"></p>
                         <% if(locals.errors?.email) { %>
                             <strong><%= errors.email.msg %></strong>
                         <% } %>
                         <br>
                         <div class="inputContainer">
-                            <input type="text" class="input" placeholder="a" name="email" autocomplete="off">
+                            <input type="text" class="input" id="email" placeholder="a" name="email" autocomplete="off">
                             <label for="email" class="label">Email</label>
                         </div>
                         
+                        <p class="error-message" id="error-password"></p>
                         <% if(locals.errors?.password) { %>
                             <strong><%= errors.password.msg %></strong>
                         <% } %>
 
                         <div class="inputContainer">
-                            <input type="password" class="input" placeholder="a" name="password" 
+                            <input type="password" class="input" id="password" placeholder="a" name="password" 
                                 autocomplete="off">
                             <label for="password" class="label">Contraseña</label>
                         </div>
@@ -45,6 +51,7 @@
                     </form>
                 </div>
             </main>
+            
 
             <!-- Footer -->
             <%- include('../partials/footer') %>
