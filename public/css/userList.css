@@ -47,8 +47,11 @@ li.userRole {
     align-items: flex-end;
 }
 
-.users {
+article.users {
     padding: 13px;
+    margin: 20px;
+    border: solid;
+    background-color: rgb(218, 218, 218);
 }
 
 .users form {
@@ -74,4 +77,8 @@ li.userRole {
     flex-direction: row;
     padding-bottom: 65px;
     margin-top: 27px;
+}
+
+.users li {
+    list-style: none;
 }
