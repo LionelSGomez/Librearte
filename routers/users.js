@@ -14,7 +14,8 @@ const upload = multer({storage});
 const usersControllers = require('../controllers/usersControllers');
 const registerValidator = require('../validators/registerValidator');
 const loginValidator = require('../validators/loginValidator')
-const adminMiddleware = require('../middlewares/adminMiddleware')
+const adminMiddleware = require('../middlewares/adminMiddleware');
+const contactMiddleware = require('../middlewares/contactMiddleware');
 
 router.get('/register',usersControllers.register);
 router.post('/register', upload.single('profile'), registerValidator, usersControllers.create)
@@ -26,6 +27,8 @@ router.get('/userList', adminMiddleware, usersControllers.control);
 router.get('/userList/:id', adminMiddleware, usersControllers.modify);
 router.put('/userList/:id', adminMiddleware, upload.single('avatar'), usersControllers.edit);
 router.delete('/userList/:id', adminMiddleware, usersControllers.destroy);
+
+router.post('/contact', contactMiddleware, usersControllers.contact);
 
 
 module.exports = router;

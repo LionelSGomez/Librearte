@@ -10,7 +10,6 @@
 
             <main>
                 <div class="father-container">
-                    <form action="/contact" method="post">
                     <section class="header-contact-page">
                         <div class="container">
                             <div class="content">
@@ -43,14 +42,14 @@
                             </ul>
                         </div>
                         <div class="contact-form">
-                            <form action="/" method="" id="form">
+                            <form action="/users/contact" method="POST">
                                 <div class="form-boxs">
                                     <label class="form-label" for="name">Nombre</label>
-                                    <input class="controls" type="text" name="name" id="name" required autocomplete="off">
+                                    <input class="controls" type="text" name="name" required autocomplete="off">
                                 </div>
                                 <div class="form-boxs">
-                                    <label class="form-label" for="e-mail">Email</label>
-                                    <input class="controls" type="email" name="e-mail" id="email" required autocomplete="off">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="controls" type="email" name="email" required autocomplete="off">
                                 </div>
                                 <div class="form-boxs">
                                     <label class="form-label"  for="phone">Teléfono</label>
@@ -58,7 +57,7 @@
                                 </div>
                                 <div class="form-boxs">
                                     <label class="form-label" for="message">Mensaje</label>
-                                    <textarea class="controls" name="menssage" id="message" cols="30" rows="6" required></textarea>
+                                    <textarea class="controls" name="message" id="message" cols="30" rows="6" required></textarea>
                                 </div>
                                 <button class="send-button" type="submit" value="Enviar" name="contact">ENVIAR</button>
 

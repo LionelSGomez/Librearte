@@ -76,7 +76,7 @@ const controller = {
         res.render('./users/register')
     },
     contact: (req, res) => {
-        res.render('./users/contact')
+        res.redirect('/')
     },
     control : async (req,res) => {
         const users = await db.User.findAll({include : [{association: "role"}]})
