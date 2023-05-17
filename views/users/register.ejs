@@ -3,6 +3,7 @@
         <%- include('../partials/head') %> 
 
   <link rel="stylesheet" href="/css/cuentas.css">
+  <script src="/js/js-register.js"></script>
   <title>Registro</title>
 </head>
 
@@ -17,36 +18,44 @@
       <form action="/users/register" method="POST" enctype="multipart/form-data" class="form">
         <h1 class="title">Crear Cuenta</h1>
 
+        <div class="errors">
+          <ul></ul>
+        </div>
+
         <% if(locals.errors?.firstName) { %>
           <strong><%= errors.firstName.msg %></strong>
         <% } %>
+        <p class="error-message" id="error-firstName"></p>
 
         <div class="inputContainer">
-          <input type="text" class="input" placeholder="a" name="firstName" autocomplete="off" value="<%= locals.oldData ? oldData.firstName : null %>">
+          <input type="text" class="input" placeholder="a" name="firstName" id="firstName" autocomplete="off" value="<%= locals.oldData ? oldData.firstName : null %>">
           <label for="" class="label">Nombre</label>
         </div>
 
         <% if(locals.errors?.lastName) { %>
           <strong><%= errors.lastName.msg %></strong>
       <% } %> 
+      <p class="error-message" id="error-lastName"></p>
         <div class="inputContainer">
-          <input type="text" class="input" placeholder="a" name="lastName" autocomplete="off" value="<%= locals.oldData ? oldData.lastName : null %>">
+          <input type="text" class="input" placeholder="a" name="lastName" autocomplete="off" id="lastName" value="<%= locals.oldData ? oldData.lastName : null %>">
           <label for="" class="label">Apellido</label>
         </div>
 
         <% if(locals.errors?.email) { %>
           <strong><%= errors.email.msg %></strong>
       <% } %> 
+      <p class="error-message" id="error-email"></p>
         <div class="inputContainer">
-          <input type="text" class="input" placeholder="a" name="email" autocomplete="off" value="<%= locals.oldData ? oldData.email : null %>">
+          <input type="text" class="input" placeholder="a" name="email" id="email" autocomplete="off" value="<%= locals.oldData ? oldData.email : null %>">
           <label for="" class="label">Email</label>
         </div>
 
         <% if(locals.errors?.password) { %>
           <strong><%= errors.password.msg %></strong>
       <% } %> 
+      <p class="error-message" id="error-password"></p>
         <div class="inputContainer">
-          <input type="password" class="input" placeholder="a" name="password">
+          <input type="password" class="input" placeholder="a" name="password" id="password">
           <label for="" class="label">Contraseña</label>
         </div>
         

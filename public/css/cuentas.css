@@ -7,6 +7,22 @@ body {
   /* background-image: url(/images/Fondo-Productos.png); */
   background-image: url(/images/Fondo-Productos2.png);
 }
+.is-valid{
+  color: black
+}
+
+.is-invalid {
+  color: #842029;
+}
+
+.error-message {
+  color: #842029;
+  display: none;
+}
+
+.show-error-message {
+  display: block;
+}
 
 #background {
   position: absolute;

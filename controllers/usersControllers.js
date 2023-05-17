@@ -50,22 +50,22 @@ const controller = {
         }
         const userToLogin = await db.User.findOne({where: {email: req.body.email}})
         try {
-                let comparePassword = await bcrypt.compare(req.body.password, userToLogin.password);
-                if (comparePassword) {
-                    req.session.userLogged = userToLogin;
-                    return res.redirect('/');
-                }
+          let comparePassword = await bcrypt.compare(req.body.password, userToLogin.password);
+          if (comparePassword) {
+            req.session.userLogged = userToLogin;
+            return res.redirect('/');
+          }
         }
         catch (error){
-            res.send({error})
-        }     
-        return res.render('./users/login', {
-            errors: {
-                email: {
-                    msg: 'Las credenciales son inválidas'
-                }
-            }
+          res.render('./users/login', {
+          errors: {
+              email: {
+                  msg: 'Las credenciales son inválidas'
+              }
+          }
         })
+        }     
+        
     },
     logout: (req, res) => {
       req.session.userLogged = undefined;
