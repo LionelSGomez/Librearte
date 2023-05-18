@@ -7,9 +7,8 @@ const controller = {
         const pedidoProducts = db.Product.findAll();
         Promise.all([pedidoProducts, pedidoCategories])
         .then(function ([products, categories]){
-            res.render('./products/products', { products, categories})
+            res.render('./products/products', { products, categories});
         })
-        ;
     },
 
     productDetail: (req, res) => {
@@ -85,6 +84,10 @@ const controller = {
         catch (error){
             res.send({error})
         }                
+    },
+    apiProducts: (req, res) => {
+        db.Product.findAll()
+        .then(users => res.json(users))
     }
 }
 

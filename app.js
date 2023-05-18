@@ -26,11 +26,13 @@ app.set('views', path.join(__dirname, './views')); // Seteo de la ubicación de 
 // ************ Route System require and use() ************
 const mainRouter = require('./routers/index');
 const productsRouter = require('./routers/products');
-const usersRouter = require('./routers/users')
+const usersRouter = require('./routers/users');
+const apiControllers = require('./routers/apis');
 
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
+app.use('/api', apiControllers)
 
 
 // ************ Listen URL + Console log ************

@@ -32,5 +32,4 @@ router.put('/:id/edit', adminMiddleware, upload.single('img'), productsControlle
 // /*** DELETE ONE PRODUCT***/ 
 router.delete('/delete/:id', adminMiddleware, productsController.destroy);
 
-
 module.exports = router;
