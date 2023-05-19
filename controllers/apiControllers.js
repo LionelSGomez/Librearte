@@ -18,25 +18,33 @@ const controller = {
                 countByCategory[nombreCategoria]++;
                 producto.dataValues.detail = '/api/products/' + producto.id;
             });
-            res.json({
+            res.status(200).json({
                 count: productos.length,
                 countByCategory,
                 productos
+
             });
         })
+        .catch(function (error) {
+            console.error(error);
+            res.status(500).json({ error: 'Ocurrió un error en el servidor.' });
+          });
         
     },
     product: (req, res) => {
         db.Product.findByPk(req.params.id, { include: { association: 'product_category' } })
           .then(function (product) {
             const productCategories = [product.product_category]
-      
             res.json({
               ...product.dataValues,
               product_category: productCategories,
-              imageUrl: '/images/products/'+ product.img
+              imageUrl: '/images/products/'+ product.img,
             });
           })
+          .catch(function (error) {
+            console.error(error);
+            res.status(400).json({ error: 'Solicitud no válida.' });
+          });
     },
     users: (req, res) => {
         db.User.findAll({attributes: ['id','name','email']})
@@ -49,7 +57,25 @@ const controller = {
                 users
             })
         })
+        .catch(function (error) {
+            console.error(error);
+            res.status(500).json({ error: 'Ocurrió un error en el servidor.' });
+          });
+    },
+    user: (req,res) => {
+        db.User.findByPk(req.params.id, {attributes: ['id','name','email','avatar']})
+        .then(function(user){
+            res.json({
+                user,
+                image : '/images/users/'+user.avatar
+            })
+        })
+        .catch(function (error) {
+            console.error(error);
+            res.status(400).json({ error: 'Solicitud no válida.' });
+          });
     }
+
 }
 
 module.exports = controller;
