@@ -1,5 +1,7 @@
 const db = require('../database/models');
 const { validationResult } = require('express-validator');
+const serverErr = require('../middlewares/serverErrMiddleware');
+
 
 const controller = {
     index: (req, res) => {
@@ -9,6 +11,9 @@ const controller = {
         .then(function ([products, categories]){
             res.render('./products/products', { products, categories});
         })
+        .catch(error =>{
+            serverErr(error,res)
+        })
     },
 
     productDetail: (req, res) => {
@@ -17,7 +22,9 @@ const controller = {
         .then(function (product){
             res.render('./products/productDetail', { product })
         })
-
+        .catch(error =>{
+            serverErr(error,res)
+        })
     },
     productAdd: (req, res) => {
         res.render('./products/productAdd');
@@ -39,9 +46,9 @@ const controller = {
             db.Product.create(newProduct);
             res.redirect('/products')
         }
-        catch (error){
-            res.send({error})
-        }
+        catch{error =>{
+            serverErr(error,res)
+        }}
     },
     productEdit: (req, res) => {
         const {id} = req.params;
@@ -50,6 +57,9 @@ const controller = {
         Promise.all([pedidoProduct, pedidoCategory])
             .then(function([product,category]){
                 res.render('./products/productEdit', { product , category});
+            })
+            .catch(error => {
+                res.send({error})
             })
     },
     productUpdate: async (req, res) => {
@@ -68,7 +78,7 @@ const controller = {
         }
         catch (error){
             res.send({error})
-        }                
+        }                 
     }        
     ,
      destroy: async (req, res) => {
@@ -83,11 +93,7 @@ const controller = {
         }
         catch (error){
             res.send({error})
-        }                
-    },
-    apiProducts: (req, res) => {
-        db.Product.findAll()
-        .then(users => res.json(users))
+        }                  
     }
 }
 

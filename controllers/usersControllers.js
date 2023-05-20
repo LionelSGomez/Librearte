@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
+const serverErr = require('../middlewares/serverErrMiddleware');
 
 const controller = {
     login: (req, res) => {
@@ -33,12 +34,14 @@ const controller = {
               password: bcrypt.hashSync(req.body.password, 10),
               avatar: image ? image.filename : "default.png",
               roles_id: 2
-            };
-            
+            };            
             return db.User.create(userToCreate)
             .then(() => {
               res.redirect('/users/login');
-            });
+            })
+          })
+          .catch(error =>{
+            serverErr(error,res)            
           })
 
       },
@@ -48,21 +51,24 @@ const controller = {
         if (!errors.isEmpty()) {
             return res.render('./users/login', { session: req.session, errors: errors.mapped() });
         }
-        const userToLogin = await db.User.findOne({where: {email: req.body.email}})
         try {
-          let comparePassword = await bcrypt.compare(req.body.password, userToLogin.password);
+          const userToLogin = await db.User.findOne({where: {email: req.body.email}});
+          if(userToLogin){
+            const comparePassword = await bcrypt.compare(req.body.password, userToLogin.password);
+          }          
           if (comparePassword) {
             req.session.userLogged = userToLogin;
             return res.redirect('/');
           }
+          throw new Error('Las credenciales son inválidas');
         }
         catch (error){
           res.render('./users/login', {
           errors: {
               email: {
-                  msg: 'Las credenciales son inválidas'
+                  msg: error.message
               }
-          }
+          },          
         })
         }     
         
@@ -111,9 +117,7 @@ const controller = {
         catch (error){
             res.send({error})
         }                
-    }
-    ,
-
+    },    
     destroy: async (req, res) => {
       const {id} = req.params;
       try {
