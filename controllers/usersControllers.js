@@ -63,14 +63,18 @@ const controller = {
           throw new Error('Las credenciales son inválidas');
         }
         catch (error){
-          res.render('./users/login', {
-          errors: {
-              email: {
-                  msg: error.message
-              }
-          },          
-        })
-        }     
+          if(error instanceof db.Sequelize.ConnectionError){
+            serverErr(error,res);
+          } else {
+            res.render('./users/login', {
+              errors: {
+                  email: {
+                      msg: error.message
+                  }
+              }  
+            })
+            }
+        }    
         
     },
     logout: (req, res) => {

@@ -4,6 +4,7 @@ const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const expressSession = require('express-session');
+const cors = require('cors');
 
 // ************ express() ************
 const app = express();
@@ -18,6 +19,8 @@ app.use(expressSession({
     resave: false,
     saveUninitialized: false,
 }));
+app.use(cors())
+
 
 // ************ Template Engine ************
 app.set('view engine', 'ejs');
