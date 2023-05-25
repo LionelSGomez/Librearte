@@ -4,6 +4,7 @@ const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const expressSession = require('express-session');
+const cors = require('cors'); // Para prevenir problemas de comunicación entre la api y el usuario 
 
 // ************ express() ************
 const app = express();
@@ -18,6 +19,8 @@ app.use(expressSession({
     resave: false,
     saveUninitialized: false,
 }));
+app.use(cors()) //previene error "CORS policy: No 'Access-Control-Allow-Origin'" 
+
 
 // ************ Template Engine ************
 app.set('view engine', 'ejs');

@@ -123,6 +123,8 @@ textarea.input {
 
 .profileContainer {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .profile{
