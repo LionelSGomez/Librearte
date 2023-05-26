@@ -4,7 +4,7 @@ import CategoriesInDb from './CategoriesInDb';
 
 function ContentRowCenter(){
     return (
-        <div className="row">
+        <div className="row justify-content-center">
             
             {/*<!-- Last Movie in DB -->*/}
             <LastMovieInDb />

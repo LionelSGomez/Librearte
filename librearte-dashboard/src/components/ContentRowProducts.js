@@ -26,34 +26,28 @@ function ContentRowProducts() {
     const [estado, setEstado] = useState(null);
 
     useEffect(() => {
-        console.log("me monté");
             fetch('http://localhost:3030/api/products')
             .then(r=> r.json())
             .then(respuesta => setEstado(respuesta))
             .catch(error => console.log(error))
     }, []);
-
-    useEffect(() => {
-        console.log("me actualizé", estado);
-    }, [estado]);
-
     
     let totalProductsInDB = {
         title: 'Total de productos en base de datos',
         color: 'primary',
-        icon: 'fa-clipboard-list'
+        icon: 'fa-database'
     }
 
     let categoryMoreStock = {
-        title:'Categoría con más stock',
+        title:'Categoría con mayor stock',
         color:'success',
-        icon:'fa-award'
+        icon:'fa-thermometer-full'
     }
 
     let categoryLessStock = {
         title:'Categoría con menos stock',
         color:'danger',
-        icon:'fa-user-check'
+        icon:'fa-thermometer-quarter'
     }
 
     if(estado){
@@ -63,13 +57,6 @@ function ContentRowProducts() {
     }
 
     let cartProps = [totalProductsInDB, categoryMoreStock, categoryLessStock];
-
-    useEffect(() => {
-        return () => {
-            console.log("me desmonté");
-        }
-    }, [])
-
 
     return (
         <div className="row justify-content-center w-100 align-items-center">
