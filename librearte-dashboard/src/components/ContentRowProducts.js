@@ -1,6 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import SmallCard from './SmallCard';
 
+const getLength = function(object){
+    let lengthObject = 0;
+    for(const property in object){
+        lengthObject++
+    }
+    return lengthObject
+}
+
 const majorCategory = function(object){
     let major = -Infinity;
     for(const property in object){
@@ -24,6 +32,7 @@ const minorCategory = function(object){
 function ContentRowProducts() {
 
     const [estado, setEstado] = useState(null);
+    const [users, setUsers] = useState(null);
 
     useEffect(() => {
             fetch('http://localhost:3030/api/products')
@@ -31,32 +40,54 @@ function ContentRowProducts() {
             .then(respuesta => setEstado(respuesta))
             .catch(error => console.log(error))
     }, []);
+
+    useEffect(()=> {
+            fetch('http://localhost:3030/api/users')
+            .then(r => r.json())
+            .then(respuesta => setUsers(respuesta))
+            .catch(error => console.log(error))
+    },[estado])
     
     let totalProductsInDB = {
         title: 'Total de productos en base de datos',
         color: 'primary',
-        icon: 'fa-database'
+        icon: 'fa-boxes'
     }
 
     let categoryMoreStock = {
         title:'Categoría con mayor stock',
         color:'success',
-        icon:'fa-thermometer-full'
+        icon:'fa-cart-plus'
     }
 
     let categoryLessStock = {
-        title:'Categoría con menos stock',
+        title:'Categoría con menor stock',
         color:'danger',
-        icon:'fa-thermometer-quarter'
+        icon:'fa-cart-arrow-down'
     }
 
-    if(estado){
+    let categoriesInDB = {
+        title:'Categorias de productos',
+        color:'warning',
+        icon:'fa-list'
+    }
+    
+    let usersInDB = {
+        title:'Usuarios en base de datos',
+        color:'info',
+        icon:'fa-users'
+    }
+
+
+    if(estado && users){
         totalProductsInDB.quantity = estado.count;
         categoryMoreStock.quantity = majorCategory(estado.countByCategory);
         categoryLessStock.quantity = minorCategory(estado.countByCategory);
+        categoriesInDB.quantity = getLength(estado.countByCategory);
+        usersInDB.quantity = users.count;
     }
 
-    let cartProps = [totalProductsInDB, categoryMoreStock, categoryLessStock];
+    let cartProps = [totalProductsInDB, categoriesInDB ,categoryMoreStock, categoryLessStock, usersInDB ];
 
     return (
         <div className="row justify-content-center w-100 align-items-center">

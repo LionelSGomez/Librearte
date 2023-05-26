@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import ContentWrapper from './ContentWrapper';
 import CategoriesInDb from './CategoriesInDb';
-import LastMovieInDb from './LastMovieInDb';
+import LastProductInDB from './LastProductInDB';
 import ContentRowProducts from './ContentRowProducts';
 import NotFound from './NotFound';
 import SearchMovies from './SearchMovies';
@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ContentWrapper />}/>
           <Route path="CategoriesInDb/*" element={<CategoriesInDb />}/>
-          <Route path="LastMovieInDb/*" element={<LastMovieInDb />}/>
+          <Route path="LastProductInDB/*" element={<LastProductInDB />}/>
           <Route path="ContentRowProducts/*" element={<ContentRowProducts />}/>
           <Route path="search/*" element={<SearchMovies />}/>
           <Route component={NotFound} />
