@@ -21,6 +21,7 @@ let tableRowsData = [
 
 
 function Chart (){
+
     return (
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
@@ -30,21 +31,12 @@ function Chart (){
                         <thead>
                             <tr>
                                 <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                                <th>Categoría</th>
+                                <th>Imagen</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
-                            </tr>
-                        </tfoot>
                         <tbody>
                             {
                             tableRowsData.map( ( row , i) => {

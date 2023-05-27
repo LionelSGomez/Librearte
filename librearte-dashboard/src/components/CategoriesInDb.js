@@ -23,7 +23,6 @@ function CategoriesInDb() {
   useEffect(() => {
     if(product){
       searchCategory(product.countByCategory);
-      console.log(product.countByCategory);
     }
   },[product])
 
