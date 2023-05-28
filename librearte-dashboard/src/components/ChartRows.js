@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 
-function ChartRow(props){
+function ChartRows(){
 
     const [allUrl, setAllUrl] = useState(null);
 
@@ -20,6 +20,10 @@ function ChartRow(props){
         .catch(error => console.log(error));
     }, [])
 
+    useEffect(()=> {
+        console.log(allUrl);
+    }, [allUrl])
+
     return (
         
         allUrl ? (allUrl.map((product, i)=> <tr key={i}>
@@ -34,4 +38,4 @@ function ChartRow(props){
     
         
 
-export default ChartRow;
+export default ChartRows;

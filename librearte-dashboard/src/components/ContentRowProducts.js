@@ -2,11 +2,7 @@ import React, {useState, useEffect} from 'react';
 import SmallCard from './SmallCard';
 
 const getLength = function(object){
-    let lengthObject = 0;
-    for(const property in object){
-        lengthObject++
-    }
-    return lengthObject
+    return Object.keys(object).length
 }
 
 const majorCategory = function(object){
