@@ -21,7 +21,7 @@ function App() {
           <Route path="LastProductInDB/*" element={<LastProductInDB />}/>
           <Route path="ContentRowProducts/*" element={<ContentRowProducts />}/>
           <Route path="search/*" element={<SearchMovies />}/>
-          <Route component={NotFound} />
+          <Route path="*" element={<NotFound/>} />  
         </Routes>
       </div>
     </React.Fragment>
