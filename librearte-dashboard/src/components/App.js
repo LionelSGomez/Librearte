@@ -6,8 +6,6 @@ import CategoriesInDb from './CategoriesInDb';
 import LastProductInDB from './LastProductInDB';
 import ContentRowProducts from './ContentRowProducts';
 import NotFound from './NotFound';
-import SearchMovies from './SearchMovies';
-
 import SideBar from './SideBar';
 
 function App() {
@@ -20,7 +18,6 @@ function App() {
           <Route path="CategoriesInDb/*" element={<CategoriesInDb />}/>
           <Route path="LastProductInDB/*" element={<LastProductInDB />}/>
           <Route path="ContentRowProducts/*" element={<ContentRowProducts />}/>
-          <Route path="search/*" element={<SearchMovies />}/>
           <Route path="*" element={<NotFound/>} />  
         </Routes>
       </div>

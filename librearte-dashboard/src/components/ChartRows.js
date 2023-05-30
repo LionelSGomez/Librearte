@@ -20,10 +20,6 @@ function ChartRows(){
         .catch(error => console.log(error));
     }, [])
 
-    useEffect(()=> {
-        console.log(allUrl);
-    }, [allUrl])
-
     return (
         
         allUrl ? (allUrl.map((product, i)=> <tr key={i}>

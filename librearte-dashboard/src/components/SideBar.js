@@ -19,7 +19,6 @@ function SideBar() {
                         <span> Dashboard - Librearte</span></Link>
                 </li>
                 <hr className="sidebar-divider" />
-                <div className="sidebar-heading">Actions</div>
                 <li className="nav-item">
                     <Link className="nav-link" to="/CategoriesInDb">
                         <i className="fas fa-fw fa-folder"></i>
@@ -30,11 +29,6 @@ function SideBar() {
                     <Link className="nav-link" to="/ContentRowProducts">
                         <i className="fas fa-fw fa-table"></i>
                         <span>Paneles</span></Link>
-                </li>
-                <li className="nav-item nav-link">
-                    <Link className="nav-link" to="/search">
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Search</span></Link>
                 </li>
                 <hr className="sidebar-divider d-none d-md-block" />
             </ul>

@@ -107,7 +107,6 @@ const controller = {
     edit : async (req,res) => {
       const {id} = req.params;
         try {
-          console.log(id,req.file, req.body);
             await db.User.update({
                 ...req.body,
                 avatar: req.file ? req.file.filename : this.avatar

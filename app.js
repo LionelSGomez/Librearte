@@ -41,26 +41,9 @@ app.use('/api', apiControllers)
 // ************ Listen URL + Console log ************
 const port = process.env.PORT || 3000
 app.listen(port, () => {
-    console.log('Servidor iniciado en http://localhost:' + port);
+    const url = 'http://localhost:' + port
+    console.log('Servidor iniciado en '+ url);
 });
 
-// //***************ERROR***************/
-// // ************ catch 404 and forward to error handler ************
-// app.use((req, res, next) => next(createError(404)));
 
-// // ************ error handler ************
-// app.use((err, req, res, next) => {
-//   // set locals, only providing error in development
-//   res.locals.message = err.message;
-//   res.locals.path = req.path;
-//   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-//   // render the error page
-//   res.status(err.status || 500);
-//   res.render('error');
-// });
-
-
-
-// ************ exports app ************
 module.exports = app;
