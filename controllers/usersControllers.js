@@ -55,11 +55,11 @@ const controller = {
           const userToLogin = await db.User.findOne({where: {email: req.body.email}});
           if(userToLogin){
             const comparePassword = await bcrypt.compare(req.body.password, userToLogin.password);
+            if (comparePassword) {
+              req.session.userLogged = userToLogin;
+              return res.redirect('/');
+            }
           }          
-          if (comparePassword) {
-            req.session.userLogged = userToLogin;
-            return res.redirect('/');
-          }
           throw new Error('Las credenciales son inválidas');
         }
         catch (error){
@@ -107,7 +107,6 @@ const controller = {
     edit : async (req,res) => {
       const {id} = req.params;
         try {
-          console.log(id,req.file, req.body);
             await db.User.update({
                 ...req.body,
                 avatar: req.file ? req.file.filename : this.avatar

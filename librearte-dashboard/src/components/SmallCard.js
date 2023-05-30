@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function SmallCard(props){
     return(
-        <div className="col-md-3 mb-4 h-25">
+        <div className="col-md-3 mb-4 h-25 m-5">
             <div className={`card border-left-${props.color} shadow h-75 py-2`}>
                 <div className="card-body">
                     <div className="row no-gutters align-items-center h-100">

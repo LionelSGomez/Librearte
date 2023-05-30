@@ -75,7 +75,6 @@ const controller = {
             res.status(400).json({ error: 'Solicitud no válida.' });
           });
     }
-
 }
 
 module.exports = controller;
