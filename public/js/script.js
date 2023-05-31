@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var a = document.getElementById('burger');
-    var b = document.querySelector('.homeNav ul');
+    let a = document.getElementById('burger');
+    let b = document.querySelector('.homeNav ul');
   
     a.addEventListener('click', function() {
       b.classList.toggle('show');

@@ -22,7 +22,8 @@ main {
     text-align: center;
     background: floralwhite;
     border-style: ridge;
-    margin: 2px;
+    padding: 15px;
+    margin: 10px;
 }
 
 .detail h4 {
