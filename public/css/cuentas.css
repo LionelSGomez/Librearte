@@ -42,14 +42,14 @@ select#role {
 
 .form {
   background-color: white;
-  width: 45%;
+  width: 90%;
   border-radius: 8px;
   padding: 20px 40px;
   box-shadow: 0 10px 25px rgba(92, 99, 105, .8);
 }
 
 .title {
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 50px;
   display: flex;
   justify-content: space-around;
@@ -108,17 +108,20 @@ textarea.input {
 
 .Contenedor {
   display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .cuentasBtn {
-  padding: 15px 30px;
+  padding: 15px 10px;
   border: none;
   background-color: #de7124;
   color: white;
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 30px;
+  margin: 1em;
 }
 
 .profileContainer {
@@ -136,13 +139,9 @@ textarea.input {
   transform: translateY(-2px);
 }
 
-#inicio{
-  margin-right: auto;
-}
+#inicio{width: 100%;text-align: center;}
 
-#crear{
-  margin-left: auto;
-}
+#crear{width: 100%;text-align: center;}
 
 .input:focus+.label {
   top: -7px;

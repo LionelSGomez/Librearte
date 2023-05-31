@@ -16,11 +16,13 @@
 
 .homeNav a{
     color: black;
-    font-size: 20px;
+    font-size: 17px;
 }
 
-.homeNav li {
-    display: none;
+.homeNav ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s ease; 
 }
 
 ul li:hover {
@@ -35,6 +37,7 @@ ul li:hover {
 }
 
 .homeNav #librearte {
+    display: none;
     height: 100px;
     padding: 10px;
     background-color: white;
@@ -73,6 +76,20 @@ ul li:hover {
     color: black
 }
 
+img#librearte2 {
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%;
+    height: 90px;
+}
+
+.onMobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
 
 /*BODY*/
 
@@ -102,20 +119,75 @@ ul li:hover {
     font-size: 16px;
 }
 
+.homeNav ul.show {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    list-style-type: none;
+    height: 100vh;
+    width: 50vw;
+    position: absolute;
+    align-items: center;
+    text-align: center;
+    background-color: #F3AE4B !important;
+    top: 73px;
+    max-height: none;
+    z-index: 2;
+}
+
+
+.homeNav ul.show li {
+    font-size: 17px;
+}
+
+.homeNav ul.show li.librearte {
+    display: none;
+}
+
+
+.destacados h2 {
+    font-style: italic;
+    padding: 5px;
+    margin: 30px 7px;
+    position: relative;
+    width: 100vw;
+    text-align: center;
+}
+
+.destacados h2::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    width: 120px;
+    border-bottom: 5px solid orange;
+}
+
 section.destacados {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 3em;
 }
 
 .destacados > article{
     width: 60vw;
     border-width: 2px;
-    border: 3px solid #ffb77d9c;
+    border: 3px solid #e7d5c69c;
     border-radius: 18px;
     margin: 2vh;
     box-shadow: lightgrey 0px 0px 10px;
+    transition-property: margin, box-shadow;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+}
+
+.destacados > article:hover{
+    box-shadow: orange 0px 0px 10px;
+    margin: 10px;
+    transition: all 300ms;
 }
 
 article.destacados h4 {
@@ -127,6 +199,9 @@ article.destacados div {
     flex-direction: column-reverse;
     padding: 25px;
     align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    height: 100%;
 }
 
 article.destacados img {
@@ -183,6 +258,19 @@ form strong {
 
 @media (min-width:768px){
 
+    .homeNav ul {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .homeNav #librearte{
+        display: block;
+    }
+
+    img#librearte2{
+        display: none;
+    }
+
     .homeNav li {
         display: block;
         width: calc(100%/7);
@@ -212,7 +300,20 @@ form strong {
     .burgerMenu {
         display: none;
     }   
+
+    section.destacados {
+        flex-direction: row;
+    }
+
+    .destacados > article{
+        flex-direction: row;
+        width: 40vw;
+    }
+    .destacados article img{
+        width: 100%;
+    }
 }
+
 
 @media (min-width:1024px){
 
@@ -264,6 +365,16 @@ form strong {
 
     .landing img {
         display: none;
+    }
+
+    .destacados > article {
+        flex-direction: row;
+        width: 25vw;
+        height: 50vh;
+    }
+
+    .destacados article img {
+        width: 17vw;
     }
     
 }

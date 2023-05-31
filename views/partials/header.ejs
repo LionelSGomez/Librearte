@@ -1,5 +1,9 @@
 <header>
     <nav class="homeNav">
+        <div class="onMobile">
+            <i id="burger" class="fa-solid fa-bars burgerMenu"></i>
+            <a href="/"><img id="librearte2" src="/images/logo.webp"></a>
+        </div>
         <ul>
             <li>
                 <a href="/">Inicio</a>
@@ -12,7 +16,6 @@
             </li>
             <li class="librearte">
                 <a href="/"><img id="librearte" src="/images/logo.webp"></a>
-                <i class="fa-solid fa-bars burgerMenu"></i>
             </li>
 
             <% if(userLogged && userLogged.roles_id == 1){ %>
