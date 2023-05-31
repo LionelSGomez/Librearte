@@ -25,8 +25,11 @@
                                     <h4>
                                         <%= products[j].title %>
                                     </h4>
-                                    <a href="/products/<%= products[j].id %> "><img
-                                            src="./images/products/<%= products[j].img %>"></a>
+                                    <a href="/products/<%= products[j].id %> ">
+                                        <div class="productImage">
+                                            <img src="./images/products/<%= products[j].img %>">
+                                        </div>
+                                    </a>
                                     <h4>$<%= products[j].price %>
                                     </h4>
                                 </article>
