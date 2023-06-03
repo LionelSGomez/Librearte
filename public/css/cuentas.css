@@ -176,3 +176,12 @@ form strong {
   display: flex;
   justify-content: center;
 }
+
+@media (min-width: 1024px){
+    .Contenedor{
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
+}

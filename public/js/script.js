@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
             menu.classList.remove('show');
         }
     }
-
     window.addEventListener('DOMContentLoaded', checkViewportSize);
     window.addEventListener('resize', checkViewportSize);
   });
