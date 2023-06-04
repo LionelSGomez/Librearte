@@ -1,4 +1,4 @@
-# Grupo 3 LibreArte
+# LibreArte
 
 Librearte es una tienda E-commerce dedicado a la venta de productos de librería, la venta está apuntada en especial a estudiantes pero se permite la venta a todo público.
 
